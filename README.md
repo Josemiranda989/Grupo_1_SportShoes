@@ -1,4 +1,5 @@
-<h1> SportShoes :shoe: <h1>
+![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/design/Sport%20Shoes.png)
+
 
 <h3> Nuestro sitio web ofrece zapatillas para todo tipo de deportes, con las facilidades de comprarlas desde tu casa, con envío gratis, a precio de costo.<h3>
 
@@ -13,6 +14,8 @@
 :point_right: **José Miranda** de 31 años, de Tucuman - Argentina. @Josemiranda989
 
 Nuestros pasos en la planificación usando [Trello](https://trello.com/b/sqaH3YHP/proyecto-final-dh) :bookmark_tabs:<h4>
+ 
+Conocé la combinación de colores de nuestra Empresa [ColorHunt](https://colorhunt.co/palette/05374239a2dba2dbfae8f0f2https://colorhunt.co/palette/05374239a2dba2dbfae8f0f2) :art:
 
 
 # Links de Referencia 
