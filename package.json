@@ -1,0 +1,22 @@
+{
+  "name": "grupo_1_sportshoes",
+  "version": "1.0.0",
+  "description": "![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/design/Sport%20Shoes.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josemiranda989/Grupo_1_SportShoes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josemiranda989/Grupo_1_SportShoes/issues"
+  },
+  "homepage": "https://github.com/Josemiranda989/Grupo_1_SportShoes#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
