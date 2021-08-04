@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home </title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/login.css">
+        <title> Sportshoes </title>
+    </head>
+    <body class="body-login">
+        <header>
+<!--             <div>
+                <h1>Aqui va el NAV Junto con el logo</h1>
+            </div> -->
+        </header>
+
+        <main>
+            <div class="box-login">
+                <img class="logo-login" src="./images/Sportshoes.png" alt="LogoSportShoes">
+                <h1 class="text-login">Login</h1>
+                <form class="form-login" action="/" method="POST">
+                    <p class="textLogin">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="login" placeholder="Username" required/>
+                    </p>
+                    <br>
+                    <p class="textLogin">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required/>
+                    </p>
+                    <br>
+                    <p><input class="submit-login" type="submit" name="sent" value="Login"></p>
+                </form>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+        
+    </body>
 </html>
