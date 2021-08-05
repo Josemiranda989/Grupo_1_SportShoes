@@ -1,4 +1,4 @@
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/design/Sport%20Shoes.png)
+![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/public/images/Sportshoes.png)
 
 
 <h3> Nuestro sitio web ofrece zapatillas para todo tipo de deportes, con las facilidades de comprarlas desde tu casa, con envío gratis, a precio de costo.<h3>
