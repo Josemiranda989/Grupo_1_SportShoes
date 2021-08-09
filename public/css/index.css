@@ -187,10 +187,36 @@ header{
 
 }
 
+/* --- FOOTER DEL INDEX ---- */
+.footer-index {
+    background-color: black;
+    color:white;
+    display:flex;
+    width: 480px;
+    justify-content: space-around;
+    font-size: 12px;
+
+}
 
 
 
 
+@media (min-width:480px) { /* TABLET */
+
+    .titulos-footer {
+        font-size: 16px;
+    }
+
+ .footer-index {
+     width: 770px;
+     font-size: 14px;
+}
+
+}
+
+@media (min-width:769px) { /* DESKTOPS */
+    /* reglas de estilo */
+    }
 /* Codigo anterior
 .search-box{
     position: absolute;
