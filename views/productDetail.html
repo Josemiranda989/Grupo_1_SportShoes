@@ -9,17 +9,30 @@
     <link rel="stylesheet" href="css/productDetail.css">
     <title> Sportshoes </title>
 <body class="body-detail">
-    <div class="imagen-detail"><img src="images/zapatilla1.png" alt="producto para agregar"></div>
+   <section class= "section-detail" >
+         <h1 class="titulo-detail">Adidas Ultraboost DNA </h1>
+    <div >
+        
+        <img class="imagen-detail" src="images/shoes-img/Adidas-Ultraboost/1.png" alt="producto para agregar">
+        
+    </div>
     
-        <form action="/" method="POST">
-            <label>Adidas Ultraboost DNA</label>
+    <form action="/" method="POST">
+           
             
-            <p class = "texto-detail">
-                <div> White/Blue</div>
+            <div class = "texto-detail">
+                 
+                <div>       
+                    <label>Select Color</label>                       =             
+                    <select name="color">
+                <option value="black">Black</option>
+                <option value="white">White </option>
+                <option value="red">Red </option>
+                <option value="blue">Blue </option>
+                    </select>
 
-                <div> Width : Width - D - Medium </div>
-
-                <div>    $180.00 </div> 
+                </div>
+                <div>  $180.00 </div> 
                 <div>       
                     <label>Select a Size</label>                                    
                     <select name="size">
@@ -31,13 +44,13 @@
 
                 </div>
 
-            </P>
-            <button type="submit">ADD CART</button>
+            </div>
+            <button class="addcart-detail" type="submit">ADD CART</button>
             
             
         </form>   
 
-   
+   </section>
 
 
 </body>

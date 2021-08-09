@@ -236,7 +236,7 @@
 
 
 
-@media (min-width:480px) { /* TABLET */
+@media (min-width:361px) { /* TABLET */
 
     .titulos-footer {
         font-size: 16px;
