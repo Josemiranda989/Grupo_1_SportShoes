@@ -27,6 +27,8 @@
     font-family:'roboto',sans-serif ;
     background: url(/images/background.jpg) fixed;
     background-size:cover;
+    min-width:361px;
+    
 
 }
 
@@ -39,7 +41,7 @@
 }
 
 /* diseno logo y sign up and in gk*/
-.nav-logo-ingreso-index{
+.nav-ingreso-index{
 
     display:flex ;
     list-style:none ;
@@ -47,11 +49,11 @@
 }
 
  
-header{
-   height:200px ;
-}
-
-
+.header-index{
+    width:414px;
+    height:300px
+   
+ }
 
 
  .ingreso-index{
@@ -59,6 +61,7 @@ header{
     right:10px ;
     list-style: none;
     display:flex;
+    justify-content:flex-end;
 }
 
 
@@ -92,8 +95,8 @@ header{
    
 
 .logo-index{
-    height:200px ;
-    width:200px ;
+    height:auto ;
+    width:auto;
    
 }
 
@@ -130,6 +133,8 @@ header{
     display:flex;
     justify-content:space-around;
     align-items: center;
+    width:414px;
+
     
     }
 
