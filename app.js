@@ -17,17 +17,12 @@ app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/register.html'))
 });
 
-<<<<<<< HEAD
 app.get('/productCart',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/productCart.html'))
 });
 
 app.get('/productDetail',(req,res)=>{
     res.sendFile(path.join(__dirname,'views/productDetail.html'))
-=======
-app.get('/terms', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/terms.html'))
->>>>>>> 52e31ea50bc3879d9713f7797277f6d2a62f6820
 });
 
 app.listen(3000,()=>{
