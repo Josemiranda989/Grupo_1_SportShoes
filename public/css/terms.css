@@ -1,0 +1,25 @@
+:root {
+    --verdeOscuro: #053742;
+    --celesteOscuro: #39A2DB;
+    --celesteClaro: #A2DBFA;
+    --grisClaro: #a6abac;
+    --grisOscuro: #5e5e5e;
+   --blanco: #ffffff;
+}
+
+/* === Estilos generales === */
+
+* {
+    box-sizing: border-box;
+    font-weight: 300;
+    margin: auto
+}
+
+/*   TERMINOS Y CONDICIONES */
+.body-terms {
+    font-family:'roboto',sans-serif ;
+    background: var(--grisClaro);
+    min-width: 400px;
+    max-width: 1000px;
+    padding: 50px;
+}

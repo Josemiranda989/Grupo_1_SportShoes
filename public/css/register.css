@@ -35,14 +35,14 @@ main div h1 {
 .box-register {
     display: flex;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     width: 80%;
     min-height: 80%;
     padding: 20px;
     background:var(--grisClaro);
     opacity: 0.9;
-    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61); 
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
 box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
 }
 
@@ -52,7 +52,7 @@ h2 {
 }
 .intereses-register {
     text-align: left;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 100%;
@@ -106,3 +106,7 @@ h2 {
 .submit-login:hover {
     background-color: var(--celesteClaro);
   }
+
+.link-register {
+    text-decoration: none;
+}
