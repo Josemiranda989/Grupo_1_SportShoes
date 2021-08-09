@@ -42,9 +42,8 @@
 .nav-logo-ingreso-index{
 
     display:flex ;
-    justify-content:space-between;
-align-items: center;
-
+    list-style:none ;
+  justify-content: flex-end;
 }
 
  
@@ -52,53 +51,42 @@ header{
    height:200px ;
 }
 
-button.far{
-    position:absolute;
-    top:15%;
-    right:9%;
-    padding:10px ;
-
-}
-
-button.fas{
-    position:absolute;
-    top:15%;
-    right:5%;
 
 
-}
 
-
-.ingreso-index{
-    position: relative;
-    top:10px ;
+ .ingreso-index{
+    top:20px ;
     right:10px ;
     list-style: none;
-    display:flex ;
+    display:flex;
 }
+
+
+
 .signin-index{
     text-decoration:none ;
     color: white;
     font-size:15px ;
     font-weight: bold;
-    text-align: center;
     width:auto;
     height: auto;
-    margin:10px;
-   
+    margin:20px;
+    display:flex;
+    
     
 }
 
  
 .signup-index{
-    text-decoration:none;
+    text-decoration:none ;
     color: white;
-    font-size:15px;
+    font-size:15px ;
     font-weight: bold;
-    text-align: center;
     width:auto;
     height: auto;
-    margin:10px;
+    margin:20px;
+    display:flex;
+    
 }
     
    
@@ -107,7 +95,6 @@ button.fas{
     height:200px ;
     width:200px ;
    
-    
 }
 
 
