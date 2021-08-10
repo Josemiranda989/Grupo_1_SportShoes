@@ -1,0 +1,83 @@
+*{
+    
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+    min-width:3%;
+}
+
+
+
+:root {
+    --verdeOscuro: #053742;
+    --celesteOscuro: #39A2DB;
+    --celesteClaro: #A2DBFA;
+    --grisClaro: #E8F0F2;
+    --grisOscuro: #5e5e5e;
+   --blanco: #ffffff;
+}
+.titulo-cart{
+    background-color:rgba(82, 176, 197, 0.95) ;
+    padding: 10px;
+    color: var(--blanco);
+ 
+ }
+
+.body-cart {
+
+    font-family:'roboto',sans-serif ;
+    background: var(--blanco);
+    
+}
+
+.main-cart {
+     width: 100%;
+
+     
+
+}
+.imagen-cart {
+    background-size:cover;
+    width: 100%;
+    background-color: var(--grisClaro);
+    
+  
+}
+.imagen-cart img {
+    background-size:cover;
+    width: 100%;
+
+}
+.zapatilla-cart1 {
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left:10px;
+    background-color:var(--grisClaro);
+    
+} 
+.button-cart{
+    font-size:12px;
+    margin-left:40px;
+    background-color:var(--grisOscuro);
+    border-radius:30px;
+    padding: 5px;
+}
+.total-cart{
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left:10px;
+    background-color:var(--grisClaro);
+    padding: 10px;
+
+}
+    
+    
+
+.zapatilla-cart1 a:visited {
+    color: black;
+}
+

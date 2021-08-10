@@ -8,6 +8,7 @@
     list-style:none;
     text-decoration:none;
     min-width:3%;
+    
 }
 
 
@@ -26,6 +27,7 @@
 .body-index{
     font-family:'roboto',sans-serif ;
     min-width:290px;
+    
 }
 
 .nav-index{
@@ -203,8 +205,13 @@
     margin-left:40px;
     background-color:var(--grisOscuro);
     border-radius:50px;
-
+    
+    
 }
+.call-index a:visited {
+    color: black;
+}
+
 
 
 
