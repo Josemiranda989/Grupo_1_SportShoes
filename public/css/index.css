@@ -1,5 +1,3 @@
-
-
 *{
     
     margin:0;
@@ -152,19 +150,21 @@
 }
 
 .titulo1-index{
-    font-size: 4vw;
-    padding-top:440px;
+    font-size: 22px;
+    padding-top: 300px;
     padding-left:40px;
-    
+    font-weight: 800;
 }
 
 .titulo2-index{
     
-    font-size: 7vw;
-    padding-top:440px;
-    padding-left:40px;
-    color:white;
+font-size: 7vw;
     
+padding-top: 300px;
+    
+padding-left:40px;
+    
+color:white;
 }
 
 
@@ -273,8 +273,334 @@
     }
 
 
+/* LOGIN   
+LOGIN   
+LOGIN   
+LOGIN   
+LOGIN   
+LOGIN    */
+
+:root {
+    --verdeOscuro: #053742;
+    --celesteOscuro: #39A2DB;
+    --celesteClaro: #A2DBFA;
+    --grisClaro: #E8F0F2;
+    --grisOscuro: #363636;
+   --blanco: #ffffff;
+}
+
+/* === Estilos generales === */
 
 
+.body-login {
+    font-family:'roboto',sans-serif;
+    background: url(/images/background.jpg) fixed;
+    background-size:cover;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 50px;
+}
+
+main div h1 {
+    text-align: center;
+    color:var(--grisOscuro);
+    margin: 20px 0;
+}
+
+/* ===  Caja Login === */
+
+.box-login {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 80%;
+    min-height: 80%;
+    padding: 20px;
+    background:var(--grisClaro);
+    opacity: 0.9;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61); 
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
+}
+
+/* === formulario === */
+
+.form-login {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 100%;
+    transition: border .5s;
+}
+
+/* === Logo === */
+
+.logo-login {
+    /* height: 180px; */
+    width: 60%;
+    margin: auto;
+}
+
+/* === Botón Login === */
+
+.submit-login {
+    border: 2px solid transparent;
+    background: var(--celesteOscuro);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.submit-login:hover {
+    background-color: var(--celesteClaro);
+  }
+
+
+/* PRODUCT CART
+PRODUCT CART */
+
+
+.titulo-cart{
+    background-color:rgba(82, 176, 197, 0.95) ;
+    padding: 10px;
+    color: var(--blanco);
  
+ }
+
+.body-cart {
+
+    font-family:'roboto',sans-serif ;
+    background: var(--blanco);
+    
+}
+
+.main-cart {
+     width: 100%;
+
+     
+
+}
+.imagen-cart {
+    background-size:cover;
+    width: 100%;
+    background-color: var(--grisClaro);
+    
+  
+}
+.imagen-cart img {
+    background-size:cover;
+    width: 100%;
+
+}
+.zapatilla-cart1 {
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left:10px;
+    background-color:var(--grisClaro);
+    
+} 
+.button-cart{
+    font-size:12px;
+    margin-left:40px;
+    background-color:var(--grisOscuro);
+    border-radius:30px;
+    padding: 5px;
+}
+.total-cart{
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left:10px;
+    background-color:var(--grisClaro);
+    padding: 10px;
+
+}
+    
+    
+
+.zapatilla-cart1 a:visited {
+    color: black;
+}
 
 
+/* PRODUCT DETAIL
+PRODUCT DETAIL
+PRODUCT DETAIL
+PRODUCT DETAIL
+ */
+
+ .body-detail {
+
+    font-family:'roboto',sans-serif ;
+    background: url(/images/background.jpg) fixed;
+    background-size:cover;
+    
+
+    
+}
+.titulo-detail{
+
+   padding: 10px;
+
+}
+
+.section-detail {
+    background-color: white;
+    height: 90%;
+
+
+}
+.imagen-detail {
+   
+    width: 100%;
+    background-color: var(--grisClaro);
+    
+}
+
+.texto-detail {
+
+    line-height:30px;
+    margin: 10px;
+
+}   
+.addcart-detail{
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left:40px;
+    background-color:var(--grisOscuro);
+    border-radius:50px;
+    padding: 7px;
+    
+   
+} 
+.addcart-detail a:visited {
+    color: black;
+}
+
+/* REGISTER
+REGISTER
+REGISTER
+REGISTER */
+
+.body-register {
+
+    font-family:'roboto',sans-serif ;
+    background: url(/images/background.jpg) fixed;
+    background-size:cover;
+    min-width: 400px;
+    max-width: 1000px;
+    padding: 50px;
+}
+
+main div h1 {
+    text-align: center;
+    color:var(--grisOscuro);
+    margin: 20px 0;
+}
+
+/* ===  Caja register === */
+
+.box-register {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    min-height: 80%;
+    padding: 20px;
+    background:var(--grisClaro);
+    opacity: 0.9;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
+box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
+}
+
+/* ===  Caja register === */
+
+.intereses-register {
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+
+
+/* === formulario === */
+
+.form-register {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 100%;
+    transition: border .5s;
+}
+
+/* === Logo Register === */
+
+.logo-register {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+}
+
+/* === Botones Register === */
+
+.submit-login {
+    border: 2px solid transparent;
+    background: var(--celesteOscuro);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    display: inline;
+}
+
+.submit-login:hover {
+    background-color: var(--celesteClaro);
+  }
+
+.link-register {
+    text-decoration: none;
+}
+
+/* TERMS
+TERMS
+TERMS
+TERMS */
+
+.body-terms {
+    font-family:'roboto',sans-serif ;
+    background: var(--grisClaro);
+    min-width: 400px;
+    max-width: 1000px;
+    padding: 50px;
+}
