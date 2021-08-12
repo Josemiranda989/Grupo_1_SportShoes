@@ -1,606 +1,525 @@
-*{
-    
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    list-style:none;
-    text-decoration:none;
-    min-width:3%;
-    
+/* <-------------- CONFIGURACIONES GENERALES --------------> */
+
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    list-style     : none;
+    text-decoration: none;
+    min-width      : 3%;
 }
 
-
+/* <-------------- VARIABLES --------------> */
 
 :root {
-    --verdeOscuro: #053742;
+    --verdeOscuro  : #053742;
     --celesteOscuro: #39A2DB;
-    --celesteClaro: #A2DBFA;
-    --grisClaro: #E8F0F2;
-    --grisOscuro: #5e5e5e;
-   --blanco: #ffffff;
+    --celesteClaro : #A2DBFA;
+    --grisClaro    : #E8F0F2;
+    --grisOscuro   : #5e5e5e;
+    --blanco       : #ffffff;
+}
+
+/* <-------------- INDEX.HTML --------------> */
+/* <-------------- INDEX.HTML --------------> */
+/* <-------------- INDEX.HTML --------------> */
+
+
+.body-index {
+    font-family: 'roboto', sans-serif;
+    min-width  : 235px;
+}
+
+.nav-index {
+    background-color: #053742;
+    opacity         : 0.95;
+    padding-bottom:10px;
+}
+
+/* <-LOGO - SIGN IN - SING UP - INDEX-> */
+
+.nav-ingreso-index {
+    display        : flex;
+    list-style     : none;
+    justify-content: space-around;
+}
+
+.header-index {
+    width: 100%;
+}
+
+.ingreso-index {
+    display: flex;
+    margin : auto 0;
+}
+
+.signin-index {
+    text-decoration: none;
+    color          : white;
+    font-size      : 15px;
+    font-weight    : bold;
+    margin         : 20px;
+    display        : flex;
+}
+
+.signup-index {
+    text-decoration: none;
+    color          : white;
+    font-size      : 15px;
+    font-weight    : bold;
+    margin         : 20px;
+    display        : flex;
+}
+
+.logo-index {
+    height: 40px;
+    margin: 20px 5px;
 
 }
 
+/* <-SEARCH - MENU - INDEX-> */
 
-.body-index{
-    font-family:'roboto',sans-serif ;
-    min-width:290px;
-    
+.menu-index li a {
+    text-decoration: none;
+    color          : white;
+    font-weight    : bold;
 }
 
-.nav-index{
-    background-color:rgba(82, 176, 197, 0.95) ;
-    
- }
-
-/* diseno logo y sign up and in gk*/
-.nav-ingreso-index{
-
-    display:flex ;
-    list-style:none ;
-  justify-content: space-between;
+.menu-index {
+    display: none;
 }
 
- 
-.header-index{
-    width:100%;
-    
-   
- }
-   
+.item-index {
+    margin   : 0 5px;
+    font-size: 16px;
+}
 
- .ingreso-index{
-   
-    display:flex;
-    margin:auto;
+.search-menu-index {
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    width          : 100%;
+    padding        : 0 3px;
 }
 
 
-
-.signin-index{
-    text-decoration:none ;
-    color: white;
-    font-size:15px ;
-    font-weight: bold;
-    margin:20px;
-    display:flex;
-    
-    
-}
-
- 
-.signup-index{
-    text-decoration:none ;
-    color: white;
-    font-size:15px ;
-    font-weight: bold;
-    margin:20px;
-    display:flex;
-    
-}
-    
-   
-.logo-index{
-    height:40px;
-    margin:20px  5px;
-
-    
-}
-
-
-/*diseno search y menu */
-
-.menu-index li a {  
-
-    text-decoration:none ;
-    color:white;
-    font-weight:bold ;
-
-}
-
-
-.menu-index{
-    
-    display:none ;
-   
-}
-.item-index{
-    margin:0 5px;
-    font-size:16px;
-    
-    
-}
-
-.search-menu-index{
-
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
-    width:100%;
-    padding: 0 3px ;
-
-    
-    }
-
-
-.far,.fas,.fa{
-    margin:3px;
+.far,
+.fas,
+.fa {
+    margin     : 3px;
     align-items: flex-end;
-    display:flex ;
-    
-    }
+    display    : flex;
+}
 
-    .search-box-index{
-        display: flex;
-        margin:10 ;
-    }
+.search-box-index {
+    display: flex;
+    margin : 10;
+}
 
-  
-.menu-index li a:hover{
 
-    color:var(--grisClaro);
+.menu-index li a:hover {
+    color: var(--grisClaro);
 }
 
 
 
-/*diseno main*/
+/* <-MAIN - INDEX-> */
 
-.main-index{
-
+.titulo1-index {
+    width       : 80%;
+    font-size   : 22px;
+    padding-top : 300px;
+    padding-left: 40px;
+    font-weight : bold;
 }
 
-.titulo1-index{
-    font-size: 22px;
-    padding-top: 300px;
-    padding-left:40px;
-    font-weight: 800;
-}
-
-.titulo2-index{
-    
-font-size: 7vw;
-    
-padding-top: 300px;
-    
-padding-left:40px;
-    
-color:white;
+.titulo2-index {
+    font-weight : bold;
+    font-size   : 22px;
+    padding-top : 290px;
+    border      : 1px;
+    padding-left: 40px;
+    color       : white;
 }
 
 
-.section1-index{
-   
-    background:url(/images/section1-movile.jpeg);
-    width:100%;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin:10px 0;
-
+.section1-index {
+    background         : url(/images/section1-movile.jpeg);
+    width              : 100%;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center center;
+    border-top         : 5px solid #E8F0F2;
+    border-bottom      : 5px solid #E8F0F2
 }
-
-
 
 .section2-index {
-    
-    background:url(/images/section2-movile.jpeg);
-    width:100%;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin:10px 0;
-
+    background         : url(/images/section2-movile.jpeg);
+    width              : 100%;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center center;
+    border-bottom      : 5px solid #E8F0F2;
 }
 
-
-.section-left-index{
-    padding:10%;
-    
-
+.call-index {
+    font-size       : 12px;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    margin-left     : 40px;
+    background-color: var(--grisOscuro);
+    border-radius   : 50px;
 }
 
-
-.call-index{
-    font-size:12px;
-    font-weight:bold;
-    text-transform: uppercase;
-    margin-left:40px;
-    background-color:var(--grisOscuro);
-    border-radius:50px;
-    
-    
-}
 .call-index a:visited {
     color: black;
 }
 
+/* <-FOOTER - INDEX-> */
 
-
-
-/* --- FOOTER DEL INDEX ---- */
 .footer-index {
     background-color: black;
-    color:white;
-    display:flex;
-    width: 100%;
-    justify-content:center;
-    font-size: 15px;
-    flex-wrap:wrap;
-    margin:auto;
-    flex-direction:column;
-    padding-left:30px;
-    padding-top:30px;
-    border-top: solid 2px white;
+    color           : white;
+    display         : flex;
+    width           : 100%;
+    flex-direction:row;
+    justify-content : space-between;
+    font-size       : 15px;
+    flex-wrap       : wrap;
+    border-top      : solid 2px white;
 
 }
 
-.lista1-footer li {
-    padding-top:6px;
+.cajas-footer {
+    margin: 10px 6px;
 }
 
-.espacio-footer{
-    height:40px;
-    padding:10px;
-}
-
-.final-footer{
-    margin-top:15px;
-    margin-left:-5px; 
- }
- 
-
-@media (min-width:361px) { /* TABLET */
-
-   
-    .titulos-footer {
-        font-size: 16px;
-    }
-
-    .footer-index {
-     font-size: 14px;
-}
-        .menu-index{
-        
-        display:flex;
-        justify-content: center;
-        flex-wrap:wrap;
-    }
-
-
-
-}
-
-@media (min-width:769px) { /* DESKTOPS */
-    /* reglas de estilo */
-    }
-
-
-/* LOGIN   
-LOGIN   
-LOGIN   
-LOGIN   
-LOGIN   
-LOGIN    */
-
-:root {
-    --verdeOscuro: #053742;
-    --celesteOscuro: #39A2DB;
-    --celesteClaro: #A2DBFA;
-    --grisClaro: #E8F0F2;
-    --grisOscuro: #363636;
-   --blanco: #ffffff;
-}
-
-/* === Estilos generales === */
-
+/* <-------------- LOGIN.HTML --------------> */
+/* <-------------- LOGIN.HTML --------------> */
+/* <-------------- LOGIN.HTML --------------> */
 
 .body-login {
-    font-family:'roboto',sans-serif;
-    background: url(/images/background.jpg) fixed;
-    background-size:cover;
-    min-width: 300px;
-    max-width: 600px;
-    padding: 50px;
+    font-family    : 'roboto', sans-serif;
+    background     : url(/images/background.jpg) fixed;
+    background-size: cover;
+    min-width      : 300px;
+    max-width      : 600px;
+    padding        : 50px;
 }
 
 main div h1 {
     text-align: center;
-    color:var(--grisOscuro);
-    margin: 20px 0;
+    color     : var(--grisOscuro);
+    margin    : 20px 0;
 }
 
-/* ===  Caja Login === */
+/* <-CAJA - LOGIN-> */
 
 .box-login {
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-    justify-content: center;
-    width: 80%;
-    min-height: 80%;
-    padding: 20px;
-    background:var(--grisClaro);
-    opacity: 0.9;
-    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61); 
-    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
+    display           : flex;
+    align-items       : center;
+    flex-direction    : column;
+    justify-content   : center;
+    width             : 80%;
+    min-height        : 80%;
+    padding           : 20px;
+    background        : var(--grisClaro);
+    opacity           : 0.9;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
+    box-shadow        : 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
-/* === formulario === */
+/* <-FORMULARIO - LOGIN> */
 
 .form-login {
-    text-align: center;
+    text-align      : center;
     background-color: #ECF0F1;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 10px 0;
-    width: 100%;
-    transition: border .5s;
+    border          : 2px solid transparent;
+    border-radius   : 3px;
+    font-size       : 16px;
+    font-weight     : 200;
+    padding         : 10px 0;
+    width           : 100%;
+    transition      : border .5s;
 }
 
-/* === Logo === */
+/* <-LOGO - LOGIN-> */
 
 .logo-login {
     /* height: 180px; */
-    width: 60%;
+    width : 60%;
     margin: auto;
 }
 
-/* === Botón Login === */
+/* <-BOTON - LOGIN-> */
 
 .submit-login {
-    border: 2px solid transparent;
-    background: var(--celesteOscuro);
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 25px;
-    padding: 10px 0;
+    border         : 2px solid transparent;
+    background     : var(--celesteOscuro);
+    color          : #ffffff;
+    font-size      : 16px;
+    line-height    : 25px;
+    padding        : 10px 0;
     text-decoration: none;
-    text-shadow: none;
-    border-radius: 3px;
-    box-shadow: none;
-    transition: 0.25s;
-    display: block;
-    width: 200px;
-    margin: 0 auto;
+    text-shadow    : none;
+    border-radius  : 3px;
+    box-shadow     : none;
+    transition     : 0.25s;
+    display        : block;
+    width          : 200px;
+    margin         : 0 auto;
 }
 
 .submit-login:hover {
     background-color: var(--celesteClaro);
-  }
+}
 
 
-/* PRODUCT CART
-PRODUCT CART */
+/* <-------------- PRODUCT CART.HTML --------------> */
+/* <-------------- PRODUCT CART.HTML --------------> */
+/* <-------------- PRODUCT CART.HTML --------------> */
 
-
-.titulo-cart{
-    background-color:rgba(82, 176, 197, 0.95) ;
-    padding: 10px;
-    color: var(--blanco);
- 
- }
+.titulo-cart {
+    background-color: rgba(82, 176, 197, 0.95);
+    padding         : 10px;
+    color           : var(--blanco);
+}
 
 .body-cart {
-
-    font-family:'roboto',sans-serif ;
-    background: var(--blanco);
-    
+    font-family: 'roboto', sans-serif;
+    background : var(--blanco);
 }
 
 .main-cart {
-     width: 100%;
-
-     
-
+    width: 100%;
 }
+
 .imagen-cart {
-    background-size:cover;
-    width: 100%;
+    background-size : cover;
+    width           : 100%;
     background-color: var(--grisClaro);
-    
-  
 }
+
 .imagen-cart img {
-    background-size:cover;
-    width: 100%;
-
+    background-size: cover;
+    width          : 100%;
 }
+
 .zapatilla-cart1 {
-    font-size:12px;
-    font-weight:bold;
-    text-transform: uppercase;
-    margin-left:10px;
-    background-color:var(--grisClaro);
-    
-} 
-.button-cart{
-    font-size:12px;
-    margin-left:40px;
-    background-color:var(--grisOscuro);
-    border-radius:30px;
-    padding: 5px;
+    font-size       : 12px;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    margin-left     : 10px;
+    background-color: var(--grisClaro);
 }
-.total-cart{
-    font-size:12px;
-    font-weight:bold;
-    text-transform: uppercase;
-    margin-left:10px;
-    background-color:var(--grisClaro);
-    padding: 10px;
 
+.button-cart {
+    font-size       : 12px;
+    margin-left     : 40px;
+    background-color: var(--grisOscuro);
+    border-radius   : 30px;
+    padding         : 5px;
 }
-    
-    
+
+.total-cart {
+    font-size       : 12px;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    margin-left     : 10px;
+    background-color: var(--grisClaro);
+    padding         : 10px;
+}
+
+
 
 .zapatilla-cart1 a:visited {
     color: black;
 }
 
 
-/* PRODUCT DETAIL
-PRODUCT DETAIL
-PRODUCT DETAIL
-PRODUCT DETAIL
- */
+/* <-------------- PRODUCT DETAIL.HTML --------------> */
+/* <-------------- PRODUCT DETAIL.HTML --------------> */
+/* <-------------- PRODUCT DETAIL.HTML --------------> */
 
- .body-detail {
-
-    font-family:'roboto',sans-serif ;
-    background: url(/images/background.jpg) fixed;
-    background-size:cover;
-    
-
-    
+.body-detail {
+    font-family    : 'roboto', sans-serif;
+    background     : url(/images/background.jpg) fixed;
+    background-size: cover;
 }
-.titulo-detail{
 
-   padding: 10px;
-
+.titulo-detail {
+    padding: 10px;
 }
 
 .section-detail {
     background-color: white;
-    height: 90%;
-
-
+    height          : 90%;
 }
+
 .imagen-detail {
-   
-    width: 100%;
+    width           : 100%;
     background-color: var(--grisClaro);
-    
 }
 
 .texto-detail {
+    line-height: 30px;
+    margin     : 10px;
+}
 
-    line-height:30px;
-    margin: 10px;
+.addcart-detail {
+    font-size       : 12px;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    margin-left     : 40px;
+    background-color: var(--grisOscuro);
+    border-radius   : 50px;
+    padding         : 7px;
+}
 
-}   
-.addcart-detail{
-    font-size:12px;
-    font-weight:bold;
-    text-transform: uppercase;
-    margin-left:40px;
-    background-color:var(--grisOscuro);
-    border-radius:50px;
-    padding: 7px;
-    
-   
-} 
 .addcart-detail a:visited {
     color: black;
 }
 
-/* REGISTER
-REGISTER
-REGISTER
-REGISTER */
+
+/* <-------------- REGISTER.HTML --------------> */
+/* <-------------- REGISTER.HTML --------------> */
+/* <-------------- REGISTER.HTML --------------> */
 
 .body-register {
 
-    font-family:'roboto',sans-serif ;
-    background: url(/images/background.jpg) fixed;
-    background-size:cover;
-    min-width: 400px;
-    max-width: 1000px;
-    padding: 50px;
+    font-family    : 'roboto', sans-serif;
+    background     : url(/images/background.jpg) fixed;
+    background-size: cover;
+    min-width      : 400px;
+    max-width      : 1000px;
+    padding        : 50px;
 }
 
 main div h1 {
     text-align: center;
-    color:var(--grisOscuro);
-    margin: 20px 0;
+    color     : var(--grisOscuro);
+    margin    : 20px 0;
 }
 
-/* ===  Caja register === */
+/* <-CAJA - REGISTER-> */
 
 .box-register {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    min-height: 80%;
-    padding: 20px;
-    background:var(--grisClaro);
-    opacity: 0.9;
-    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.61);
+    display           : flex;
+    align-items       : center;
+    flex-direction    : column;
+    justify-content   : center;
+    width             : 80%;
+    min-height        : 80%;
+    padding           : 20px;
+    background        : var(--grisClaro);
+    opacity           : 0.9;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
+    box-shadow        : 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
-/* ===  Caja register === */
+/* <-CHECKBOX - REGISTER-> */
 
 .intereses-register {
-    text-align: left;
-    flex-direction: column;
+    text-align     : left;
+    flex-direction : column;
     justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
+    width          : 100%;
+    min-height     : 100%;
+    padding        : 20px;
 }
 
-
-
-/* === formulario === */
+/* <-FORMULARIO - REGISTER-> */
 
 .form-register {
-    text-align: center;
+    text-align      : center;
     background-color: #ECF0F1;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 10px 0;
-    width: 100%;
-    transition: border .5s;
+    border          : 2px solid transparent;
+    border-radius   : 3px;
+    font-size       : 16px;
+    font-weight     : 200;
+    padding         : 10px 0;
+    width           : 100%;
+    transition      : border .5s;
 }
 
-/* === Logo Register === */
+/* <-LOGO - REGISTER-> */
 
 .logo-register {
     height: 120px;
-    width: 120px;
+    width : 120px;
     margin: auto;
 }
 
-/* === Botones Register === */
+/* <-BOTONES - REGISTER-> */
 
 .submit-login {
-    border: 2px solid transparent;
-    background: var(--celesteOscuro);
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 25px;
-    padding: 10px 0;
+    border         : 2px solid transparent;
+    background     : var(--celesteOscuro);
+    color          : #ffffff;
+    font-size      : 16px;
+    line-height    : 25px;
+    padding        : 10px 0;
     text-decoration: none;
-    text-shadow: none;
-    border-radius: 3px;
-    box-shadow: none;
-    transition: 0.25s;
-    display: block;
-    width: 80px;
-    margin: 0 auto;
-    display: inline;
+    text-shadow    : none;
+    border-radius  : 3px;
+    box-shadow     : none;
+    transition     : 0.25s;
+    display        : block;
+    width          : 80px;
+    margin         : 0 auto;
+    display        : inline;
 }
 
 .submit-login:hover {
     background-color: var(--celesteClaro);
-  }
+}
 
 .link-register {
     text-decoration: none;
 }
 
-/* TERMS
-TERMS
-TERMS
-TERMS */
+
+/* <-------------- TERMS.HTML --------------> */
+/* <-------------- TERMS.HTML --------------> */
+/* <-------------- TERMS.HTML --------------> */
 
 .body-terms {
-    font-family:'roboto',sans-serif ;
-    background: var(--grisClaro);
-    min-width: 400px;
-    max-width: 1000px;
-    padding: 50px;
+    font-family: 'roboto', sans-serif;
+    background : var(--grisClaro);
+    min-width  : 400px;
+    max-width  : 1000px;
+    padding    : 50px;
+}
+
+
+/* <-------------- MEDIA QUERIES --------------> */
+/* <-------------- MEDIA QUERIES --------------> */
+/* <-------------- MEDIA QUERIES --------------> */
+
+@media (min-width:361px) {
+    /* TABLET */
+
+
+    .titulos-footer {
+        font-size: 16px;
+    }
+
+    .footer-index {
+        font-size: 14px;
+    }
+
+    .menu-index {
+
+        display        : flex;
+        justify-content: center;
+        flex-wrap      : wrap;
+    }
+
+
+
+}
+
+@media (min-width:769px) {
+    /* DESKTOPS */
+    /* reglas de estilo */
 }
