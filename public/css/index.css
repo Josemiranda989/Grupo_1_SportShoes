@@ -54,27 +54,45 @@
 }
 
 .signin-index {
-    text-decoration: none;
     color          : white;
     font-size      : 15px;
     font-weight    : bold;
     margin         : 20px;
     display        : flex;
+    background: black;
+    padding: 8px;
+    border-radius: 15%;
+    min-width:45px;
+}
+
+.signin-index:hover, .signup-index:hover {
+    background-color: var(--celesteOscuro);
+    transform: scale(1.2);
+    transition: .5s;
 }
 
 .signup-index {
-    text-decoration: none;
     color          : white;
     font-size      : 15px;
     font-weight    : bold;
     margin         : 20px;
     display        : flex;
+    background: black;
+    padding: 8px;
+    border-radius: 15%;
+    min-width:45px;
 }
 
 .logo-index {
     height: 40px;
     margin: 20px 5px;
+    align-self:center;
+}
 
+.logo-index:hover {
+    border-radius: 5%;
+    transform: scale(1.1);
+    transition: 0.8s;
 }
 
 /* <-SEARCH - MENU - INDEX-> */
@@ -90,8 +108,10 @@
 }
 
 .item-index {
-    margin   : 0 5px;
+    margin   : 5px;
     font-size: 16px;
+    padding: 10px;
+    border-radius: 20%;
 }
 
 .search-menu-index {
@@ -116,9 +136,10 @@
     margin : 10;
 }
 
-
-.menu-index li a:hover {
-    color: var(--grisClaro);
+.item-index:hover {
+    background-color: var(--celesteOscuro);
+    transform: scale(1.2);
+    transition: 0.5s;
 }
 
 
