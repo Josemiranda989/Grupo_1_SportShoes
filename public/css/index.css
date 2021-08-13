@@ -123,13 +123,20 @@
 
 
 .far,
-.fas,
+.fas, 
 .fa {
-    margin     : 3px;
+    margin-right: 3px;
     align-items: flex-end;
     display    : flex;
 }
+.fa {
+    background-color: white;
+} 
+ 
+.search-text {
+    border: 1px;
 
+}
 .search-box-index {
     display: flex;
     margin : 10;
@@ -148,9 +155,9 @@
 .titulo1-index {
     width       : 80%;
     font-size   : 22px;
-    padding-top : 300px;
     padding-left: 40px;
     font-weight : bold;
+    padding-bottom: 5px;   
 }
 
 .titulo2-index {
@@ -170,7 +177,14 @@
     background-repeat  : no-repeat;
     background-position: center center;
     border-top         : 5px solid #E8F0F2;
-    border-bottom      : 5px solid #E8F0F2
+    border-bottom      : 5px solid #E8F0F2;
+    height: 539px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:flex-start;
+
+
 }
 
 .section2-index {
@@ -187,8 +201,12 @@
     font-weight     : bold;
     text-transform  : uppercase;
     margin-left     : 40px;
-    background-color: var(--grisOscuro);
-    border-radius   : 50px;
+    background-color: gray;
+    border-radius   : 10%;
+    margin-bottom: 20px;
+    height:30px;
+    width:90px;
+    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
 .call-index a:visited {
@@ -559,5 +577,10 @@ main div h1 {
 
     .titulo2-index {
         color: black;
+    }
+
+    .far,
+    .fas{
+    margin-left: 10px;
     }
 }
