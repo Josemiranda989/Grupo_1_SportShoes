@@ -33,7 +33,7 @@
 .nav-index {
     background-color: #053742;
     opacity         : 0.95;
-    padding-bottom:10px;
+    padding-bottom  : 10px;
 }
 
 /* <-LOGO - SIGN IN - SING UP - INDEX-> */
@@ -54,45 +54,44 @@
 }
 
 .signin-index {
-    color          : white;
-    font-size      : 15px;
-    font-weight    : bold;
-    margin         : 20px;
-    display        : flex;
-    background: black;
-    padding: 8px;
+    color        : white;
+    font-size    : 15px;
+    font-weight  : bold;
+    margin       : 20px;
+    display      : flex;
+    padding      : 8px;
     border-radius: 15%;
-    min-width:45px;
+    min-width    : 45px;
 }
 
-.signin-index:hover, .signup-index:hover {
+.signin-index:hover,
+.signup-index:hover {
     background-color: var(--celesteOscuro);
-    transform: scale(1.2);
-    transition: .5s;
+    transform       : scale(1.2);
+    transition      : .5s;
 }
 
 .signup-index {
-    color          : white;
-    font-size      : 15px;
-    font-weight    : bold;
-    margin         : 20px;
-    display        : flex;
-    background: black;
-    padding: 8px;
+    color        : white;
+    font-size    : 15px;
+    font-weight  : bold;
+    margin       : 20px;
+    display      : flex;
+    padding      : 8px;
     border-radius: 15%;
-    min-width:45px;
+    min-width    : 45px;
 }
 
 .logo-index {
-    height: 40px;
-    margin: 20px 5px;
-    align-self:center;
+    height    : 40px;
+    margin    : 20px 5px;
+    align-self: center;
 }
 
 .logo-index:hover {
     border-radius: 5%;
-    transform: scale(1.1);
-    transition: 0.8s;
+    transform    : scale(1.1);
+    transition   : 0.8s;
 }
 
 /* <-SEARCH - MENU - INDEX-> */
@@ -108,9 +107,9 @@
 }
 
 .item-index {
-    margin   : 5px;
-    font-size: 16px;
-    padding: 10px;
+    margin       : 5px;
+    font-size    : 16px;
+    padding      : 10px;
     border-radius: 20%;
 }
 
@@ -138,8 +137,8 @@
 
 .item-index:hover {
     background-color: var(--celesteOscuro);
-    transform: scale(1.2);
-    transition: 0.5s;
+    transform       : scale(1.2);
+    transition      : 0.5s;
 }
 
 
@@ -203,7 +202,7 @@
     color           : white;
     display         : flex;
     width           : 100%;
-    flex-direction:row;
+    flex-direction  : row;
     justify-content : space-between;
     font-size       : 15px;
     flex-wrap       : wrap;
@@ -517,9 +516,13 @@ main div h1 {
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
 
-@media (min-width:480px) {
-    /* TABLET */
+@@media (min-width:480px) {
 
+    /* TABLET */
+    .body-index {
+        width : 80%;
+        margin: auto
+    }
 
     .titulos-footer {
         font-size: 16px;
@@ -536,11 +539,25 @@ main div h1 {
         flex-wrap      : wrap;
     }
 
+    .section1-index {
 
+        background         : url(/images/section1-index.jpg);
+        width              : 100%;
+        background-size    : cover;
+        background-repeat  : no-repeat;
+        background-position: center center;
+    }
 
-}
+    .section2-index {
 
-@media (min-width:769px) {
-    /* DESKTOPS */
-    /* reglas de estilo */
+        background         : url(/images/section2-index.jpg);
+        width              : 100%;
+        background-size    : cover;
+        background-repeat  : no-repeat;
+        background-position: center center;
+    }
+
+    .titulo2-index {
+        color: black;
+    }
 }
