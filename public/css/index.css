@@ -516,12 +516,12 @@ main div h1 {
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
 
-@@media (min-width:480px) {
+@media (min-width:480px) {
 
     /* TABLET */
     .body-index {
         width : 80%;
-        margin: auto
+        margin: 10px auto;
     }
 
     .titulos-footer {
