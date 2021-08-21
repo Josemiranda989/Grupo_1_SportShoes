@@ -1,12 +1,12 @@
 /* <-------------- CONFIGURACIONES GENERALES --------------> */
 
 * {
-    margin         : 0;
-    padding        : 0;
-    box-sizing     : border-box;
-    list-style     : none;
-    text-decoration: none;
-    --min-width      : 3%; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  --min-width: 3%;
 }
 
 /*El min width esta demas y nos va romper codigos,
@@ -15,248 +15,238 @@ lo puse blanco para no afecte*/
 /* <-------------- VARIABLES --------------> */
 
 :root {
-    --verdeOscuro  : #053742;
-    --celesteOscuro: #39A2DB;
-    --celesteClaro : #A2DBFA;
-    --grisClaro    : #E8F0F2;
-    --grisOscuro   : #5e5e5e;
-    --blanco       : #ffffff;
+  --verdeOscuro: #053742;
+  --celesteOscuro: #39a2db;
+  --celesteClaro: #a2dbfa;
+  --grisClaro: #e8f0f2;
+  --grisOscuro: #5e5e5e;
+  --blanco: #ffffff;
 }
 
 /* <-------------- INDEX.HTML --------------> */
 /* <-------------- INDEX.HTML --------------> */
 /* <-------------- INDEX.HTML --------------> */
 
-
 .body-index {
-    font-family: 'roboto', sans-serif;
-    min-width  : 235px;
+  font-family: 'roboto', sans-serif;
+  min-width: 235px;
 }
 
 .nav-index {
-    background-color: #053742;
-    opacity         : 0.95;
-    padding-bottom  : 10px;
+  background-color: #053742;
+  opacity: 0.95;
+  padding-bottom: 10px;
 }
 
 /* <-LOGO - SIGN IN - SING UP - INDEX-> */
 
 .nav-ingreso-index {
-    display        : flex;
-    list-style     : none;
-    justify-content: space-around;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
 .header-index {
-    width: 100%;
+  width: 100%;
 }
 
 .ingreso-index {
-    display: flex;
-    margin : auto 0;
+  display: flex;
+  margin: auto 0;
 }
 
 .signin-index {
-    color        : white;
-    font-size    : 15px;
-    font-weight  : bold;
-    margin       : 20px;
-    display      : flex;
-    padding      : 8px;
-    border-radius: 15%;
-    min-width    : 45px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  padding: 8px;
+  border-radius: 15%;
+  min-width: 45px;
 }
 
 .signin-index:hover,
 .signup-index:hover {
-    background-color: var(--celesteOscuro);
-    transform       : scale(1.2);
-    transition      : .5s;
+  background-color: var(--celesteOscuro);
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 
 .signup-index {
-    color        : white;
-    font-size    : 15px;
-    font-weight  : bold;
-    margin       : 20px;
-    display      : flex;
-    padding      : 8px;
-    border-radius: 15%;
-    min-width    : 45px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  padding: 8px;
+  border-radius: 15%;
+  min-width: 45px;
 }
 
 .logo-index {
-    height    : 40px;
-    margin    : 20px 5px;
-    align-self: center;
+  height: 40px;
+  margin: 20px 5px;
+  align-self: center;
 }
 
 .logo-index:hover {
-    border-radius: 5%;
-    transform    : scale(1.1);
-    transition   : 0.8s;
+  border-radius: 5%;
+  transform: scale(1.1);
+  transition: 0.8s;
 }
 
 /* <-SEARCH - MENU - INDEX-> */
 
-
-
-
 .menu-index li a {
-    text-decoration: none;
-    color          : white;
-    font-weight    : bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .menu-index {
-    display: none;
+  display: none;
 }
 
 .item-index {
-    margin       : 5px;
-    font-size    : 16px;
-    padding      : 10px;
-    border-radius: 20%;
+  margin: 5px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 20%;
 }
 
 .search-menu-index {
-    display        : flex;
-    justify-content: space-around;
-    align-items    : center;
-    width          : 100%;
-    padding        : 0 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 3px;
 }
 
 .button-search {
-    background-color: white;
-    margin          : 0;
-    border          : 0;
+  background-color: white;
+  margin: 0;
+  border: 0;
 }
 
 .lupa-index {
-    background-color: white;
-    display         : flex;
+  background-color: white;
+  display: flex;
 }
 
 .corazon,
 .carrito {
-    margin-right    : 3px;
-    align-items     : flex-end;
-    display         : flex;
-    background-color:transparent;
-    cursor          : pointer;
+  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.heart-index{ 
-background-color    :transparent ;
+.heart-index {
+  background-color: transparent;
 }
 
- .lupa{
-    background-color:transparent;
-    margin-right    : 3px;
-    align-items     : flex-end;
-    display         :  flex;
-    cursor          : pointer;
-} 
- 
+.lupa {
+  background-color: transparent;
+  margin-right: 3px;
+  align-items: flex-end;
+  display: flex;
+  cursor: pointer;
+}
+
 .search-text {
-    border          : 1px;
-    padding         : 0.5rem 0.75rem;
-    outline         : none;
+  border: 1px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
 }
 .search-box-index {
-    display         : flex;
-    position        : relative;
+  display: flex;
+  position: relative;
 }
 
 .item-index:hover {
-    background-color: var(--celesteOscuro);
-    transform       : scale(1.2);
-    transition      : 0.5s;
+  background-color: var(--celesteOscuro);
+  transform: scale(1.2);
+  transition: 0.5s;
 }
-
-
 
 /* <-MAIN - INDEX-> */
 
 .titulo1-index {
-    width         : 80%;
-    font-size     : 22px;
-    padding-left  : 40px;
-    font-weight   : bold;
-    padding-bottom: 5px;   
+  width: 80%;
+  font-size: 22px;
+  padding-left: 40px;
+  font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .titulo2-index {
-    font-weight : bold;
-    font-size   : 22px;
-    padding-top : 290px;
-    border      : 1px;
-    padding-left: 40px;
-    color       : white;
+  font-weight: bold;
+  font-size: 22px;
+  padding-top: 290px;
+  border: 1px;
+  padding-left: 40px;
+  color: white;
 }
 
-
 .section1-index {
-    background         : url(/images/section1-movile.jpeg);
-    width              : 100%;
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    background-position: center center;
-    border-top         : 5px solid #E8F0F2;
-    border-bottom      : 5px solid #E8F0F2;
-    height             : 539px;
-    display            :flex;
-    flex-direction     :column;
-    justify-content    :flex-end;
-    align-items        :flex-start;
-
-
+  background: url(/images/section1-movile.jpeg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-top: 5px solid #e8f0f2;
+  border-bottom: 5px solid #e8f0f2;
+  height: 539px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .section2-index {
-    background         : url(/images/section2-movile.jpeg);
-    width              : 100%;
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    background-position: center center;
-    border-bottom      : 5px solid #E8F0F2;
+  background: url(/images/section2-movile.jpeg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-bottom: 5px solid #e8f0f2;
 }
 
 .call-index {
-    font-size       : 12px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    margin-left     : 40px;
-    background-color: gray;
-    border-radius   : 10%;
-    margin-bottom   : 20px;
-    height          :30px;
-    width           :90px;
-    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.61);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+  background-color: gray;
+  border-radius: 10%;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 90px;
+  box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
 .call-index a:visited {
-    color: black;
+  color: black;
 }
 
 /* <-FOOTER - INDEX-> */
 
 .footer-index {
-    background-color: black;
-    color           : white;
-    display         : flex;
-    width           : 100%;
-    flex-direction  : row;
-    justify-content : space-between;
-    font-size       : 15px;
-    flex-wrap       : wrap;
-    border-top      : solid 2px white;
-
+  background-color: black;
+  color: white;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  flex-wrap: wrap;
+  border-top: solid 2px white;
 }
 
 .cajas-footer {
-    margin: 10px 6px;
+  margin: 10px 6px;
 }
 
 /* <-------------- LOGIN.HTML --------------> */
@@ -264,380 +254,358 @@ background-color    :transparent ;
 /* <-------------- LOGIN.HTML --------------> */
 
 .body-login {
-    font-family    : 'roboto', sans-serif;
-    background     : url(/images/background.jpg) fixed;
-    background-size: cover;
-    min-width      : 300px;
-    max-width      : 600px;
-    padding        : 50px;
+  font-family: 'roboto', sans-serif;
+  background: url(/images/background.jpg) fixed;
+  background-size: cover;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 50px;
 }
 
 main div h1 {
-    text-align: center;
-    color     : var(--grisOscuro);
-    margin    : 20px 0;
-    font-size : 25px;
-
+  text-align: center;
+  color: var(--grisOscuro);
+  margin: 20px 0;
+  font-size: 25px;
 }
 
 /* <-CAJA - LOGIN-> */
 
 .box-login {
-    display           : flex;
-    align-items       : center;
-    flex-direction    : column;
-    justify-content   : center;
-    width             : 80%;
-    min-height        : 80%;
-    padding           : 20px;
-    background        : var(--grisClaro);
-    opacity           : 0.9;
-    -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
-    box-shadow        : 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  min-height: 80%;
+  padding: 20px;
+  background: var(--grisClaro);
+  opacity: 0.9;
+  -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
 /* <-FORMULARIO - LOGIN> */
 
 .form-login {
-    text-align      : center;
-    background-color: #ECF0F1;
-    border          : 2px solid transparent;
-    border-radius   : 3px;
-    font-size       : 16px;
-    font-weight     : 200;
-    padding         : 10px 0;
-    width           : 100%;
-    transition      : border .5s;
+  text-align: center;
+  background-color: #ecf0f1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 100%;
+  transition: border 0.5s;
 }
 
 /* <-LOGO - LOGIN-> */
 
 .logo-login {
-    /* height: 180px; */
-    width          : 60%;
-    margin         : auto;
-    display        :flex;
-    justify-content: center;
+  /* height: 180px; */
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 /*<-PREGUNTAS DE PASSWORD Y SI TIENE UNA CUENTA->*/
 
-.pregunta-login{
-    text-decoration  :none;
-    font-size        :13px;
-    font-weight      : bolder;
-    line-height      :20px;
-    color            :black;
-    font-family      :"roboto",sans-serif;
-
+.pregunta-login {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bolder;
+  line-height: 20px;
+  color: black;
+  font-family: 'roboto', sans-serif;
 }
 
-.pregunta-login:hover{
-    color:blue;
+.pregunta-login:hover {
+  color: blue;
 }
 
 /* <-BOTON - LOGIN-> */
 
 .submit-login {
-    border         : 2px solid transparent;
-    background     :  var(--celesteClaro);
-    color          : #ffffff;
-    font-size      : 16px;
-    line-height    : 25px;
-    padding        : 10px 0;
-    text-decoration: none;
-    text-shadow    : none;
-    border-radius  : 3px;
-    box-shadow     : none;
-    transition     : 0.25s;
-    display        : block;
-    width          : 200px;
-    margin         : 0 auto;
+  border: 2px solid transparent;
+  background: var(--celesteClaro);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .submit-login:hover {
-    background-color: var(--celesteClaro);
+  background-color: var(--celesteClaro);
 }
-
 
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 
 .titulo-cart {
-    background-color: rgba(82, 176, 197, 0.95);
-    padding         : 10px;
-    color           : var(--blanco);
+  background-color: rgba(82, 176, 197, 0.95);
+  padding: 10px;
+  color: var(--blanco);
 }
 
 .body-cart {
-    font-family: 'roboto', sans-serif;
-    background : var(--blanco);
+  font-family: 'roboto', sans-serif;
+  background: var(--blanco);
 }
 
 .main-cart {
-    width: 100%;
+  width: 100%;
 }
 
 .imagen-cart {
-    background-size : cover;
-    width           : 100%;
-    background-color: var(--grisClaro);
+  background-size: cover;
+  width: 100%;
+  background-color: var(--grisClaro);
 }
 
 .imagen-cart img {
-    background-size: cover;
-    width          : 100%;
+  background-size: cover;
+  width: 100%;
 }
 
 .zapatilla-cart1 {
-    font-size       : 12px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    margin-left     : 10px;
-    background-color: var(--grisClaro);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+  background-color: var(--grisClaro);
 }
 
 .button-cart {
-    font-size       : 12px;
-    margin-left     : 40px;
-    background-color: var(--grisOscuro);
-    border-radius   : 30px;
-    padding         : 5px;
+  font-size: 12px;
+  margin-left: 40px;
+  background-color: var(--grisOscuro);
+  border-radius: 30px;
+  padding: 5px;
 }
 
 .total-cart {
-    font-size       : 12px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    margin-left     : 10px;
-    background-color: var(--grisClaro);
-    padding         : 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+  background-color: var(--grisClaro);
+  padding: 10px;
 }
-
-
 
 .zapatilla-cart1 a:visited {
-    color: black;
+  color: black;
 }
-
 
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 
 .body-detail {
-    font-family    : 'roboto', sans-serif;
-    background     : url(/images/background.jpg) fixed;
-    background-size: cover;
+  font-family: 'roboto', sans-serif;
+  background: url(/images/background.jpg) fixed;
+  background-size: cover;
 }
 
 .titulo-detail {
-    padding: 10px;
+  padding: 10px;
 }
 
 .section-detail {
-    background-color: white;
-    height          : 90%;
+  background-color: white;
+  height: 90%;
 }
 
 .imagen-detail {
-    width           : 100%;
-    background-color: var(--grisClaro);
+  width: 100%;
+  background-color: var(--grisClaro);
 }
 
 .texto-detail {
-    line-height: 30px;
-    margin     : 10px;
+  line-height: 30px;
+  margin: 10px;
 }
 
 .addcart-detail {
-    font-size       : 12px;
-    font-weight     : bold;
-    text-transform  : uppercase;
-    margin-left     : 40px;
-    background-color: var(--grisOscuro);
-    border-radius   : 50px;
-    padding         : 7px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+  background-color: var(--grisOscuro);
+  border-radius: 50px;
+  padding: 7px;
 }
 
 .addcart-detail a:visited {
-    color: black;
+  color: black;
 }
-
 
 /* <-------------- REGISTER.HTML --------------> */
 /* <-------------- REGISTER.HTML --------------> */
 /* <-------------- REGISTER.HTML --------------> */
 
 .body-register {
-
-    font-family    : 'roboto', sans-serif;
-    background     : url(/images/background.jpg) fixed;
-    background-size: cover;
-    min-width      : 400px;
-    max-width      : 1000px;
-    padding        : 50px;
+  font-family: 'roboto', sans-serif;
+  background: url(/images/background.jpg) fixed;
+  background-size: cover;
+  min-width: 400px;
+  max-width: 1000px;
+  padding: 50px;
 }
 
 main div h1 {
-    text-align: center;
-    color     : var(--grisOscuro);
-    margin    : 20px 0;
-    font-size : 25px;
-
-
+  text-align: center;
+  color: var(--grisOscuro);
+  margin: 20px 0;
+  font-size: 25px;
 }
 
 /* <-CAJA - REGISTER-> */
 
 .box-register {
-    display           : flex;
-    align-items       : center;
-    flex-direction    : column;
-    justify-content   : center;
-    width             : 80%;
-    min-height        : 80%;
-    padding           : 20px;
-    background        : var(--grisClaro);
-    opacity           : 0.9;
-    -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
-    box-shadow        : 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  min-height: 80%;
+  padding: 20px;
+  background: var(--grisClaro);
+  opacity: 0.9;
+  -webkit-box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
 /* <-CHECKBOX - REGISTER-> */
 
 .intereses-register {
-    text-align     : left;
-    flex-direction : column;
-    justify-content: center;
-    width          : 100%;
-    min-height     : 100%;
-    padding        : 20px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
 }
 
 /* <-FORMULARIO - REGISTER-> */
 
 .form-register {
-    text-align      : center;
-    background-color: #ECF0F1;
-    border          : 2px solid transparent;
-    border-radius   : 3px;
-    font-size       : 16px;
-    font-weight     : 200;
-    padding         : 10px 0;
-    width           : 100%;
-    transition      : border .5s;
+  text-align: center;
+  background-color: #ecf0f1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 100%;
+  transition: border 0.5s;
 }
 
 /* <-LOGO - REGISTER-> */
 
 .logo-register {
-    height: 120px;
-    width : 120px;
-    display:flex;
-    justify-content:center;
-    
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
 }
-
-
 
 /* <-BOTONES - REGISTER-> */
 
 .submit-login {
-    border         : 2px solid transparent;
-    background     : var(--celesteClaro);
-    color          : #ffffff;
-    font-size      : 16px;
-    line-height    : 25px;
-    padding        : 10px 0;
-    text-decoration: none;
-    text-shadow    : none;
-    border-radius  : 3px;
-    box-shadow     : none;
-    transition     : 0.25s;
-    display        : block;
-    width          : 80px;
-    margin         : 0 auto;
-    display        : inline;
+  border: 2px solid transparent;
+  background: var(--celesteClaro);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  display: inline;
 }
 
 .submit-login:hover {
-    background-color: var(--celesteClaro);
+  background-color: var(--celesteClaro);
 }
 
 .link-register {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /* <-------------- TERMS.HTML --------------> */
 /* <-------------- TERMS.HTML --------------> */
 /* <-------------- TERMS.HTML --------------> */
 
 .body-terms {
-    font-family: 'roboto', sans-serif;
-    background : var(--grisClaro);
-    min-width  : 400px;
-    max-width  : 1000px;
-    padding    : 50px;
+  font-family: 'roboto', sans-serif;
+  background: var(--grisClaro);
+  min-width: 400px;
+  max-width: 1000px;
+  padding: 50px;
 }
 
-
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
 
-@media (min-width:480px) {
+@media (min-width: 480px) {
+  /* TABLET */
+  .body-index {
+    width: 95%;
+    margin: 10px auto;
+  }
 
-    /* TABLET */
-    .body-index {
-        width : 80%;
-        margin: 10px auto;
-    }
+  .titulos-footer {
+    font-size: 16px;
+  }
 
-    .titulos-footer {
-        font-size: 16px;
-    }
+  .footer-index {
+    font-size: 14px;
+  }
 
-    .footer-index {
-        font-size: 14px;
-    }
+  .menu-index {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .menu-index {
+  .section1-index {
+    background: url(/images/section1-index.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-        display        : flex;
-        justify-content: center;
-        flex-wrap      : wrap;
-    }
+  .section2-index {
+    background: url(/images/section2-index.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-    .section1-index {
+  .titulo2-index {
+    color: black;
+  }
 
-        background         : url(/images/section1-index.jpg);
-        width              : 100%;
-        background-size    : cover;
-        background-repeat  : no-repeat;
-        background-position: center center;
-    }
-
-    .section2-index {
-
-        background         : url(/images/section2-index.jpg);
-        width              : 100%;
-        background-size    : cover;
-        background-repeat  : no-repeat;
-        background-position: center center;
-    }
-
-    .titulo2-index {
-        color: black;
-    }
-
-    .corazon,
-    .carrito{
+  .corazon,
+  .carrito {
     margin-left: 10px;
-    }
+  }
 }
-
-

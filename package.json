@@ -1,9 +1,12 @@
+ 
 {
   "name": "grupo_1_sportshoes",
   "version": "1.0.0",
   "description": "![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/design/Sport%20Shoes.png)",
   "main": "app.js",
+  "private": true,
   "scripts": {
+    "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +21,13 @@
   "homepage": "https://github.com/Josemiranda989/Grupo_1_SportShoes#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+
   }
 }
