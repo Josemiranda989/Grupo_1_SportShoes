@@ -1,4 +1,3 @@
- 
 {
   "name": "grupo_1_sportshoes",
   "version": "1.0.0",
@@ -27,6 +26,5 @@
     "ejs": "~2.6.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-
   }
 }
