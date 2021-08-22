@@ -9,7 +9,7 @@ Focalizarnos en la practica tanto personal como grupal para de esta manera poder
 
 3. Continuar haciendo.
 
-Seguir con la misma comunicacion y siempre estar actulizandonos con los conocimientos. 
+Seguir con la misma comunicacion y siempre estar actualizandonos con los conocimientos. 
 
 4. Hacer menos.
 
