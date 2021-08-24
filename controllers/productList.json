@@ -18,7 +18,7 @@
     "description": "Primeknit, adaptive knit, and mesh allow you to customize the look and feel of your shoes.",
     "price": 170,
     "size": 9,
-    "category": "women´s",
+    "category": "Women´s",
     "img1": "/images/shoes-img/Adidas-originals/1.png",
     "img2": "images/shoes-img/Adidas-Originals/2.png",
     "img3": "images/shoes-img/Adidas-Originals/3.png",
@@ -78,6 +78,20 @@
   },
 
   {
+    "nameproduct": "Newbalance-Vision",
+    "brand": "New Balance",
+    "description": "Translucent outsole with VISION print adds standout style.",
+    "price": 190,
+    "size": 6,
+    "category": "Women´s",
+    "img1": "/images/shoes-img/Newbalance-Vision/MPRMXCM_a1.png",
+    "img2": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a2.png",
+    "img3": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a3.png",
+    "img4": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a4.png"
+  },
+
+
+  {
     "nameproduct": "Crocs-green",
     "brand": "Crocs",
     "description": "The water-friendly and buoyant design adds functionality.",
@@ -96,7 +110,7 @@
     "description": "The water-friendly and buoyant design adds functionality.",
     "price": 160,
     "size": 6,
-    "category": "women´s",
+    "category": "Women´s",
     "img1": "/images/shoes-img/Crocs-red/16ENRED_a1.png",
     "img2": "/images/shoes-img/Crocs-red/16ENRED_a2.png",
     "img3": "/images/shoes-img/Crocs-red/16ENRED_a3.png",
@@ -142,19 +156,7 @@
     "img4": "/images/shoes-img/Newbalance-Fuel/MPRMXCM_a4.png"
   },
 
-  {
-    "nameproduct": "Newbalance-Vision",
-    "brand": "New Balance",
-    "description": "agregar description",
-    "price": 190,
-    "size": 12,
-    "category": "Men´s",
-    "img1": "/images/shoes-img/Newbalance-Vision/MPRMXCM_a1.png",
-    "img2": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a2.png",
-    "img3": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a3.png",
-    "img4": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a4.png"
-  },
-
+ 
   {
     "nameproduct": "Newbalance-Wnl 327",
     "brand": "New Balance",
