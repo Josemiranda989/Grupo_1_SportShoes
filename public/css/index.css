@@ -6,7 +6,6 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  --min-width: 3%;
 }
 
 /*El min width esta demas y nos va romper codigos,
@@ -409,30 +408,41 @@ main div h1 {
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
-
 .body-detail {
   font-family: 'roboto', sans-serif;
-  background: url(/images/background.jpg) fixed;
+background: url(/images/background.jpg) fixed;
   background-size: cover;
+  min-width: 300px;
+  width: 100%;
+  padding: 10px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.section-detail {
+  background-color: white;
+  width: 98%;  
+ box-shadow: 1px 1px 2px 
+
 }
 
 .titulo-detail {
   padding: 10px;
-}
-
-.section-detail {
-  background-color: white;
-  height: 90%;
+  text-align:center;
 }
 
 .imagen-detail {
-  width: 75%;
+  width: 90%;
   background-color: var(--grisClaro);
+ display: block; margin: auto;
+ box-shadow: 1px 1px 2px;
+ max-width: 1000px;
 }
 
 .texto-detail {
   line-height: 30px;
-  margin: 10px;
+  margin: 20px 0 20px 40px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .addcart-detail {
@@ -443,6 +453,7 @@ main div h1 {
   background-color: var(--grisOscuro);
   border-radius: 50px;
   padding: 7px;
+  margin: 0 0 20px 40px;
 }
 
 .addcart-detail a:visited {

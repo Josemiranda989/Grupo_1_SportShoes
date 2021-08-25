@@ -1,3 +1,7 @@
+/* Lista de Productos .JSON */
+const product = require ('../controllers/productList.json')
+
+
 const mainController = {
     index: (req, res) => { 
         res.render('index', { title: 'SPORT SHOES' });
@@ -17,12 +21,7 @@ const mainController = {
         res.render('productCart');
 
     },
-    
-    productDetail: (req, res) => {
-        res.render('productDetail');
-
-    },
-    
+      
     register: (req, res) => {
         res.render('register');
 
@@ -31,7 +30,19 @@ const mainController = {
     terms: (req, res) => {
         res.render('terms');
 
-    },
+    }, 
+    
+    productDetail: (req, res) => {
+        const shoes= req.params.shoes
+        let shoesParaMostrar;
+
+        for( let i=0; i< product.length; i++){
+            if (product[i].nameproduct==shoes ){
+                shoesParaMostrar=product[i];
+              }
+            }
+        res.render('productDetail',{product:shoesParaMostrar});
+    }
 }
 
     
@@ -39,3 +50,5 @@ const mainController = {
 
 
 module.exports = mainController;
+
+
