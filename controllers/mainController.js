@@ -14,7 +14,7 @@ const mainController = {
     },
     
     productCart: (req, res) => {
-        res.render('producCart');
+        res.render('productCart');
 
     },
     
@@ -32,7 +32,10 @@ const mainController = {
         res.render('terms');
 
     },
-
 }
+
+    
+
+
 
 module.exports = mainController;

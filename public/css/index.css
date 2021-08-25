@@ -426,7 +426,7 @@ main div h1 {
 }
 
 .imagen-detail {
-  width: 100%;
+  width: 75%;
   background-color: var(--grisClaro);
 }
 
