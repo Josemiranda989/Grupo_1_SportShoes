@@ -367,13 +367,13 @@ main div h1 {
 
 .imagen-cart {
   background-size: cover;
-  width: 100%;
+  width: 80%;
   background-color: var(--grisClaro);
 }
 
 .imagen-cart img {
   background-size: cover;
-  width: 100%;
+  width: 75%;
 }
 
 .zapatilla-cart1 {
@@ -417,21 +417,21 @@ background: url(/images/background.jpg) fixed;
   padding: 10px;
   max-width: 1500px;
   margin: 0 auto;
-}
-.section-detail {
-  background-color: white;
+}.section-detail {
+  background-color: cadetblue;
   width: 98%;  
- box-shadow: 1px 1px 2px 
+ box-shadow: 1px 1px 2px;
+  
 
 }
 
 .titulo-detail {
-  padding: 10px;
+  padding: 15px;
   text-align:center;
 }
 
 .imagen-detail {
-  width: 90%;
+  width: 60%;
   background-color: var(--grisClaro);
  display: block; margin: auto;
  box-shadow: 1px 1px 2px;
@@ -441,12 +441,26 @@ background: url(/images/background.jpg) fixed;
 .texto-detail {
   line-height: 30px;
   margin: 20px 0 20px 40px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  text-align:left;
+}
+.addcart-detail-signin {
+  font-size: 18px;
+  margin: 5px;
+  background-color: cadetblue;
+  border-radius: 50px;
+  
 }
 
+.addcart-detail-signin a:visited {
+  color: black;
+  
+}
+
+
 .addcart-detail {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 40px;
@@ -454,6 +468,7 @@ background: url(/images/background.jpg) fixed;
   border-radius: 50px;
   padding: 7px;
   margin: 0 0 20px 40px;
+  
 }
 
 .addcart-detail a:visited {
