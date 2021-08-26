@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title> Sportshoes </title>
-</head>
+<%- include('./partials/head', {title: "Product Cart"}) %>
 
 <body class="body-cart">
+    <%- include('./partials/header') %>
     <main class="main-cart"> 
         <h1 class="titulo-cart"> My Cart </h1>
         <form class="zapatilla-cart1" action="/" method="POST">
@@ -23,12 +16,8 @@
                 <div>  Excluded from discount   </div>
              </section>
              <button class="button-cart"  type="reset" >Remove </button>
-             <button class="button-cart"  type="submit">Save for later </button>
-            
-        
-        </form>
-           
-
+             <button class="button-cart"  type="submit">Save for later </button>           
+        </form>         
         <form class="zapatilla-cart1" action="/" method="POST">
                 <div class="imagen-cart"><img src="/images/shoes-img/Newbalance-Wnl/1.png" alt="producto para agregar"></div>
             <section>
@@ -39,14 +28,11 @@
                     <div>  Excluded from discount   </div>
                     <button class="button-cart"  type="reset" >Remove </button>
                     <button class="button-cart"  type="submit">Save for later </button>
-            </section>
-            
-            
+            </section>                       
         </form>
         <form class="zapatilla-cart1" action="/" method="POST">
             <div class="imagen-cart"><img src="images/shoes-img/Vans-Old2/1.png" alt="producto para agregar"></div>
-            <section>
-        
+            <section>        
                 <div> Vans-Old2- light Blue - Red 
                     SIZE	12.5 Men's</div>
                     <div> QTY	1         </div>
@@ -54,10 +40,8 @@
                     <div>  Excluded from discount   </div>
                     <button class="button-cart"  type="reset" >Remove </button>
                     <button class="button-cart"  type="submit">Save for later </button>
-            </section>
-            
+            </section>            
         </form>
-
         <div class="total-cart">
             Total products = 3
         </div>
@@ -65,11 +49,8 @@
             Amount = $530
         </div>
         <button class="button-cart"  type="reset" >Start Payment </button>
-    </main>
-
-
-	
+    </main>	
 <body>
-    
+<%- include('./partials/footer') %>
 </body>
 </html>

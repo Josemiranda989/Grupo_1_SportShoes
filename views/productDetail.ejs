@@ -1,19 +1,16 @@
 <%- include('./partials/head', {title: product.nameproduct}) %>
 
 <body class="body-detail">
-   <section class= "section-detail " >
+    <%- include('./partials/header') %>
+    <section class= "section-detail " >
          <h1 class="titulo-detail"> <%= product.nameproduct %>  </h1>
     <div >
         
         <img class="imagen-detail " src=" <%= product.img1 %> "  alt="producto para agregar">
         
-    </div>
-    
-        <form action="/" method="POST">
-           
-            
-            <div class = "texto-detail">
-                 
+    </div>    
+        <form action="/" method="POST">                       
+            <div class = "texto-detail">                 
                 <div>       
                     <label>Select Color</label>                              
                     <select name="color">
@@ -22,7 +19,6 @@
                 <option value="red">Red </option>
                 <option value="blue">Blue </option>
                     </select>
-
                 </div>
                 <div>       
                     <label>Select a Size</label>                                    
@@ -31,24 +27,16 @@
                 <option value="8.5">8.5 </option>
                 <option value="9.0">9.0 </option>
                 <option value="10.0">10.0 </option>
-
                     </select>
                 <div> Price $<%= product.price %> </div> 
                 </div>
-                <p> IMPORTANT MESSAGE
-                    
+                <p> IMPORTANT MESSAGE                    
                     Your order is not finalized until you've received a shipment confirmation email. To checkout faster, please
                      <button class="addcart-detail-signin"> <a href="/login" type="submit" >Sign In> </a> </button> </p>
-
             </div>
-            <button class="addcart-detail"> <a href="/productCart" type="submit" >ADD TO CART> </a> </button>
-            
-            
-            
+            <button class="addcart-detail"> <a href="/productCart" type="submit" >ADD TO CART> </a> </button>                     
         </form>   
-
    </section>
-
-
+   <%- include('./partials/footer') %>
 </body>
 </html>
