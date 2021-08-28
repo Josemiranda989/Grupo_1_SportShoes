@@ -8,9 +8,6 @@
   text-decoration: none;
 }
 
-/*El min width esta demas y nos va romper codigos,
-lo puse blanco para no afecte*/
-
 /* <-------------- VARIABLES --------------> */
 
 :root {
@@ -29,147 +26,15 @@ lo puse blanco para no afecte*/
 .body-index {
   font-family: 'roboto', sans-serif;
   min-width: 235px;
+}.navbar {
+    background-color: #16414c;
 }
 
-.nav-index {
-  background-color: #053742;
-  opacity: 0.95;
-  padding-bottom: 20px;
-  border:1px;
-  margin-bottom:2px
-}
-
-/* <-LOGO - SIGN IN - SING UP - INDEX-> */
-
-.nav-ingreso-index {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-
-.header-index {
-  width: 100%;
-}
-
-.ingreso-index {
-  display: flex;
-  margin: auto 0;
-}
-
-.signin-index {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 20px;
-  display: flex;
-  padding: 8px;
-  border-radius: 15%;
-  min-width: 45px;
-}
-
-.signin-index:hover,
-.signup-index:hover {
-  background-color: var(--celesteOscuro);
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-.signup-index {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 20px;
-  display: flex;
-  padding: 8px;
-  border-radius: 15%;
-  min-width: 45px;
-}
-
-.logo-index {
-  height: 40px;
-  margin: 20px 5px;
-  align-self: center;
-}
-
-.logo-index:hover {
-  border-radius: 5%;
-  transform: scale(1.1);
-  transition: 0.8s;
-}
-
-/* <-SEARCH - MENU - INDEX-> */
-
-.menu-index li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.menu-index {
-  display: none;
-}
-
-.item-index {
-  margin: 5px;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 20%;
-}
-
-.search-menu-index {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 0 3px;
-}
-
-.button-search {
-  background-color: white;
-  margin: 0;
-  border: 0;
-}
-
-.lupa-index {
-  background-color: white;
-  display: flex;
-}
-
-.corazon,
-.carrito {
-  margin-right: 3px;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.heart-index {
-  background-color: transparent;
-}
-
-.lupa {
-  background-color: transparent;
-  margin-right: 3px;
-  align-items: flex-end;
-  display: flex;
-  cursor: pointer;
-}
-
-.search-text {
-  border: 1px;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-}
-.search-box-index {
-  display: flex;
-  position: relative;
-}
-
-.item-index:hover {
-  background-color: var(--celesteOscuro);
-  transform: scale(1.2);
-  transition: 0.5s;
+.carousel {
+  background: #91C9EA;
+  background: -moz-linear-gradient(top, #91C9EA 0%, #1C6EA4 50%, #000000 100%);
+  background: -webkit-linear-gradient(top, #91C9EA 0%, #1C6EA4 50%, #000000 100%);
+  background: linear-gradient(to bottom, #91C9EA 0%, #1C6EA4 50%, #000000 100%);
 }
 
 /* <-MAIN - INDEX-> */
@@ -601,7 +466,7 @@ main div h1 {
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   /* TABLET */
   .body-index {
     width: 95%;
