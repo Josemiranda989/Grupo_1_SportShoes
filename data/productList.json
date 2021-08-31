@@ -7,9 +7,9 @@
     "size": 8,
     "category": "Men´s",
     "img1": "/images/shoes-img/Adidas-Flowers/1.png",
-    "img2": "images/shoes-img/Adidas-Flowers/2}.png",
-    "img3": "images/shoes-img/Adidas-Flowers/3.png",
-    "img4": "images/shoes-img/Adidas-Flowers/4.png"
+    "img2": "/images/shoes-img/Adidas-Flowers/2.png",
+    "img3": "/images/shoes-img/Adidas-Flowers/3.png",
+    "img4": "/images/shoes-img/Adidas-Flowers/4.png"
   },
 
   { "id":2,
@@ -20,9 +20,9 @@
     "size": 9,
     "category": "Women´s",
     "img1": "/images/shoes-img/Adidas-originals/1.png",
-    "img2": "images/shoes-img/Adidas-Originals/2.png",
-    "img3": "images/shoes-img/Adidas-Originals/3.png",
-    "img4": "images/shoes-img/Adidas-Originals/4.png"
+    "img2": "/images/shoes-img/Adidas-Originals/2.png",
+    "img3": "/images/shoes-img/Adidas-Originals/3.png",
+    "img4": "/images/shoes-img/Adidas-Originals/4.png"
   },
 
   { "id":3,
@@ -33,9 +33,9 @@
     "size": 10,
     "category": "Men´s",
     "img1": "/images/shoes-img/Adidas-pw/1.png",
-    "img2": "images/shoes-img/Adidas-pw/2.png",
-    "img3": "images/shoes-img/Adidas-pw/3.png",
-    "img4": "images/shoes-img/Adidas-pw/4.png"
+    "img2": "/images/shoes-img/Adidas-pw/2.png",
+    "img3": "/images/shoes-img/Adidas-pw/3.png",
+    "img4": "/images/shoes-img/Adidas-pw/4.png"
   },
 
   { "id":4,
@@ -46,9 +46,9 @@
     "size": 8,
     "category": "Women´s",
     "img1": "/images/shoes-img/Adidas-Superstan/1.png",
-    "img2": "images/shoes-img/Adidas-Superstan/2.png",
-    "img3": "images/shoes-img/Adidas-Superstan/3.png",
-    "img4": "images/shoes-img/Adidas-Superstan/4.png"
+    "img2": "/images/shoes-img/Adidas-Superstan/2.png",
+    "img3": "/images/shoes-img/Adidas-Superstan/3.png",
+    "img4": "/images/shoes-img/Adidas-Superstan/4.png"
   },
 
   { "id":5,
@@ -71,10 +71,10 @@
     "price": 150,
     "size": 6,
     "category": "Women´s",
-    "img1": "/images/shoes-img/Crocs-blue/10014JLM_a1.png",
-    "img2": "/images/shoes-img/Crocs-blue/10014JLM_a2.png",
-    "img3": "/images/shoes-img/Crocs-blue/10014JLM_a3.png",
-    "img4": "/images/shoes-img/Crocs-blue/10014JLM_a4.png"
+    "img1": "/images/shoes-img/Crocs-blue/1.png",
+    "img2": "/images/shoes-img/Crocs-blue/2.png",
+    "img3": "/images/shoes-img/Crocs-blue/3.png",
+    "img4": "/images/shoes-img/Crocs-blue/4.png"
   },
 
   { "id":7,
@@ -84,10 +84,10 @@
     "price": 190,
     "size": 6,
     "category": "Women´s",
-    "img1": "/images/shoes-img/Newbalance-Vision/MPRMXCM_a1.png",
-    "img2": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a2.png",
-    "img3": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a3.png",
-    "img4": "/images/shoes-img/Newbalance-Vision/MSVRCJS1_a4.png"
+    "img1": "/images/shoes-img/Newbalance-Vision/1.png",
+    "img2": "/images/shoes-img/Newbalance-Vision/2.png",
+    "img3": "/images/shoes-img/Newbalance-Vision/3.png",
+    "img4": "/images/shoes-img/Newbalance-Vision/4.png"
   },
 
 
@@ -98,10 +98,10 @@
     "price": 153,
     "size": 7,
     "category": "Men´s",
-    "img1": "/images/shoes-img/Crocs-green/7296001_a1.png",
-    "img2": "/images/shoes-img/Crocs-green/7296001_a2.png",
-    "img3": "/images/shoes-img/Crocs-green/7296001_a3.png",
-    "img4": "/images/shoes-img/Crocs-green/7296001_a4.png"
+    "img1": "/images/shoes-img/Crocs-green/1.png",
+    "img2": "/images/shoes-img/Crocs-green/2.png",
+    "img3": "/images/shoes-img/Crocs-green/3.png",
+    "img4": "/images/shoes-img/Crocs-green/4.png"
   },
 
   { "id":9,
@@ -111,10 +111,10 @@
     "price": 160,
     "size": 6,
     "category": "Women´s",
-    "img1": "/images/shoes-img/Crocs-red/16ENRED_a1.png",
-    "img2": "/images/shoes-img/Crocs-red/16ENRED_a2.png",
-    "img3": "/images/shoes-img/Crocs-red/16ENRED_a3.png",
-    "img4": "/images/shoes-img/Crocs-red/16ENRED_a4.png"
+    "img1": "/images/shoes-img/Crocs-red/1.png",
+    "img2": "/images/shoes-img/Crocs-red/2.png",
+    "img3": "/images/shoes-img/Crocs-red/3.png",
+    "img4": "/images/shoes-img/Crocs-red/4.png"
   },
 
   { "id":10,
@@ -150,10 +150,10 @@
     "price": 170,
     "size": 12,
     "category": "Men´s",
-    "img1": "/images/shoes-img/Newbalance-Fuel/MPRMXCM_a1.png",
-    "img2": "/images/shoes-img/Newbalance-Fuel/MPRMXCM_a2.png",
-    "img3": "/images/shoes-img/Newbalance-Fuel/MPRMXCM_a3.png",
-    "img4": "/images/shoes-img/Newbalance-Fuel/MPRMXCM_a4.png"
+    "img1": "/images/shoes-img/Newbalance-Fuel/1.png",
+    "img2": "/images/shoes-img/Newbalance-Fuel/2.png",
+    "img3": "/images/shoes-img/Newbalance-Fuel/3.png",
+    "img4": "/images/shoes-img/Newbalance-Fuel/4.png"
   },
 
  
@@ -167,7 +167,7 @@
     "img1": "/images/shoes-img/Newbalance-Wnl/1.png",
     "img2": "/images/shoes-img/Newbalance-Wnl/2.png",
     "img3": "/images/shoes-img/Newbalance-Wnl/3.png",
-    "img4": "/images/shoes-img/Newbalance-Wnl/.png"
+    "img4": "/images/shoes-img/Newbalance-Wnl/4.png"
   },
 
   { "id":14,
@@ -230,8 +230,7 @@
     "img1": "/images/shoes-img/Nike-LeBron/1.png",
     "img2": "/images/shoes-img/Nike-LeBron/2.png",
     "img3": "/images/shoes-img/Nike-LeBron/3.png",
-    "img4": "/images/shoes-img/Nike-LeBron/4.png",
-    "img5": "/images/shoes-img/Nike-LeBron/5.png"
+    "img4": "/images/shoes-img/Nike-LeBron/4.png"
   },
 
   { "id":19,
@@ -244,8 +243,7 @@
     "img1": "/images/shoes-img/Vans-brown/1.png",
     "img2": "/images/shoes-img/Vans-brown/2.png",
     "img3": "/images/shoes-img/Vans-brown/3.png",
-    "img4": "/images/shoes-img/Vans-brown/4.png",
-    "img5": "/images/shoes-img/Vans-brown/5.png"
+    "img4": "/images/shoes-img/Vans-brown/4.png"
   },
 
   { "id":20,
@@ -258,7 +256,7 @@
     "img1": "/images/shoes-img/Vans-Ofthe/1.png",
     "img2": "/images/shoes-img/Vans-Ofthe/2.png",
     "img3": "/images/shoes-img/Vans-Ofthe/3.png",
-    "img4": "/images/shoes-img/Vans-Ofthe/.png"
+    "img4": "/images/shoes-img/Vans-Ofthe/4.png"
   },
 
   { "id":21,
@@ -271,7 +269,7 @@
     "img1": "/images/shoes-img/Vans-Old/1.png",
     "img2": "/images/shoes-img/Vans-Old/2.png",
     "img3": "/images/shoes-img/Vans-Old/3.png",
-    "img4": "/images/shoes-img/Vans-Old/.png"
+    "img4": "/images/shoes-img/Vans-Old/4.png"
   },
 
   { "id":22,
@@ -284,7 +282,7 @@
     "img1": "/images/shoes-img/Vans-Old2/1.png",
     "img2": "/images/shoes-img/Vans-Old2/2.png",
     "img3": "/images/shoes-img/Vans-Old2/3.png",
-    "img4": "/images/shoes-img/Vans-Old2/.png"
+    "img4": "/images/shoes-img/Vans-Old2/4.png"
   },
 
   { "id":23,
@@ -297,7 +295,7 @@
     "img1": "/images/shoes-img/Vans-SpongeBob1/.png",
     "img2": "/images/shoes-img/Vans-SpongeBob/2.png",
     "img3": "/images/shoes-img/Vans-SpongeBob/3.png",
-    "img4": "/images/shoes-img/Vans-SpongeBob/.png"
+    "img4": "/images/shoes-img/Vans-SpongeBob/4.png"
   }
 
 

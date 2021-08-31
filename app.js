@@ -16,13 +16,6 @@ app.use('/users', usersRouter);
 var productsRouter = require('./routes/products')
 app.use('/products', productsRouter);
 
-
-
-
-
-
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
