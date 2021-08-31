@@ -1,9 +1,11 @@
-<%- include('./partials/head', {title: product.nameproduct}) %>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: product.productName}) %>
 
 <body class="body-detail">
     <%- include('./partials/header') %>
     <section class= "section-detail " >
-         <h1 class="titulo-detail"> <%= product.nameproduct %>  </h1>
+         <h1 class="titulo-detail"> <%= product.productName %>  </h1>
     <div >
         
         <img class="imagen-detail " src=" <%= product.img1 %> "  alt="producto para agregar">
@@ -37,6 +39,10 @@
             <button class="addcart-detail"> <a href="/productCart" type="submit" >ADD TO CART> </a> </button>                     
         </form>   
    </section>
+
+
+
+   <!-- FOOTER -->
    <%- include('./partials/footer') %>
 </body>
 </html>

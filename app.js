@@ -3,12 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var methodOverride=require('method-override');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var methodOverride = require('method-override');
 
 var app = express();
+/* RUTAS DE INDEX */
+var indexRouter = require('./routes/index');
+app.use('/', indexRouter);
+
+var usersRouter = require('./routes/users');
+app.use('/users', usersRouter);
+
+var productsRouter = require('./routes/products')
+app.use('/products', productsRouter);
+
+
+
+
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,9 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/:shoes',indexRouter);
+
 
 app.use('/error', indexRouter);
 

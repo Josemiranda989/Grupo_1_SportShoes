@@ -1,5 +1,5 @@
 /* Lista de Productos .JSON */
-const product = require ('../controllers/productList.json')
+const allShoes = require ('../data/productList.json')
 
 
 const mainController = {
@@ -16,11 +16,6 @@ const mainController = {
         res.render('login');
 
     },
-    
-    productCart: (req, res) => {
-        res.render('productCart');
-
-    },
       
     register: (req, res) => {
         res.render('register');
@@ -30,19 +25,11 @@ const mainController = {
     terms: (req, res) => {
         res.render('terms');
 
-    }, 
-    
-    productDetail: (req, res) => {
-        const shoes= req.params.shoes
-        let shoesParaMostrar;
+    },
 
-        for( let i=0; i< product.length; i++){
-            if (product[i].nameproduct==shoes ){
-                shoesParaMostrar=product[i];
-              }
-            }
-        res.render('productDetail',{product:shoesParaMostrar});
-    }
+    allProducts: (req, res) => {
+        res.render ('allProducts', {allShoes: allShoes})
+    },    
 }
 
     
