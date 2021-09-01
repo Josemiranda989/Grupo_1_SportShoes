@@ -6,35 +6,26 @@
       <%- include('./partials/header') %>
     
     <!-- todos los productos -->
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Todos los productos</h2>
-            
-    
-            <% for (i=0 ; i < allShoes.length ; i++) { %>
-                
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <section class="product-box">
-                        <a href="/products/<%=allShoes[i].id%>">
-                            <figure class="product-box_image">
-                                <img src="<%= allShoes[i].img1 %>"
-                                    alt="imagen de <%=allShoes[i].productName%>">
-                            </figure>
-                            <article class="product-box_data">
-                                <h2>$<%= allShoes[i].price %></h2>
-                                <p>
-                                    <%= allShoes[i].productName %>
-                                </p>
-                                <i class="fas fa-truck"></i>
-                            </article>
-                        </a>
-                    </section>
-                
-                <% } %>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <% for (i=0 ; i < allShoes.length ; i++) { %>
+
+        <div class="col">
+            <div class="card">
+                <img src="<%= allShoes[i].img1 %>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= allShoes[i].productName %></h5>
+                    <p class="card-text">$<%= allShoes[i].price %></p>
+                </div>
             </div>
         </div>
+
+        <% } %>
     </div>
+
+
+
 
 
       <!-- FOOTER -->
