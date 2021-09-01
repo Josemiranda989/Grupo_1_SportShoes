@@ -1,5 +1,9 @@
+const fs = require('fs')
+const path = require('path')
+
 /* Lista de Productos .JSON */
-const allShoes = require('../data/productList.json')
+const allShoesFilePath = path.join (__dirname, '../data/productList.json')
+const allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
 
 const productController = {
     
@@ -13,15 +17,15 @@ const productController = {
     },  */
     
     productDetail: (req, res) => {
-        const shoes= req.params.shoes
-        let shoesParaMostrar;
+        const idShoes= parseInt(req.params.id)
+        let productSelected;
 
         for( let i=0; i< allShoes.length; i++){
-            if (allShoes[i].productName==shoes ){
-                shoesParaMostrar=allShoes[i];
+            if (allShoes[i].id==idShoes ){
+                productSelected=allShoes[i];
               }
             }
-        res.render('productDetail',{product:shoesParaMostrar});
+        res.render('productDetail',{product:productSelected});
     }
 }
 
