@@ -10,11 +10,11 @@ const productController = {
     productCart: (req, res) => {
         res.render('productCart');
 
-    },/* 
+    }, 
 
     allProducts: (req, res) => {
-        res.render ('allProducts')
-    },  */
+        res.render ('allProducts', {allShoes: allShoes})
+    }, 
     
     productDetail: (req, res) => {
         const idShoes= parseInt(req.params.id)

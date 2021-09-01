@@ -27,12 +27,8 @@ const mainController = {
     
     terms: (req, res) => {
         res.render('terms');
-
-    },
-
-    allProducts: (req, res) => {
-        res.render ('allProducts', {allShoes: allShoes})
-    },    
+        
+    }
 }
 
     
