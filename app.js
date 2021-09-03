@@ -14,7 +14,7 @@ var usersRouter = require('./routes/users');
 app.use('/', usersRouter);
 
 var productsRouter = require('./routes/products');
-app.use('/', productsRouter);
+app.use('/products', productsRouter);
 
 
 

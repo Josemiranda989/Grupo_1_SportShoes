@@ -28,16 +28,17 @@ const productController = {
         res.render('productDetail',{product:productSelected});
     },
 
-
-    create:(req,res)=>{
-        res.render('create');
+    create: (req, res) => {
+        res.render('productCreate');
     },
 
-    edit:(req,res)=>{
-        res.render('edit');
+    edit: (req, res) => {
+        let idProduct = parseInt(req.params.id);
+        let productToEdit = allShoes.filter(i => i.id === idProduct);
+        res.render('productEdit', {
+            productToEdit: productToEdit
+        });
     }
-
-
 }
 
 
