@@ -15,24 +15,11 @@ const mainController = {
 
     },
     
-    login: (req, res) => {
-        res.render('login');
-
-    },
-      
-    register: (req, res) => {
-        res.render('register');
-
-    },
-    
     terms: (req, res) => {
         res.render('terms');
         
     }
 }
-
-    
-
 
 
 module.exports = mainController;

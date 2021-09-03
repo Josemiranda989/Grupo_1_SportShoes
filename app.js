@@ -11,10 +11,12 @@ var indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
 var usersRouter = require('./routes/users');
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 
-var productsRouter = require('./routes/products')
-app.use('/products', productsRouter);
+var productsRouter = require('./routes/products');
+app.use('/', productsRouter);
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

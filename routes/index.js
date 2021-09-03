@@ -4,10 +4,7 @@ const mainController = require('../controllers/mainController')
 
 /* GET home page. */
 router.get('/', mainController.index);
-
 router.get('/error', mainController.error);
-router.get('/login', mainController.login);
-router.get('/register', mainController.register);
 router.get('/terms', mainController.terms);
 
 

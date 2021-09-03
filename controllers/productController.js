@@ -12,8 +12,8 @@ const productController = {
 
     }, 
 
-    allProducts: (req, res) => {
-        res.render ('allProducts', {allShoes: allShoes})
+    products: (req, res) => {
+        res.render ('products', {allShoes: allShoes})
     }, 
     
     productDetail: (req, res) => {
@@ -26,7 +26,21 @@ const productController = {
               }
             }
         res.render('productDetail',{product:productSelected});
+    },
+
+
+    create:(req,res)=>{
+        res.render('create');
+    },
+
+    edit:(req,res)=>{
+        res.render('edit');
     }
+
+
 }
+
+
+
 
 module.exports = productController
