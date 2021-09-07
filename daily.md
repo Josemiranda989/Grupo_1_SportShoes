@@ -3,4 +3,5 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 
 
 2/9/21 : En este fecha direccionamos las rutas,creamos la lista de usuarios,renderizamos las vistas.
-3/9/21: Hoy se termino de agregar formularios de create y editar producto         
+3/9/21: Hoy se termino de agregar formularios de create y editar producto  
+6/9/21: Agregamos la lógica para crear productos nuevos, borrar productos, modificarlos (Falta ruta de imagenes)       

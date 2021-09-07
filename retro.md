@@ -17,4 +17,5 @@ Reuniones largas que no sean tan productivas.
 
 5. Dejar de hacer
 
-Hacer foco en informacion irelevante. 
+Hacer foco en informacion irelevante.
+Subir código incompleto. 
