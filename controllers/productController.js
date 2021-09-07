@@ -58,6 +58,21 @@ const productController = {
         }
     },
 
+    // BARRA SEARCH ITEMS 
+    search:(req,res) => {
+        let loqueBuscoElUsuario= req.query.shoes.toLowerCase();
+        let userResults=[];
+
+        for(let i=0;i<allShoes.length;i++){
+            if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario)|| allShoes[i].category.toLowerCase().includes(loqueBuscoElUsuario)){
+                userResults.push(allShoes[i]);
+            }
+        }
+        console.log(userResults)
+          res.render('usersResults',{userResults:userResults});
+    },
+
+
     // Edit - Vista del Formulario
     edit: (req, res) => {
         let idProduct = parseInt(req.params.id);

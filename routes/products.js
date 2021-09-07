@@ -33,6 +33,10 @@ router.post('/', upload.single('product-image'), productController.store);
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', upload.single('product-image'), productController.update); 
 
+
+// * SEARCH BAR*//
+router.get('/search',productController.search);
+
 /* DETALLE DE UN PRODUCTO */
 router.get("/:id", productController.productDetail); // ..../products/1
 
