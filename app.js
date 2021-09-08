@@ -16,6 +16,9 @@ app.use('/', usersRouter);
 var productsRouter = require('./routes/products');
 app.use('/products', productsRouter);
 
+/* MIDDLEWARES PARA USERS LOGS */
+var userLogs=require('./middlewares/userLogs');
+app.use(userLogs)
 
 
 // view engine setup

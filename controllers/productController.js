@@ -68,7 +68,7 @@ const productController = {
                 userResults.push(allShoes[i]);
             }
         }
-        console.log(userResults)
+        
           res.render('usersResults',{userResults:userResults});
     },
 
