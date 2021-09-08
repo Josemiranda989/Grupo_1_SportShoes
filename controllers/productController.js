@@ -47,7 +47,10 @@ const productController = {
                 description: req.body.description,
                 size: req.body.size,
                 category: req.body.category,
-                img1: req.file.filename
+                img1: req.file.filename1,
+                img2: req.file.filename2,
+                img3: req.file.filename3,
+                img4: req.file.filename4
             };
             allShoes.push(newShoe);
             let AllShoesJSON = JSON.stringify(allShoes, null, ' ');
@@ -68,7 +71,7 @@ const productController = {
                 userResults.push(allShoes[i]);
             }
         }
-        
+        console.log(userResults)
           res.render('usersResults',{userResults:userResults});
     },
 
