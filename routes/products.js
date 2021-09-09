@@ -6,10 +6,11 @@ const path = require('path');
 // Controller require
 const productController = require('../controllers/productController')
 
-// Config Multer
+// Configurar Multer
+/*${req.body.productName} CHEQUEAR BIEN CREACION DE CARPETA DE PRODUCTOS*/
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, `../../public/images/shoes-img/${req.body.productName}`))
+        cb(null, path.join(__dirname, `../public/images/shoes-img`)) 
     },
     filename: function (req, file, cb) {
         const newFileName = 'product-' + Date.now() + path.extname(file.originalname)
@@ -27,11 +28,11 @@ router.get('/productCart', productController.productCart); //..../products/produ
 
 /* CREATE PRODUCTS */
 router.get('/create', productController.create); 
-router.post('/', upload.single('product-image'), productController.store); 
+router.post('/', upload.single("img1"), productController.store); 
 
 /* EDIT FORM */
 router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', upload.single('product-image'), productController.update); 
+router.put('/edit/:id', upload.single("img1"), productController.update); 
 
 
 // * SEARCH BAR*//

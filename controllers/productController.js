@@ -47,10 +47,7 @@ const productController = {
                 description: req.body.description,
                 size: req.body.size,
                 category: req.body.category,
-                img1: req.file.filename1,
-                img2: req.file.filename2,
-                img3: req.file.filename3,
-                img4: req.file.filename4
+                img1: req.file.filename
             };
             allShoes.push(newShoe);
             let AllShoesJSON = JSON.stringify(allShoes, null, ' ');
@@ -67,7 +64,7 @@ const productController = {
         let userResults=[];
 
         for(let i=0;i<allShoes.length;i++){
-            if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario)|| allShoes[i].category.toLowerCase().includes(loqueBuscoElUsuario)){
+            if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario)|| allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)){
                 userResults.push(allShoes[i]);
             }
         }
