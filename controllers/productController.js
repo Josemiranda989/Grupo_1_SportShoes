@@ -60,16 +60,19 @@ const productController = {
 
     // BARRA SEARCH ITEMS 
     search:(req,res) => {
+        console.log(req.query.shoes)
         let loqueBuscoElUsuario= req.query.shoes.toLowerCase();
         let userResults=[];
 
         for(let i=0;i<allShoes.length;i++){
+            console.log('primera var ',allShoes[i].brand)
+            console.log('segunda var',allShoes[i].productName)
             if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario) || allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)){
                 userResults.push(allShoes[i]);
             }
         }
-        console.log(allShoes)
-        res.render('/products', { allShoes: userResults })
+       
+        res.render('products', { allShoes: userResults })
     },
 
 
