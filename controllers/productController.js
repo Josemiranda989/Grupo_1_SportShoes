@@ -64,12 +64,12 @@ const productController = {
         let userResults=[];
 
         for(let i=0;i<allShoes.length;i++){
-            if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario)|| allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)){
+            if(allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario) || allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)){
                 userResults.push(allShoes[i]);
             }
         }
-        console.log(userResults)
-          res.render('usersResults',{userResults:userResults});
+        console.log(allShoes)
+        res.render('/products', { allShoes: userResults })
     },
 
 
