@@ -7,3 +7,4 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 6/9/21: Agregamos la lógica para crear productos nuevos, borrar productos, modificarlos (Falta menos para completar la ruta de imagenes ) 
 8/9/21: Hoy se arreglo el buscador,la ruta parcial de imagenes,se hizo el link del sing up,sing in y el catalogo de todos los productos.(queda pendiente configurar formularios y algunos detalles del sprint 4 )
 11/9/21: Hoy se termino de configurar el search con products ejs.
+13/9/21: Hoy se agrego links correspondientes a las redes sociales ubicadas en el Footer y se usa el modulo de filesync para crear una nueva carpeta donde se guardaran los archivos.
