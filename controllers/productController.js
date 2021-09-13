@@ -47,7 +47,7 @@ const productController = {
                 description: req.body.description,
                 size: req.body.size,
                 category: req.body.category,
-                img1: '/images/shoes-img/' + req.file.filename
+                img1: '/images/shoes-img/'+req.body.productName+'/'+req.file.filename
             };
             allShoes.push(newShoe);
             let AllShoesJSON = JSON.stringify(allShoes, null, ' ');
