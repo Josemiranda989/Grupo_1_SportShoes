@@ -7,14 +7,17 @@ const path = require('path');
 const productController = require('../controllers/productController')
 
 // Configurar Multer
-/*${req.body.productName} CHEQUEAR BIEN CREACION DE CARPETA DE PRODUCTOS*/
+//CHEQUEAR BIEN CREACION DE CARPETA DE PRODUCTOS*/ /* cb(null, path.join(__dirname, `../public/images/shoes-img/${req.body.productName}`)) */
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, `../public/images/shoes-img`)) 
     },
     filename: function (req, file, cb) {
-        const newFileName = 'product-' + Date.now() + path.extname(file.originalname)
+        //const newFileName = 'product-' + Date.now() + path.extname(file.originalname)
+        const newFileName = req.body.productName + '-1' + path.extname(file.originalname)
         cb(null, newFileName)
+    
+
     }
 })
 

@@ -40,14 +40,14 @@ const productController = {
     store: (req, res) => {
         if (req.file) {
             let newShoe = {
-                id: Date.now(),
+                id: allShoes[allShoes.length-1].id+1,
                 productName: req.body.productName,
                 price: req.body.price,
                 brand: req.body.brand,
                 description: req.body.description,
                 size: req.body.size,
                 category: req.body.category,
-                img1: req.file.filename
+                img1: '/images/shoes-img/' + req.file.filename
             };
             allShoes.push(newShoe);
             let AllShoesJSON = JSON.stringify(allShoes, null, ' ');
