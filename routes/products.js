@@ -11,9 +11,9 @@ const productController = require('../controllers/productController')
 //CHEQUEAR BIEN CREACION DE CARPETA DE PRODUCTOS*/ /* cb(null, path.join(__dirname, `../public/images/shoes-img/${req.body.productName}`)) */
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        var newFoldeName = req.body.productName
-        fs.mkdirSync(path.join(__dirname,`../public/images/shoes-img/${newFoldeName}/`),{recursive:true});
-        cb(null, path.join(__dirname, `../public/images/shoes-img/${newFoldeName}/`)) 
+        var newFolderName = req.body.productName
+        fs.mkdirSync(path.join(__dirname,`../public/images/shoes-img/${newFolderName}/`),{recursive:true});
+        cb(null, path.join(__dirname, `../public/images/shoes-img/${newFolderName}/`)) 
     },
     filename: function (req, file, cb) {
         //const newFileName = 'product-' + Date.now() + path.extname(file.originalname) // product-123124551.jpg

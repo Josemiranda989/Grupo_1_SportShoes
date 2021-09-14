@@ -96,9 +96,9 @@ const productController = {
                 product.description = req.body.description
                 product.size = req.body.size
                 product.category = req.body.category
-                if (req, file) {
+                if (req.file) {
                     let indexShoe = allShoes.findIndex(product => product.id === idProduct)
-                    let imagePath = path.join(__dirname, '../../public/images/shoes-img', allShoes[indexShoe].img1);
+                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].img1);
                     fs.unlink(imagePath, function (err) {
                         if (err) throw err;
                     })
@@ -116,7 +116,7 @@ const productController = {
     delete: (req, res) => {
         let idProduct = parseInt(req.params.id);
         let indexShoe = allShoes.findIndex(product => product.id === idProduct)
-        let imagePath = path.join(__dirname, '../../public/images/shoes-img', allShoes[indexShoe].image)
+        let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].image)
         fs.unlink(imagePath, function (err) {
             if (err) throw err
             console.log('File deleted!')
