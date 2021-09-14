@@ -13,7 +13,7 @@
 
         <div class="col">
             <div class="card">
-                <img src="<%= allShoes[i].img1 %>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
+                <img src="/images/shoes-img/<%= allShoes[i].productName%>/<%= allShoes[i].img1%>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
                 <div class="card-body">
                     <h5 class="card-title"><%= allShoes[i].productName %></h5>
                     <p class="card-text">$<%= allShoes[i].price %></p>
@@ -23,10 +23,6 @@
 
         <% } %>
     </div>
-
-
-
-
 
       <!-- FOOTER -->
 

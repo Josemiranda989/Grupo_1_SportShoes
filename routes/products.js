@@ -8,7 +8,6 @@ const fs = require ('fs')
 const productController = require('../controllers/productController')
 
 // Configurar Multer
-//CHEQUEAR BIEN CREACION DE CARPETA DE PRODUCTOS*/ /* cb(null, path.join(__dirname, `../public/images/shoes-img/${req.body.productName}`)) */
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         var newFolderName = req.body.productName
@@ -16,12 +15,8 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, `../public/images/shoes-img/${newFolderName}/`)) 
     },
     filename: function (req, file, cb) {
-        //const newFileName = 'product-' + Date.now() + path.extname(file.originalname) // product-123124551.jpg
-        //const newFileName = req.body.productName + '-1' + path.extname(file.originalname) // adidas-1.jpg
-        const newFileName = '1' + path.extname(file.originalname) // 1.jpg
+        const newFileName = '1' + path.extname(file.originalname)
         cb(null, newFileName)
-    
-
     }
 })
 

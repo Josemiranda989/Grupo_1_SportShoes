@@ -7,10 +7,10 @@
   "price": 180,
   "size": 8,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Adidas-Flowers/1.png",
-  "img2": "/images/shoes-img/Adidas-Flowers/2.png",
-  "img3": "/images/shoes-img/Adidas-Flowers/3.png",
-  "img4": "/images/shoes-img/Adidas-Flowers/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 2,
@@ -20,10 +20,10 @@
   "price": 170,
   "size": 9,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Adidas-Originals/1.png",
-  "img2": "/images/shoes-img/Adidas-Originals/2.png",
-  "img3": "/images/shoes-img/Adidas-Originals/3.png",
-  "img4": "/images/shoes-img/Adidas-Originals/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 3,
@@ -33,10 +33,10 @@
   "price": 165,
   "size": 10,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Adidas-pw/1.png",
-  "img2": "/images/shoes-img/Adidas-pw/2.png",
-  "img3": "/images/shoes-img/Adidas-pw/3.png",
-  "img4": "/images/shoes-img/Adidas-pw/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 4,
@@ -46,10 +46,10 @@
   "price": 172,
   "size": 8,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Adidas-Superstan/1.png",
-  "img2": "/images/shoes-img/Adidas-Superstan/2.png",
-  "img3": "/images/shoes-img/Adidas-Superstan/3.png",
-  "img4": "/images/shoes-img/Adidas-Superstan/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 5,
@@ -59,10 +59,10 @@
   "price": 183,
   "size": 10,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Adidas-Ultraboost/1.png",
-  "img2": "/images/shoes-img/Adidas-Ultraboost/2.png",
-  "img3": "/images/shoes-img/Adidas-Ultraboost/3.png",
-  "img4": "/images/shoes-img/Adidas-Ultraboost/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 6,
@@ -72,10 +72,10 @@
   "price": 150,
   "size": 6,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Crocs-blue/1.png",
-  "img2": "/images/shoes-img/Crocs-blue/2.png",
-  "img3": "/images/shoes-img/Crocs-blue/3.png",
-  "img4": "/images/shoes-img/Crocs-blue/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 7,
@@ -85,10 +85,10 @@
   "price": 190,
   "size": 6,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Newbalance-Vision/1.png",
-  "img2": "/images/shoes-img/Newbalance-Vision/2.png",
-  "img3": "/images/shoes-img/Newbalance-Vision/3.png",
-  "img4": "/images/shoes-img/Newbalance-Vision/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 8,
@@ -98,10 +98,10 @@
   "price": 153,
   "size": 7,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Crocs-green/1.png",
-  "img2": "/images/shoes-img/Crocs-green/2.png",
-  "img3": "/images/shoes-img/Crocs-green/3.png",
-  "img4": "/images/shoes-img/Crocs-green/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 9,
@@ -111,23 +111,23 @@
   "price": 160,
   "size": 6,
   "category": "Women´s",
-  "img1": "/images/shoes-img/Crocs-red/1.png",
-  "img2": "/images/shoes-img/Crocs-red/2.png",
-  "img3": "/images/shoes-img/Crocs-red/3.png",
-  "img4": "/images/shoes-img/Crocs-red/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 10,
-  "productName": "Newbalance-327",
+  "productName": "Newbalance Wnl",
   "brand": "New Balance",
   "description": "Features a mix of 1970s aesthetics and modern logo graphics.",
   "price": 170,
   "size": 11,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Newbalance-327/1.png",
-  "img2": "/images/shoes-img/Newbalance-327/2.png",
-  "img3": "/images/shoes-img/Newbalance-327/3.png",
-  "img4": "/images/shoes-img/Newbalance-327/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 11,
@@ -137,10 +137,10 @@
   "price": 150,
   "size": 10,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Newbalance-327white/1.png",
-  "img2": "/images/shoes-img/Newbalance-327white/2.png",
-  "img3": "/images/shoes-img/Newbalance-327white/3.png",
-  "img4": "/images/shoes-img/Newbalance-327white/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 12,
@@ -150,10 +150,10 @@
   "price": 170,
   "size": 12,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Newbalance-Fuel/1.png",
-  "img2": "/images/shoes-img/Newbalance-Fuel/2.png",
-  "img3": "/images/shoes-img/Newbalance-Fuel/3.png",
-  "img4": "/images/shoes-img/Newbalance-Fuel/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 13,
@@ -163,23 +163,23 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Newbalance-Wnl/1.png",
-  "img2": "/images/shoes-img/Newbalance-Wnl/2.png",
-  "img3": "/images/shoes-img/Newbalance-Wnl/3.png",
-  "img4": "/images/shoes-img/Newbalance-Wnl/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 14,
-  "productName": "Nike-AirForce 1 LV8",
+  "productName": "Nike-AirForce",
   "brand": "Nike",
   "description": "Leather upper for a comfortable fit and premium look",
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Nike-AirForce/1.png",
-  "img2": "/images/shoes-img/Nike-AirForce/2.png",
-  "img3": "/images/shoes-img/Nike-AirForce/3.png",
-  "img4": "/images/shoes-img/Nike-AirForce/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 15,
@@ -189,34 +189,34 @@
   "price": 170,
   "size": 11,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Nike-AirMax/1.png",
-  "img2": "/images/shoes-img/Nike-AirMax/2.png",
-  "img3": "/images/shoes-img/Nike-AirMax/3.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png"
  },
  {
   "id": 16,
-  "productName": "Nike-Blazer Mid '77",
+  "productName": "Nike-Blazer",
   "brand": "Nike",
   "description": "Autoclave construction fuses the midsole and outsole for a sleek look.",
   "price": 180,
   "size": 12,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Nike-Blazer/1.png",
-  "img2": "/images/shoes-img/Nike-Blazer/2.png",
-  "img3": "/images/shoes-img/Nike-Blazer/3.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png"
  },
  {
   "id": 17,
-  "productName": "Nike-Huarache-",
+  "productName": "Nike-Huarache",
   "brand": "Nike",
   "description": "Neoprene inner bootie design keeps your foot locked in with ample support and dynamic comfort.",
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Nike-Huarache/1.png",
-  "img2": "/images/shoes-img/Nike-Huarache/2.png",
-  "img3": "/images/shoes-img/Nike-Huarache/3.png",
-  "img4": "/images/shoes-img/Nike-Huarache/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 18,
@@ -226,10 +226,10 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Nike-LeBron/1.png",
-  "img2": "/images/shoes-img/Nike-LeBron/2.png",
-  "img3": "/images/shoes-img/Nike-LeBron/3.png",
-  "img4": "/images/shoes-img/Nike-LeBron/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 19,
@@ -239,10 +239,10 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Vans-brown/1.png",
-  "img2": "/images/shoes-img/Vans-brown/2.png",
-  "img3": "/images/shoes-img/Vans-brown/3.png",
-  "img4": "/images/shoes-img/Vans-brown/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 20,
@@ -252,10 +252,10 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Vans-Ofthe/1.png",
-  "img2": "/images/shoes-img/Vans-Ofthe/2.png",
-  "img3": "/images/shoes-img/Vans-Ofthe/3.png",
-  "img4": "/images/shoes-img/Vans-Ofthe/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 21,
@@ -265,10 +265,10 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Vans-Old/1.png",
-  "img2": "/images/shoes-img/Vans-Old/2.png",
-  "img3": "/images/shoes-img/Vans-Old/3.png",
-  "img4": "/images/shoes-img/Vans-Old/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 22,
@@ -278,10 +278,10 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Vans-Old2/1.png",
-  "img2": "/images/shoes-img/Vans-Old2/2.png",
-  "img3": "/images/shoes-img/Vans-Old2/3.png",
-  "img4": "/images/shoes-img/Vans-Old2/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  },
  {
   "id": 23,
@@ -291,9 +291,9 @@
   "price": 160,
   "size": 9,
   "category": "Men´s",
-  "img1": "/images/shoes-img/Vans-SpongeBob/1.png",
-  "img2": "/images/shoes-img/Vans-SpongeBob/2.png",
-  "img3": "/images/shoes-img/Vans-SpongeBob/3.png",
-  "img4": "/images/shoes-img/Vans-SpongeBob/4.png"
+  "img1": "1.png",
+  "img2": "2.png",
+  "img3": "3.png",
+  "img4": "4.png"
  }
 ]

@@ -2,8 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 /* Lista de Productos .JSON */
-const allShoesFilePath = path.join (__dirname, '../data/productList.json')
-const allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
+let allShoesFilePath = path.join (__dirname, '../data/productList.json')
+let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
 
 const productController = {
     // Todos los productos
@@ -13,7 +13,7 @@ const productController = {
 
     // Detalle de un producto particular
     productDetail: (req, res) => {
-        const idShoes = parseInt(req.params.id)
+        let idShoes = parseInt(req.params.id)
         let productSelected;
 
         for (let i = 0; i < allShoes.length; i++) {
@@ -47,7 +47,7 @@ const productController = {
                 description: req.body.description,
                 size: req.body.size,
                 category: req.body.category,
-                img1: '/images/shoes-img/'+req.body.productName+'/'+req.file.filename
+                img1: req.file.filename
             };
             allShoes.push(newShoe);
             let AllShoesJSON = JSON.stringify(allShoes, null, ' ');
@@ -89,7 +89,7 @@ const productController = {
     update: (req, res) => {
         let idProduct = parseInt(req.params.id);
         allShoes.forEach(product => {
-            if (product.id === idProduct) {
+            if (product.id == idProduct) {
                 product.productName = req.body.name
                 product.price = req.body.price
                 product.brand = req.body.brand
@@ -97,8 +97,8 @@ const productController = {
                 product.size = req.body.size
                 product.category = req.body.category
                 if (req.file) {
-                    let indexShoe = allShoes.findIndex(product => product.id === idProduct)
-                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].img1);
+                    let indexShoe = allShoes.findIndex(product => product.id == idProduct)
+                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName , allShoes[indexShoe].img1);
                     fs.unlink(imagePath, function (err) {
                         if (err) throw err;
                     })
@@ -116,7 +116,7 @@ const productController = {
     delete: (req, res) => {
         let idProduct = parseInt(req.params.id);
         let indexShoe = allShoes.findIndex(product => product.id === idProduct)
-        let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].image)
+        let imagePath =path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName , allShoes[indexShoe].img1)
         fs.unlink(imagePath, function (err) {
             if (err) throw err
             console.log('File deleted!')
