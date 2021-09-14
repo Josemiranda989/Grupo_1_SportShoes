@@ -6,7 +6,7 @@
         <!-- NAVBAR -->
         <%- include('./partials/header') %>
 
-            <!-- EDIT FORM -->
+            <!-- EDIT CONTAINER -->
             <div class="container products-wrapper">
                 <div class="row">
                     <div class="col-12">
@@ -15,13 +15,16 @@
                             </i></h2>
                     </div>
                 </div>
+                <!-- FORM TO EDIT -->
+
                 <div class="col-12">
-                    <form action="/products/edit/<%= productToEdit[0].id %>?_method=PUT" method="POST"
+                    <form action="/products/<%= productToEdit[0].id %>?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <div class="row product-detail">
                             <div class="col-12 col-md-6">
                                 <label for="productName" class="form-label">Name:</label>
-                                <input type="text" id="productName" name="productName" placeholder="Ej: Zapatillas Reebok" class="form-input"
+                                <input type="text" id="productName" name="productName"
+                                    placeholder="Ej: Zapatillas Reebok" class="form-input"
                                     value="<%= productToEdit[0].productName %>">
                             </div>
                             <div class="col-12 col-md-6">
@@ -46,18 +49,15 @@
                             <div class="col-12 col-md-6">
                                 <label for="category" class="form-label">Category:</label>
                                 <select name="category" id="category" class="form-input">
+
                                     <% if (productToEdit[0].category==='Men´s' ) { %>
-            
                                         <option value="">Select</option>
                                         <option value="Men´s" selected>Men´s</option>
                                         <option value="Women´s">Women´s</option>
-            
                                         <% } else { %>
-            
                                             <option value="">Selected</option>
                                             <option value="Men´s">Men´s</option>
                                             <option value="Women´s" selected>Women´s</option>
-            
                                             <% } %>
                                 </select>
                             </div>
@@ -66,13 +66,18 @@
                                 <textarea name="description" id="description"
                                     class="form-input"><%= productToEdit[0].description %></textarea>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="buy-now-button">Save Changes</button>
+                            <div class="col-6">
+                                <button type="submit" name='edit' class="buy-now-button">Save Changes</button>
+                            </div>
+                        </form>
+                            <!-- FORM DELETE -->
+                            <div class="col-6">
+                                <form action="/products/<%= productToEdit[0].id %> %>?_method=DELETE" method="POST">
+                                    <button class="buy-now-button" type="submit" name="delete">Delete this Product</button>
+                                </form>
                             </div>
                         </div>
-                    </form>
                 </div>
-            
             </div>
 
 

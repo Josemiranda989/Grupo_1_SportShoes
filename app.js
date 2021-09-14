@@ -1,19 +1,17 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var indexRouter = require('./routes/index');
+var productsRouter = require('./routes/products');
+var usersRouter = require('./routes/users');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 
 var app = express();
 /* RUTAS DE INDEX */
-var indexRouter = require('./routes/index');
 app.use('/', indexRouter);
-
-var usersRouter = require('./routes/users');
-app.use('/', usersRouter);
-
-var productsRouter = require('./routes/products');
+app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 
 /* MIDDLEWARES PARA USERS LOGS */

@@ -78,16 +78,16 @@ const productController = {
 
     // Edit - Vista del Formulario
     edit: (req, res) => {
+        let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
         let idProduct = parseInt(req.params.id);
         let productToEdit = allShoes.filter(i => i.id === idProduct);
-        res.render('productEdit', {
-            productToEdit: productToEdit
-        });
+        res.render('productEdit', { productToEdit: productToEdit });
     },
 
     // Update - Metodo para editar producto
     update: (req, res) => {
         let idProduct = parseInt(req.params.id);
+        let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
         allShoes.forEach(product => {
             if (product.id == idProduct) {
                 product.productName = req.body.name
@@ -119,7 +119,7 @@ const productController = {
         let imagePath =path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName , allShoes[indexShoe].img1)
         fs.unlink(imagePath, function (err) {
             if (err) throw err
-            console.log('File deleted!')
+            console.log('Could not delete file!')
         })
         let allShoesUpdated = allShoes.filter(i => i.id !== idProduct)
         let allShoesUpdatedJSON = JSON.stringify(allShoesUpdated, null, ' ')
