@@ -9,10 +9,7 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 
 var app = express();
-/* RUTAS DE INDEX */
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/products', productsRouter);
+
 
 /* MIDDLEWARES PARA USERS LOGS */
 var userLogs = require('./middlewares/userLogs');
@@ -29,6 +26,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+
+
+/* RUTAS DE INDEX */
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/products', productsRouter);
 app.use('/error', indexRouter);
 
 // catch 404 and forward to error handler

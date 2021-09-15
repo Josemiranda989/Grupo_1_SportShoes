@@ -90,7 +90,7 @@ const productController = {
         let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
         allShoes.forEach(product => {
             if (product.id == idProduct) {
-                product.productName = req.body.name
+                product.productName = req.body.productName
                 product.price = req.body.price
                 product.brand = req.body.brand
                 product.description = req.body.description
@@ -98,7 +98,7 @@ const productController = {
                 product.category = req.body.category
                 if (req.file) {
                     let indexShoe = allShoes.findIndex(product => product.id == idProduct)
-                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName , allShoes[indexShoe].img1);
+                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName, allShoes[indexShoe].img1);
                     fs.unlink(imagePath, function (err) {
                         if (err) throw err;
                     })
