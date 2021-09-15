@@ -8,3 +8,6 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 8/9/21: Hoy se arreglo el buscador,la ruta parcial de imagenes,se hizo el link del sing up,sing in y el catalogo de todos los productos.(queda pendiente configurar formularios y algunos detalles del sprint 4 )
 11/9/21: Hoy se termino de configurar el search con products ejs.
 13/9/21: Hoy se agrego links correspondientes a las redes sociales ubicadas en el Footer y se usa el modulo de filesync para crear una nueva carpeta donde se guardaran los archivos.
+14/9/21: Arreglamos los formularios de edit,delete y tambien se agrego la carpeta moduls para empezar usar base datos
+        creamos otra branch para poder trabajar mas organizados y tener mas limpio del codigo.
+        Asignamos a branch main como version estable del proyecto 
