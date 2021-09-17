@@ -10,12 +10,20 @@ const userController={
     login: (req, res) => {
         res.render('login');
     
-    },
+  },
+  
+  processRegister: (req, res)=>{
+    return res.send(req.body)
+  },
       
     register: (req, res) => {
         res.render('register');
     
-    },
+  },
+    
+  profile: (req, res) => {
+      res.render ('userProfile')
+    }
 
 }
 

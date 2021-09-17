@@ -8,6 +8,8 @@ router.get('/login', userController.login);
 //FORMULARIO DE REGISTRO
 router.get('/register', userController.register);
 
+router.post('/register', userController.processRegister);
+
 //PERFIL DE USUARIO 
 router.get('/profile/:userId',userController.profile);
 
