@@ -3,7 +3,12 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer')
 const path = require('path')
+const {body} = require('express-validator')
 const userController = require('../controllers/userController')
+
+const validations = [
+
+]
 
 // Configurar Multer
 const storage = multer.diskStorage({
@@ -25,7 +30,7 @@ router.get('/login', userController.login);
 //FORMULARIO DE REGISTRO
 router.get('/register', userController.register);
 //PROCESAMIENTO DEL REGISTRO
-router.post('/register', uploadFile.single('avatar'), userController.processRegister);
+router.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
 
 //PERFIL DE USUARIO 
 router.get('/profile/:userId',userController.profile);
