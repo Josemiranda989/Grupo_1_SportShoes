@@ -7,10 +7,10 @@
     </header>
     <main>
         <div class="box-register">
-            <a href="/"><img class="logo-register" src="./images/Sportshoes.png" alt="LogoSportShoes"></a>
+            <a href="/"><img class="logo-register" src="../images/Sportshoes.png" alt="LogoSportShoes"></a>
             <h1 class="text-register">Register</h1>
 
-            <form class="form-register" action="/" method="POST" enctype="multipart/form-data">
+            <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
                 <p>
                     <label for="nombreApellido" placeholder="ej: Elon Musk">Enter your name:</label>
                 </p>
@@ -37,7 +37,7 @@
                 <p>
                     <input type="email" placeholder="ej: nd@gmail.com" name="image" id="email">
                 </p>
-                <input type = "file" id = "profileImg" name = "profileImg" placeholder = "Image" >
+                <input type = "file" id = "avatar" name = "avatar" placeholder = "Image" >
                 <p> 
                                          
                 <p>
@@ -57,11 +57,6 @@
                 <p> <label for="terms"><a class="link-register" href="/terms">Terms and conditions:</a></label>
                 </p>
                 <br>
-                <p>
-                    <label for="terms">Accept all conditions </label>
-                
-                    <input type="checkbox" name="terms">
-                </p>
                 <br>
                 <input type="submit" class="submit-login" value="Enviar">
                 <input type="submit" class="submit-login" value="Reset">

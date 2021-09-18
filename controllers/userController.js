@@ -13,7 +13,10 @@ const userController={
   },
   
   processRegister: (req, res)=>{
-    return res.send(req.body)
+    return res.send({
+      body: req.body,
+      file: req.file
+    })
   },
       
     register: (req, res) => {
