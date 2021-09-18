@@ -10,7 +10,7 @@
             <a href="/"><img class="logo-register" src="./images/Sportshoes.png" alt="LogoSportShoes"></a>
             <h1 class="text-register">Register</h1>
 
-            <form class="form-register" action="/" method="GET">
+            <form class="form-register" action="/" method="POST" enctype="multipart/form-data">
                 <p>
                     <label for="nombreApellido" placeholder="ej: Elon Musk">Enter your name:</label>
                 </p>
@@ -24,21 +24,22 @@
                 <p>
                     <input type="text" placeholder="ej: DogeFather" name="usuario" id="usuario">
                 </p>
-                <br>
-                <p>
-                    <label for="fechaDeNacimiento">Enter your date of birth:</label>
-                </p>
-                <p>
-                    <input type="date" name="fechaDeNacimiento" value="1971-06-28">
-                </p>
-                <br>
+                              
                 <p>
                     <label for="domicilio">Enter your address:</label>
                 </p>
                 <p>
                     <input type="text" placeholder="ej: Bel-Air" name="domicilio" id="domicilio">
                 </p>
-                <br>
+                <p>
+                    <label for="email"> Enter your email </label>
+                </p>
+                <p>
+                    <input type="email" placeholder="ej: nd@gmail.com" name="image" id="email">
+                </p>
+                <input type = "file" id = "profileImg" name = "profileImg" placeholder = "Image" >
+                <p> 
+                                         
                 <p>
                     <label for="password">Enter a password:</label>
                 </p>
