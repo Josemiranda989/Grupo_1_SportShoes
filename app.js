@@ -12,8 +12,8 @@ var app = express();
 
 
 /* MIDDLEWARES PARA USERS LOGS */
-var userLogs = require('./middlewares/userLogs');
-app.use(userLogs)
+/* var userLogs = require('./middlewares/userLogs');
+app.use(userLogs) */
 
 
 // view engine setup

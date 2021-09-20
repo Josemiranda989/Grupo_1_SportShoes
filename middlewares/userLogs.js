@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 
 
 function userLogs(req,res,next){
@@ -6,4 +6,4 @@ function userLogs(req,res,next){
     next()
 }
 
-module.exports=userLogs;
+module.exports=userLogs; */

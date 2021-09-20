@@ -3,69 +3,110 @@
 <%- include('./partials/head', {title: "Register" }) %>
 
 <body class="body-register">
-    <header>
-    </header>
-    <main>
-        <div class="box-register">
-            <a href="/"><img class="logo-register" src="../images/Sportshoes.png" alt="LogoSportShoes"></a>
-            <h1 class="text-register">Register</h1>
+        <main>
+            <div class="box-register">
 
-            <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
-                <p>
-                    <label for="nombreApellido" placeholder="ej: Elon Musk">Enter your name:</label>
-                </p>
-                
-                    <input type="text" placeholder="ej: Elon Musk" name="nombreApellido" id="nombreApellido">
-                </p>
-                <br>
-                <p>
-                    <label for="usuario">Enter your Username:</label>
-                </p>
-                <p>
-                    <input type="text" placeholder="ej: DogeFather" name="usuario" id="usuario">
-                </p>
-                              
-                <p>
-                    <label for="domicilio">Enter your address:</label>
-                </p>
-                <p>
-                    <input type="text" placeholder="ej: Bel-Air" name="domicilio" id="domicilio">
-                </p>
-                <p>
-                    <label for="email"> Enter your email </label>
-                </p>
-                <p>
-                    <input type="email" placeholder="ej: nd@gmail.com" name="image" id="email">
-                </p>
-                <input type = "file" id = "avatar" name = "avatar" placeholder = "Image" >
-                <p> 
-                                         
-                <p>
-                    <label for="password">Enter a password:</label>
-                </p>
-                <p>
-                    <input type="password" placeholder="Password" name="password" id="password">
-                </p>
-                <br>
-                <p>
-                    <label for="password">Confirm the Password:</label>
-                </p>
-                <p>
-                    <input type="password" name="password2" placeholder="Password" id="password2">
-                </p>
-                <br>
-                <p> <label for="terms"><a class="link-register" href="/terms">Terms and conditions:</a></label>
-                </p>
-                <br>
-                <br>
-                <input type="submit" class="submit-login" value="Enviar">
-                <input type="submit" class="submit-login" value="Reset">
-            </form>
-        </div>
-    </main>
-    <footer>
+    <a href="/"><img class="logo-register" src="../images/original.jpeg"
+            alt="LogoSportShoes"></a>
+    <h1 class="text-register">Register</h1>
 
-    </footer>
+    <form class="form-register" action="/users/register" method="POST"
+        enctype="multipart/form-data">
+
+        <p>
+            <label for="nombreApellido">Enter your name:</label>
+        </p>
+        <input type="text"
+        placeholder="<%= locals.errors && errors.nombreApellido ? errors.nombreApellido.msg : null %>"
+        name="nombreApellido"
+        class='form-control <%= locals.errors && errors.nombreApellido ? 'is-invalid' : null  %>'
+        value= '<%= locals.oldData ? oldData.nombreApellido : null  %>'>
+        </p>
+
+        <p>
+            <label for="usuario">Enter your Username:</label>
+        </p>
+        <p>
+            <input type="text"
+            placeholder="<%= locals.errors && errors.usuario ? errors.usuario.msg : null %>"
+            name="usuario"
+            value= '<%= locals.oldData ? oldData.usuario : null  %>'
+            class='form-control <%= locals.errors && errors.usuario ? 'is-invalid' : null  %> '>
+        </p>
+
+        <p>
+            <label for='country'>Select your Country</label>
+        </p>
+        <p>
+            <select
+            name='country'
+            class='form-select <%= locals.errors && errors.country ? 'is-invalid' : null  %> '>
+            <option value=''>Choose a country</option>
+            <% let countries = ['Argentina', 'EEUU', 'Chile', 'Perú', 'Bolivia', 'Colombia', 'Paraguay'] %> 
+            <% for( const oneCountry of countries ) { %>
+            <option
+                value='<%= oneCountry %>'
+                <%= locals.oldData && (oneCountry == oldData.country) ? 'selected' : null %> 
+                > <%= oneCountry  %> </option> 
+            <% } %> 
+            </select>
+            <% if (locals.errors && errors.country) { %>
+             <h7 class='text-danger'>
+                <%= errors.country.msg  %> 
+             </h7>            
+            <% } %>
+        </p>
+
+        <p>
+            <label for="domicilio">Enter your address:</label>
+        </p>
+        <p>
+            <input type="text"
+            placeholder="<%= locals.errors && errors.domicilio ? errors.domicilio.msg : null %>"
+            name="domicilio"
+            value= '<%= locals.oldData ? oldData.domicilio : null %>'
+            class='form-control <%= locals.errors && errors.domicilio ? 'is-invalid' : null  %> '>
+        </p>
+        <p>
+            <label for="email"> Enter your email </label>
+        </p>
+        <p>
+            <input type="email"
+            placeholder="<%= locals.errors && errors.email ? errors.email.msg : null %>"
+            name="email"
+            value= '<%= locals.oldData ? oldData.email : null  %>'
+            class='form-control <%= locals.errors && errors.email ? 'is-invalid' : null  %> '>
+
+        </p>
+         <p>
+           <label for="email"> Choose an Avatar </label>
+         </p>
+         <p>
+        <input class='form-control' type="file" id="avatar" name="avatar" placeholder="Image">
+        <% if (locals.errors && errors.avatar) { %>
+        <h7 class='text-danger'>
+          <%= errors.avatar.msg  %>
+        </h7>
+        <% } %>
+        </p>
+        <p>
+        <p>
+            <label for="password">Enter a password:</label>
+        </p>
+        <p>
+            <input type="password" 
+            placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>"
+            name="password"
+            value= '<%= locals.oldData ? oldData.password : null  %>'
+            class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+        </p>
+        <br>
+        <br>
+        <input type="submit" class="submit-login" value="Enviar">
+        <input type="submit" class="submit-login" value="Reset">
+    </form>
+            </div>
+        </main>
 
 </body>
 
