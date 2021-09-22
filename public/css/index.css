@@ -537,3 +537,10 @@ textarea.form-input {
   padding: auto;
   margin: 10px;
 }
+
+/*====== PROFILE ======*/
+
+.alert {
+  width: 500px;
+  text-align: center;
+}

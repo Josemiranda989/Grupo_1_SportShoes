@@ -6,22 +6,34 @@
 
         <main>
             <div class="box-login">
-                <a href="/"> <img class="logo-login" src="./images/Sportshoes.png" alt="LogoSportShoes"></a>
+                <a href="/"> <img class="logo-login" src="../images/Sportshoes.png" alt="LogoSportShoes"></a>
                 <h1 class="text-login">Login</h1>
-                <form class="form-login" action="/" method="POST">
+                <form class="form-login" action="/user/login" method="POST">
                     <p class="textLogin">
                         <i class="fa fa-user"></i>
-                        <input type="text" name="login" placeholder="Username" required />
+                        <input type="text" name="email" placeholder="youEmail@sportshoes.com" required />
+                        <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                          <%= errors.email.msg %>
+                        </div>
+                        <% } %>
                     </p>
                     <br>
                     <p class="textLogin">
                         <i class="fa fa-lock"></i>
-                        <input type="password" name="password" placeholder="Password" required />
+                        <input type="password" name="password" placeholder="Your Password" required />
                     </p>
                     <br>
-                    <p><input class="submit-login" type="submit" name="sent" value="Login"></p><br>
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                    </label>
+                    <br>
+                    <p>
+                        <input class="submit-login" type="submit" name="sent" value="Login">
+                    </p>
+                    <br>
                     <a class="pregunta-login" href="#">Lost your password ?</a><br>
-                    <a class="pregunta-login" href="register">Don't have an account ?</a>
+                    <a class="pregunta-login" href="/user/register">Don't have an account ?</a>
                 </form>
             </div>
         </main>

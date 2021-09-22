@@ -3,110 +3,86 @@
 <%- include('./partials/head', {title: "Register" }) %>
 
 <body class="body-register">
-        <main>
-            <div class="box-register">
+  <main>
+    <div class="box-register">
 
-    <a href="/"><img class="logo-register" src="../images/original.jpeg"
-            alt="LogoSportShoes"></a>
-    <h1 class="text-register">Register</h1>
+      <a href="/"><img class="logo-register" src="../images/original.jpeg" alt="LogoSportShoes"></a>
+      <h1 class="text-register">Register</h1>
 
-    <form class="form-register" action="/users/register" method="POST"
-        enctype="multipart/form-data">
+      <form class="form-register" action="/user/register" method="POST" enctype="multipart/form-data">
 
         <p>
-            <label for="nombreApellido">Enter your name:</label>
+          <label for="fullName">Enter your name:</label>
         </p>
-        <input type="text"
-        placeholder="<%= locals.errors && errors.nombreApellido ? errors.nombreApellido.msg : null %>"
-        name="nombreApellido"
-        class='form-control <%= locals.errors && errors.nombreApellido ? 'is-invalid' : null  %>'
-        value= '<%= locals.oldData ? oldData.nombreApellido : null  %>'>
+        <input type="text" placeholder="<%= locals.errors && errors.fullName ? errors.fullName.msg : null %>" name="fullName" class='form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null  %>' value='<%= locals.oldData ? oldData.fullName : null  %>'>
         </p>
 
         <p>
-            <label for="usuario">Enter your Username:</label>
+          <label for="userName">Enter your user name:</label>
         </p>
         <p>
-            <input type="text"
-            placeholder="<%= locals.errors && errors.usuario ? errors.usuario.msg : null %>"
-            name="usuario"
-            value= '<%= locals.oldData ? oldData.usuario : null  %>'
-            class='form-control <%= locals.errors && errors.usuario ? 'is-invalid' : null  %> '>
+          <input type="text" placeholder="<%= locals.errors && errors.userName ? errors.userName.msg : null %>" name="userName" value='<%= locals.oldData ? oldData.userName : null  %>' class='form-control <%= locals.errors && errors.userName ? 'is-invalid' : null  %> '>
         </p>
 
         <p>
-            <label for='country'>Select your Country</label>
+          <label for='country'>Select your Country</label>
         </p>
         <p>
-            <select
-            name='country'
-            class='form-select <%= locals.errors && errors.country ? 'is-invalid' : null  %> '>
+          <select name='country' class='form-select <%= locals.errors && errors.country ? 'is-invalid' : null  %> '>
             <option value=''>Choose a country</option>
-            <% let countries = ['Argentina', 'EEUU', 'Chile', 'Perú', 'Bolivia', 'Colombia', 'Paraguay'] %> 
+            <% let countries = ['Argentina', 'EEUU', 'Chile', 'Perú', 'Bolivia', 'Colombia', 'Paraguay'] %>
             <% for( const oneCountry of countries ) { %>
-            <option
-                value='<%= oneCountry %>'
-                <%= locals.oldData && (oneCountry == oldData.country) ? 'selected' : null %> 
-                > <%= oneCountry  %> </option> 
-            <% } %> 
-            </select>
-            <% if (locals.errors && errors.country) { %>
-             <h7 class='text-danger'>
-                <%= errors.country.msg  %> 
-             </h7>            
+            <option value='<%= oneCountry %>' <%= locals.oldData && (oneCountry == oldData.country) ? 'selected' : null %>> <%= oneCountry  %> </option>
             <% } %>
+          </select>
+          <% if (locals.errors && errors.country) { %>
+          <h7 class='text-danger'>
+            <%= errors.country.msg  %>
+          </h7>
+          <% } %>
         </p>
 
         <p>
-            <label for="domicilio">Enter your address:</label>
+          <label for="address">Enter your address:</label>
         </p>
         <p>
-            <input type="text"
-            placeholder="<%= locals.errors && errors.domicilio ? errors.domicilio.msg : null %>"
-            name="domicilio"
-            value= '<%= locals.oldData ? oldData.domicilio : null %>'
-            class='form-control <%= locals.errors && errors.domicilio ? 'is-invalid' : null  %> '>
+          <input type="text" placeholder="<%= locals.errors && errors.address ? errors.address.msg : null %>" name="address" value='<%= locals.oldData ? oldData.address : null %>' class='form-control <%= locals.errors && errors.address ? 'is-invalid' : null  %> '>
         </p>
         <p>
-            <label for="email"> Enter your email </label>
+          <label for="email"> Enter your email </label>
         </p>
         <p>
-            <input type="email"
-            placeholder="<%= locals.errors && errors.email ? errors.email.msg : null %>"
-            name="email"
-            value= '<%= locals.oldData ? oldData.email : null  %>'
-            class='form-control <%= locals.errors && errors.email ? 'is-invalid' : null  %> '>
-
+          <input type="email" placeholder="<%= locals.errors && errors.email ? errors.email.msg : null %>" name="email" value='<%= locals.oldData ? oldData.email : null  %>' class='form-control <%= locals.errors && errors.email ? 'is-invalid' : null  %> '>
+          <% if (locals.errors && errors.email) { %>
+          <div class="text-danger">
+            <%= errors.email.msg %>
+          </div>
+          <% } %>
         </p>
-         <p>
-           <label for="email"> Choose an Avatar </label>
-         </p>
-         <p>
-        <input class='form-control' type="file" id="avatar" name="avatar" placeholder="Image">
-        <% if (locals.errors && errors.avatar) { %>
-        <h7 class='text-danger'>
-          <%= errors.avatar.msg  %>
-        </h7>
-        <% } %>
+        <p>
+          <label for="avatar"> Choose an Avatar </label>
+        </p>
+        <p>
+          <input class='form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>' type="file" name="avatar">
+          <% if (locals.errors && errors.avatar) { %>
+          <h7 class='text-danger'>
+            <%= errors.avatar.msg  %>
+          </h7>
+          <% } %>
         </p>
         <p>
         <p>
-            <label for="password">Enter a password:</label>
+          <label for="password">Enter a password:</label>
         </p>
         <p>
-            <input type="password" 
-            placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>"
-            name="password"
-            value= '<%= locals.oldData ? oldData.password : null  %>'
-            class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+          <input type="password" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
         </p>
         <br>
         <br>
-        <input type="submit" class="submit-login" value="Enviar">
-        <input type="submit" class="submit-login" value="Reset">
-    </form>
-            </div>
-        </main>
+        <input type="submit" class="submit-login" value="Register">
+      </form>
+    </div>
+  </main>
 
 </body>
 
