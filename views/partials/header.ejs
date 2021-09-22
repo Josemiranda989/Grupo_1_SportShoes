@@ -15,8 +15,16 @@
                 <ul class="navbar-nav me-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="products">CATALOG</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">SALE</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login">SIGN IN</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register">SIGN UP</a></li>
+
+                    <% if (locals.isLogged) { %>
+                    <li class="nav-item"><a class="nav-link" href="/user/logout">LOGOUT</a></li>
+                    <li class="nav-item"> <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;"></li>
+                   
+                    <li class="nav-item"><a class="nav-link">HI <%= locals.userLogged.userName  %></a></li>
+                    <% } else { %>
+                    <li class="nav-item"><a class="nav-link" href="/user/login">SIGN IN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/register">SIGN UP</a></li>
+                    <% } %>
                 </ul>
                 <form class="d-flex" method="GET" action="/products/search">
                     <input class="form-control me-2" type="search" name="shoes" placeholder="Search" aria-label="Search">
@@ -25,3 +33,6 @@
             </div>
         </div>
     </nav>
+
+
+    
