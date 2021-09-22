@@ -22,8 +22,6 @@ router.get('/login', guestMiddleware, userController.login)
 //PROCESAMIENTO DEL LOGIN
 router.post('/login', userController.loginProcess)
 
-
-
 //PERFIL DE USUARIO
 router.get('/profile/', authMiddleware, userController.profile)
 
