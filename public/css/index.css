@@ -87,16 +87,19 @@
 }
 
 .call-index {
-  font-size: 13px;
-  margin-left: 40px;
-  background-color: var(--grisOscuro);
-  border-radius: 30px;
-  padding: 5px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 10px;
+font-size: 15px;
+margin-left: 40px;
+background-color: #5e5e5e87;
+border-radius: 10px;
+padding: 5px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-bottom: 10px;
+transition-property: all;
+transition-duration: 0.5s;
 }
+
 
 .call-index a:visited {
   text-decoration: none;
