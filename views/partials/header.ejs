@@ -20,7 +20,7 @@
                     <li class="nav-item"><a class="nav-link" href="/user/logout">LOGOUT</a></li>
                     <li class="nav-item"> <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;"></li>
                    
-                    <li class="nav-item"><a class="nav-link">HI <%= locals.userLogged.userName  %></a></li>
+                    <li class="nav-item"><a class="nav-link"><%= locals.userLogged.userName  %></a></li>
                     <% } else { %>
                     <li class="nav-item"><a class="nav-link" href="/user/login">SIGN IN</a></li>
                     <li class="nav-item"><a class="nav-link" href="/user/register">SIGN UP</a></li>

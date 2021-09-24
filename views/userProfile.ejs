@@ -9,8 +9,10 @@
 <div class="container d-flex justify-content-center" style="margin-top: 40px;">
   <div class="row">
     <div class="col-md-3">
-      <h2>Hi <%= user.fullName %> </h2>
-      <img src="/images/avatars/<%=user.avatar%>">
+      <div class= "text-center fs-2 ">Hi <%= user.fullName %> </div>
+      <div>
+          <img class = "imagenavatar" src ="/images/avatars/<%=user.avatar%>">
+      </div>
       <br>
       <br>
       <div class="alert alert-success"><%= user.email %></div>
