@@ -10,4 +10,8 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 13/9/21: Hoy se agrego links correspondientes a las redes sociales ubicadas en el Footer y se usa el modulo de filesync para crear una nueva carpeta donde se guardaran los archivos.
 14/9/21: Arreglamos los formularios de edit,delete y tambien se agrego la carpeta moduls para empezar usar base datos
         creamos otra branch para poder trabajar mas organizados y tener mas limpio del codigo.
-        Asignamos a branch main como version estable del proyecto 
+        Asignamos a branch main como version estable del proyecto
+18/09/21 Se impleto expess validator en el login y en el register en base al SPRINT 5       
+20/09/21 Se agregro Bscrypthjs para incriptar contrasena del los usuarios.      
+21/09/21 Se agrego la vista de profile para el usuario ya logiado.
+24/09/21 Se hizo una reunion para poder terminar de cordinar algunos Actividades .
