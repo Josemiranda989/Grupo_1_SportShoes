@@ -15,3 +15,4 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 20/09/21 Se agregro Bscrypthjs para incriptar contrasena del los usuarios.      
 21/09/21 Se agrego la vista de profile para el usuario ya logiado.
 24/09/21 Se hizo una reunion para poder terminar de cordinar algunos Actividades .
+30/09/21 Se corrigió error de direccionamiento al borrar un producto desde el formulario de edición. Se borró zapatilla de prueba con ID = 2
