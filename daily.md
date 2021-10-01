@@ -16,3 +16,5 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 21/09/21 Se agrego la vista de profile para el usuario ya logiado.
 24/09/21 Se hizo una reunion para poder terminar de cordinar algunos Actividades .
 30/09/21 Se corrigió error de direccionamiento al borrar un producto desde el formulario de edición. Se borró zapatilla de prueba con ID = 2
+01/10/21 Se corrigió error al editar un producto la imagen se vea a la vista.
+Se Agregaron nuevas tareas al trello en base a la reunion con el profesor.

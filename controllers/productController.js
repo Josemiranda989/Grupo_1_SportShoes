@@ -98,7 +98,7 @@ const productController = {
                 product.category = req.body.category
                 if (req.file) {
                     let indexShoe = allShoes.findIndex(product => product.id == idProduct)
-                    let imagePath = path.join(__dirname, '../public/images/shoes-img', allShoes[indexShoe].productName, allShoes[indexShoe].img1);
+                    let imagePath = path.join(__dirname, `../public/images/shoes-img/${req.body.productName}`, allShoes[indexShoe].productName, allShoes[indexShoe].img1);
                     fs.unlink(imagePath, function (err) {
                         if (err) throw err;
                     })
