@@ -7,15 +7,17 @@
     
     <!-- todos los productos -->
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
 
         <% for (i=0 ; i < allShoes.length ; i++) { %>
-
+         
         <div class="col">
             <div class="card">
                 <img src="/images/shoes-img/<%= allShoes[i].productName%>/<%= allShoes[i].img1%>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
                 <div class="card-body">
-                    <h5 class="card-title"><%= allShoes[i].productName %></h5>
+                    <h5 class="card-title ">
+                    <a href="/products/detail/<%= allShoes[i].id%>"><%= allShoes[i].productName %></a>
+                    </h5>
                     <p class="card-text">$<%= allShoes[i].price %></p>
                 </div>
             </div>
