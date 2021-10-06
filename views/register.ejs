@@ -75,7 +75,7 @@
           <label for="password">Enter a password:</label>
         </p>
         <p>
-          <input type="password" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+          <input type="password" pattern=".{8,}" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
         </p>
         <br>
         <br>
