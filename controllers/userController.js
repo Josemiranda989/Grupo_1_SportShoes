@@ -73,7 +73,7 @@ const userController = {
       return res.render('login', {
         errors: {
           email: {
-            msg: 'Credentials are invalid',
+            msg: 'Password is invalid',
           }
         }
       })

@@ -1,13 +1,14 @@
 const path = require('path');
 const { body } = require('express-validator');
 
+
 module.exports = [
   body('fullName')
     .notEmpty()
     .withMessage('Invalid Full name, please write again'),
   body('userName')
     .notEmpty()
-    .withMessage('Invalid User name, please write again'),
+    .withMessage('Invalid Username, please write again'),
   body('address')
     .notEmpty()
     .withMessage('Invalid Adress, please write again'),
@@ -26,7 +27,7 @@ module.exports = [
       let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
     if (!file) {
-      throw new Error('Choose a image')
+      throw new Error("Upload an image")
     } else {
       let fileExtension = path.extname(file.originalname)
       if (!acceptedExtensions.includes(fileExtension)) {
@@ -38,3 +39,7 @@ module.exports = [
     return true
   }),
 ]
+
+
+
+

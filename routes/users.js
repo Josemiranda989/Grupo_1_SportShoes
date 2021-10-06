@@ -1,5 +1,5 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
 
 // Controller
 const userController = require('../controllers/userController')
@@ -20,6 +20,7 @@ router.post('/register', uploadFile.single('avatar'), validations, userControlle
 router.get('/login', guestMiddleware, userController.login)
 
 //PROCESAMIENTO DEL LOGIN
+
 router.post('/login', userController.loginProcess)
 
 //PERFIL DE USUARIO
