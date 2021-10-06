@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: product.productName}) %>
+<%- include('./partials/head', {title: product?.productName ? product.productName : 'Not Found'}) %>
 
 <body class="body-detail">
-    <%- include('./partials/header') %>
-    <section class= "section-detail " >
-         <h1 class="titulo-detail"> <%= product.productName %>  </h1>
-    <div >
-        
-        <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>"  alt="producto para agregar">
-        
-    </div>    
-        <form action="/" method="POST">                       
-            <div class = "texto-detail">                 
-                <div>       
-                    <label>Select Color</label>                              
-                    <select name="color">
-                <option value="black">Black</option>
-                <option value="white">White </option>
-                <option value="red">Red </option>
-                <option value="blue">Blue </option>
-                    </select>
-                </div>
-                <div>       
-                    <label>Select a Size</label>                                    
-                    <select name="size">
-                <option value="8.0">8.0 </option>
-                <option value="8.5">8.5 </option>
-                <option value="9.0">9.0 </option>
-                <option value="10.0">10.0 </option>
-                    </select>
-                <div> Price $<%= product.price %> </div> 
-                </div>
-                <p> IMPORTANT MESSAGE                    
-                    Your order is not finalized until you've received a shipment confirmation email. To checkout faster, please
-                     <button class="addcart-detail-signin"> <a href="/login" type="submit" >Sign In> </a> </button> </p>
-            </div>
-            <button class="addcart-detail"> <a href="/productCart" type="submit" >ADD TO CART> </a> </button>                     
-        </form>   
-   </section>
+  <%- include('./partials/header') %>
 
 
+  <% if (product != undefined) { %>
 
-   <!-- FOOTER -->
-   <%- include('./partials/footer') %>
+  <!-- DETALLE DEL PRODUCTO -->
+  <section class="section-detail ">
+    <h1 class="titulo-detail"> <%= product.productName %> </h1>
+    <div>
+      <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>" alt="producto para agregar">
+    </div>
+    <form action="/" method="POST">
+      <div class="texto-detail">
+        <div>
+          <label>Select Color</label>
+          <select name="color">
+            <option value="black">Black</option>
+            <option value="white">White </option>
+            <option value="red">Red </option>
+            <option value="blue">Blue </option>
+          </select>
+        </div>
+        <div>
+          <label>Select a Size</label>
+          <select name="size">
+            <option value="8.0">8.0 </option>
+            <option value="8.5">8.5 </option>
+            <option value="9.0">9.0 </option>
+            <option value="10.0">10.0 </option>
+          </select>
+          <div> Price $<%= product.price %> </div>
+        </div>
+        <p> IMPORTANT MESSAGE
+          Your order is not finalized until you've received a shipment confirmation email. To checkout faster, please
+          <button class="addcart-detail-signin"> <a href="/login" type="submit">Sign In> </a> </button>
+        </p>
+      </div>
+      <button class="addcart-detail"> <a href="/productCart" type="submit">ADD TO CART> </a> </button>
+    </form>
+  </section>
+
+  <% } else { %>
+
+  <!-- PRODUCTO NO ENCONTRADO -->
+  <div class="container fondo-form mt-1 mb-1" style="height:720px">
+    <h1 class="text-center fs-2 pt-4 fw-bold">We're sorry</h1>
+    <div class="d-flex justify-content-center">
+      <img class='img-fluid ' src="/images/product-not-found.png" alt="Product not found">
+    </div>
+  </div>
+  </div>
+
+  <% } %>
+
+  <!-- FOOTER -->
+  <%- include('./partials/footer') %>
 </body>
+
 </html>

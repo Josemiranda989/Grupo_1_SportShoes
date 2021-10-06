@@ -521,7 +521,12 @@ main div h1 {
   }
 }
 
-/*====== Formularios ======*/
+/*====== Formulario Create ======*/
+
+.fondo-form {
+  background-color: var(--grisClaro);
+}
+
 .form-label {
   display: inline-block;
   font-size: 1.6em;
@@ -544,13 +549,6 @@ textarea.form-input {
   min-height: 140px;
   resize: vertical;
   padding: 15px;
-}
-
-.container {
-  background-color: var(--grisClaro);
-  border: 1px solid black;
-  padding: auto;
-  margin: 10px;
 }
 
 /*====== PROFILE ======*/
