@@ -18,4 +18,5 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
 30/09/21 Se corrigió error de direccionamiento al borrar un producto desde el formulario de edición. Se borró zapatilla de prueba con ID = 2
 1/10/21 Se corrigió error al editar un producto la imagen se vea a la vista.
 Se Agregaron nuevas tareas al trello en base a la reunion con el profesor.
-4/10/21 Hoy se corrio el footer  agregando heigth a la caja contenedoray se agrego el link al profile del usurio 
+4/10/21 Hoy se corrio el footer  agregando heigth a la caja contenedoray se agrego el link al profile del usuario.
+7/10/21 Hoy se verifico detalles para terminar el sprint 5 y dar inicio con la distribucion de tareas para el sprint 6.
