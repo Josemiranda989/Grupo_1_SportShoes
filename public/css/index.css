@@ -107,28 +107,22 @@
 
 /* <-FOOTER - INDEX-> */
 
-.footer-index {
-  background-color: black;
-  color: white;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
-  flex-wrap: wrap;
-  border-top: solid 2px white;
+
+section a {
+  margin:5px ;
 }
 
-.cajas-footer {
-  margin: 10px 6px;
+section a i {
+  font-size:30px ;
+  
 }
 
-.listas-footer a {
-  color: white;
-  text-decoration: none;
-}
-.listas-footer a:visited {
-  color: white;
+.bg-footer{
+  background-color: #000000;
+} 
+
+
+.text-white{
   text-decoration: none;
 }
 
