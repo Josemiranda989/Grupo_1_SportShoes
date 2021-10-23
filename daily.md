@@ -21,3 +21,5 @@ Se Agregaron nuevas tareas al trello en base a la reunion con el profesor.
 4/10/21 Hoy se corrio el footer  agregando heigth a la caja contenedoray se agrego el link al profile del usuario.
 7/10/21 Hoy se verifico detalles para terminar el sprint 5 y dar inicio con la distribucion de tareas para el sprint 6.
 8/10/21 Se actualizó la lista de tareas en trello en base al sprint 6, se terminó el diagrama de relación de entidades con draw.io.
+14/10/21 Reunion sobre como crear la estructura de la base de datos y sus relaciones
+22/10/21 Se creó la base de datos en el branch beta. Falta agregar el contenido de las tablas
