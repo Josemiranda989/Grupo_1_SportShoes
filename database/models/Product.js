@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    productNAme: {
+    productName: {
       type: DataTypes.STRING(50),
     },
     price: {
@@ -50,14 +50,17 @@ module.exports = (sequelize, DataTypes) => {
 
   let config = {
     tableName: 'products',
+    timestamps: false
   }
 
-  let product = sequelize.define(alias, cols, config)
+  let Product = sequelize.define(alias, cols, config)
 
-  product.associate = function (models) {
-    product.belongsToMany(models.Cartproduct, {
-      as: 'products',
-      foreignKey: product_id,
+  Product.associate = function (models) {
+    Product.belongsTo(models.Cartproduct, {
+      as: 'cartproducts',
+      foreignKey: "product_id",
     })
   }
+
+return Product
 }

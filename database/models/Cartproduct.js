@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  let alias = 'cartproduct'
+  let alias = 'Cartproduct'
 
   let cols = {
     id: {
@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
 
-    cart_id: {
+    user_id: {
       type: DataTypes.INTEGER(11),
     },
 
@@ -35,25 +35,31 @@ module.exports = (sequelize, DataTypes) => {
 
   let config = {
     tableName: 'cartproduct',
+    timestamps: false
   }
   
-  let cartproduct = sequelize.define(alias, cols, config)
-  cartproduct.associate = function (models) {
-    cartproduct.belongsTo(models.Product, {
-      as: 'cartproduct',
+  let Cartproduct = sequelize.define(alias, cols, config)
+
+  Cartproduct.associate = function (models) {
+    Cartproduct.hasMany(models.Product, {
+      as: 'products',
       foreignKey: 'product_id',
       otherKey: 'user_id',
     })
-  }
 
-/*   cartproduct.associate = function(models){
-      cartproduct.belongsTo(models.Product,{
+    return Cartproduct
+  } 
+
+ /*   Cartproduct.associate = function(models){
+      Cartproduct.belongsTo(models.Product,{
           foreignKey:'product_id'
       })
   }
-  cartproduct.associate = function(models){
-      cartproduct.belongsTo(models.User,{
+  Cartproduct.associate = function(models){
+      Cartproduct.belongsTo(models.User,{
           foreignKey:'user_id'
       })
   } */
+  
+  return Cartproduct
 }

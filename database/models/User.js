@@ -1,5 +1,5 @@
-module.exports = (sequileze, DataTypes) => {
-  let alias = 'users'
+module.exports = (sequelize, DataTypes) => {
+  let alias = 'Users'
   let cols = {
     user_id: {
       type: DataTypes.INTEGER(11),
@@ -7,7 +7,7 @@ module.exports = (sequileze, DataTypes) => {
       autoIncrement: true,
     },
 
-    fullNAme: {
+    fullName: {
       type: DataTypes.STRING(50),
     },
     userName: {
@@ -48,14 +48,17 @@ module.exports = (sequileze, DataTypes) => {
 
   let config = {
     tableName: 'users',
+    timestamps: false
   }
 
-  let Usuario = sequelize.define(alias, cols, config)
+  let User = sequelize.define(alias, cols, config)
 
-  Usuario.associate = function (models) {
-    Usuario.hasMany(models.Cart, {
-      as: 'usercart',
+  User.associate = function (models) {
+    User.belongsTo(models.Cartproduct, {
+      as: 'carts',
       foreingKey: 'user_id',
     })
   }
+
+  return User
 }

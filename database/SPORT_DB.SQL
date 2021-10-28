@@ -304,7 +304,7 @@ values
         'Nike-AirForce',
         '109.55',
         'Full-length FuelCell midsole provides a pinnacle of propulsion and energy return.',
-        'img1.png',
+        '1.png',
         'Men´s',
         'Green',
         'Nike',
@@ -422,7 +422,7 @@ values
 
 
 
--- CONTENIDO DE TABLA CART
+
 
 -- CREACION DE TABLA CARTPRODUCTS
 CREATE TABLE IF NOT EXISTS cartproduct (
