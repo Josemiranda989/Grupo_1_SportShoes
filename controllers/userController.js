@@ -3,7 +3,8 @@ const path = require('path')
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 
-const User = require('../database/models/Users')
+const User = require('../database/models/User')
+
 
 /* Lista de Productos .JSON */
 const allUsersFilePath = path.join(__dirname, '../data/users.json')

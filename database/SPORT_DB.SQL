@@ -420,30 +420,20 @@ values
         '2021-02-14 19:00:52'
     );
 
--- CREACION DE TABLA CART 
-CREATE TABLE IF NOT EXISTS cart (
-    cart_id int(11) NOT NULL AUTO_INCREMENT,
-    user_id int(11) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (cart_id),
-    FOREIGN KEY (user_id) REFERENCES users (user_id)
-);
+
 
 -- CONTENIDO DE TABLA CART
 
 -- CREACION DE TABLA CARTPRODUCTS
-CREATE TABLE IF NOT EXISTS cartproducts (
+CREATE TABLE IF NOT EXISTS cartproduct (
     id int(11) NOT NULL AUTO_INCREMENT,
-    cart_id int(11) NOT NULL,
+    user_id int(11) NOT NULL,
     product_id int(11) NOT NULL,
+    quantity int unsigned NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (product_id) REFERENCES products(product_id),
-    FOREIGN KEY (cart_id) REFERENCES cart(cart_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
--- CONTENIDO DE TABLA CARTPRODUCTS:

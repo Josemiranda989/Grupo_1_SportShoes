@@ -4,11 +4,17 @@ const path = require('path')
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join (__dirname, '../data/productList.json')
 let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
+/* const DB = require('../database/models'); */
 
 const productController = {
     // Todos los productos
     products: (req, res) => {
-        res.render('products', { allShoes: allShoes })
+                res.render('products', { allShoes: allShoes }) 
+
+/*         DB.Product.findAll()            
+            .then(function (products) {
+                res.render('products', {allShoes : products})
+            }) */
     },
 
     // Detalle de un producto particular
