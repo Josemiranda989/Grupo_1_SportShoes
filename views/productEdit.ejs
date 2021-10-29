@@ -43,9 +43,11 @@
                                     value="<%= productToEdit.size %>">
                             </div>
                             <div class="col-12 col-md-6">
-                                <label for="img1" class="form-label">Image :</label>
-                                <input type="file" id="img1" name="img1" placeholder="Image" class="form-input">
+                                <label for="color" class="form-label">Color:</label>
+                                <input type="text" id="color" name="color" placeholder="Ej: Blue" class="form-input"
+                                    value="<%= productToEdit.color %>">
                             </div>
+                            
                             <div class="col-12 col-md-6">
                                 <label for="category" class="form-label">Category:</label>
                                 <select name="category" id="category" class="form-input">
@@ -61,6 +63,11 @@
                                             <% } %>
                                 </select>
                             </div>
+                            <div class="col-12 col-md-12">
+                                <label for="img1" class="form-label">Image :</label>
+                                <input type="file" id="img1" name="img1" placeholder="Image" class="form-input">
+                            </div>
+                            
                             <div class="col-12">
                                 <label for="description" class="form-label">Description:</label>
                                 <textarea name="description" id="description"
@@ -72,7 +79,7 @@
                         </form>
                             <!-- FORM DELETE -->
                             <div class="col-6">
-                                <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                                <form action="/products/<%= productToEdit.product_id %>?_method=DELETE" method="POST">
                                     <button class="buy-now-button" type="submit" name="delete">Delete this Product</button>
                                 </form>
                             </div>

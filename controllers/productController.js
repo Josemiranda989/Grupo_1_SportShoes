@@ -49,13 +49,14 @@ const productController = {
       if (req.file.filename) {
         db.Product.create({
           productName: req.body.productName,
-          price:parseInt(req.body.price,10),
+          price: parseInt(req.body.price, 10),
           brand: req.body.brand,
+          color:req.body.color,
           description: req.body.description,
-          size:parseInt(req.body.size,10),
+          size: parseInt(req.body.size, 10),
           category: req.body.category,
           img1: req.file.filename,
-        }).then(function (a) {
+        }).then(function () {
           res.redirect("/products");
         });
       }
@@ -102,13 +103,11 @@ const productController = {
 
   // Edit - Vista del Formulario
   edit: (req, res) => {
-    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10))
-    idShoes
-    .then(function(productToEdit){
-    res.render("productEdit", { productToEdit: productToEdit });
-    
-  })
-    
+    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
+    idShoes.then(function (productToEdit) {
+      res.render("productEdit", { productToEdit: productToEdit });
+    });
+
     /* let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
     let idProduct = parseInt(req.params.id);
     let productToEdit = allShoes.filter((i) => i.id === idProduct);
@@ -116,43 +115,48 @@ const productController = {
   },
 
   // Update - Metodo para editar producto
+
   update: (req, res) => {
-    if(req.file.filename){
-      db.Producto.update({
-                  nombre:req.body.nombre,
-                  rating: parseInt(req.body.rating,10),
-                  precio: parseInt(req.body.precio,10),
-                  breveDescripcion: req.body.breveDescripcion,
-                  informacionAdicional: req.body.informacionAdicional,
-                  imagenPrincipal:req.file.filename,
-                  idPlataforma:parseInt(req.body.plataforma,10),
-                  idConsola:parseInt(req.body.consola,10),
-                  idCategoria:parseInt(req.body.categoria,10)
-              },{
-        where: {
-          idProductos: req.params.id
+    if (req.file) {
+      if (req.file.filename) {
+        db.Product.update(
+          {
+            productName: req.body.Name,
+            price: req.body.price,
+            brand: req.body.brand,
+            description: req.body.description,
+            size: req.body.size,
+            color:req.body.color,
+            category: req.body.category,
+            img1: req.file.filename,
+          },
+          {
+            where: {
+              product_id: req.params.id,
+            },
+          }
+        );
+      }
+    } else {
+      db.Product.update(
+        {
+          productName: req.body.Name,
+          price: req.body.price,
+          brand: req.body.brand,
+          description: req.body.description,
+          size: req.body.size,
+          color:req.body.color,
+          category: req.body.category,
+         
+        },
+        {
+          where: {
+            product_id: req.params.id,
+          },
         }
-      });
+      );
     }
-  }else{
-    db.Producto.update({
-              nombre:req.body.nombre,
-              rating: parseInt(req.body.rating,10),
-              precio: parseInt(req.body.precio,10),
-              breveDescripcion: req.body.breveDescripcion,
-              informacionAdicional: req.body.informacionAdicional,
-              idPlataforma:parseInt(req.body.plataforma,10),
-              idConsola:parseInt(req.body.consola,10),
-              idCategoria:parseInt(req.body.categoria,10)
-          },{
-              where: {
-                  idProductos: req.params.id
-              }
-          });
-  }
-  res.redirect('/products/detail/'+ parseInt(req.params.id,10))
-
-
+    res.redirect("/products/detail/" + parseInt(req.params.id, 10));
 
     /* let idProduct = parseInt(req.params.id);
     let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
@@ -188,7 +192,16 @@ const productController = {
 
   // Delete - Borrar un producto de la base de datos
   delete: (req, res) => {
-    let idProduct = parseInt(req.params.id);
+    
+    db.Product.destroy({
+      Where:{
+				product_id: parseInt(req.params.id,10)
+			}
+    })
+    res.redirect('/products')
+ 
+    
+    /*let idProduct = parseInt(req.params.id);
     let indexShoe = allShoes.findIndex((product) => product.id === idProduct);
     let imagePath = path.join(
       __dirname,
@@ -203,8 +216,9 @@ const productController = {
     let allShoesUpdated = allShoes.filter((i) => i.id !== idProduct);
     let allShoesUpdatedJSON = JSON.stringify(allShoesUpdated, null, " ");
     fs.writeFileSync(allShoesFilePath, allShoesUpdatedJSON);
-    res.redirect("/products");
-  },
+    
+    res.redirect('/products')*/
+  }
 };
 
 module.exports = productController;
