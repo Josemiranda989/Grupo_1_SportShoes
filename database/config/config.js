@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "SportShoes_DB",
+    "password": 'Pass55word!!',
+    "database": "sportshoes_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -21,3 +21,5 @@ module.exports = {
     "dialect": "mysql"
   }
 }
+
+//gabriel pass Pass55word!!
