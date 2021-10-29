@@ -11,46 +11,46 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="products-title">Edit: <i>
-                                <%= productToEdit[0].productName %>
+                                <%= productToEdit.productName %>
                             </i></h2>
                     </div>
                 </div>
                 <!-- FORM TO EDIT -->
 
                 <div class="col-12">
-                    <form action="/products/<%= productToEdit[0].id %>/edit?_method=PUT" method="POST"
+                    <form action="/products/<%= productToEdit.product_id %>/edit?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <div class="row product-detail">
                             <div class="col-12 col-md-6">
                                 <label for="productName" class="form-label">Name:</label>
                                 <input type="text" id="productName" name="productName"
                                     placeholder="Ej: Zapatillas Reebok" class="form-input"
-                                    value="<%= productToEdit[0].productName %>">
+                                    value="<%= productToEdit.productName %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="price" class="form-label">Price:</label>
                                 <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
-                                    value="<%= productToEdit[0].price %>">
+                                    value="<%= productToEdit.price %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="brand" class="form-label">Brand:</label>
                                 <input type="text" id="brand" name="brand" placeholder="Ej: Adidas" class="form-input"
-                                    value="<%= productToEdit[0].brand %>">
+                                    value="<%= productToEdit.brand %>">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="size" class="form-label">Size:</label>
                                 <input type="text" id="size" name="size" placeholder="Ej: 15" class="form-input"
-                                    value="<%= productToEdit[0].size %>">
+                                    value="<%= productToEdit.size %>">
                             </div>
                             <div class="col-12 col-md-6">
-                                <label for="img1" class="form-label">Image 1:</label>
+                                <label for="img1" class="form-label">Image :</label>
                                 <input type="file" id="img1" name="img1" placeholder="Image" class="form-input">
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="category" class="form-label">Category:</label>
                                 <select name="category" id="category" class="form-input">
 
-                                    <% if (productToEdit[0].category==='Men´s' ) { %>
+                                    <% if (productToEdit.category==='Men´s' ) { %>
                                         <option value="">Select</option>
                                         <option value="Men´s" selected>Men´s</option>
                                         <option value="Women´s">Women´s</option>
@@ -64,7 +64,7 @@
                             <div class="col-12">
                                 <label for="description" class="form-label">Description:</label>
                                 <textarea name="description" id="description"
-                                    class="form-input"><%= productToEdit[0].description %></textarea>
+                                    class="form-input"><%= productToEdit.description %></textarea>
                             </div>
                             <div class="col-6">
                                 <button type="submit" name='edit' class="buy-now-button">Save Changes</button>
@@ -72,7 +72,7 @@
                         </form>
                             <!-- FORM DELETE -->
                             <div class="col-6">
-                                <form action="/products/<%= productToEdit[0].id %>?_method=DELETE" method="POST">
+                                <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="POST">
                                     <button class="buy-now-button" type="submit" name="delete">Delete this Product</button>
                                 </form>
                             </div>

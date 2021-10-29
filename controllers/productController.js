@@ -3,7 +3,6 @@ const path = require("path");
 let db = require("../database/models");
 let allShoesDB = db.Product.findAll();
 
-
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join(__dirname, "../data/productList.json");
 let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
@@ -19,9 +18,8 @@ const productController = {
 
   // Detalle de un producto particular
   productDetail: (req, res) => {
-    let idShoes=db.Product.findByPk(parseInt(req.params.id,10))
-    idShoes
-    .then(function (productSelected) {
+    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
+    idShoes.then(function (productSelected) {
       res.render("productDetail", { product: productSelected });
     });
 
@@ -48,6 +46,24 @@ const productController = {
   // Create - Metodo para almacenar
   store: (req, res) => {
     if (req.file) {
+      if (req.file.filename) {
+        db.Product.create({
+          productName: req.body.productName,
+          price:parseInt(req.body.price,10),
+          brand: req.body.brand,
+          description: req.body.description,
+          size:parseInt(req.body.size,10),
+          category: req.body.category,
+          img1: req.file.filename,
+        }).then(function (a) {
+          res.redirect("/products");
+        });
+      }
+    } else {
+      res.send("Falta adjuntar imagen, intentalo de nuevo");
+    }
+
+    /* if (req.file) {
       let newShoe = {
         id: allShoes[allShoes.length - 1].id + 1,
         productName: req.body.productName,
@@ -64,18 +80,15 @@ const productController = {
       res.redirect("/products");
     } else {
       res.render("productCreate");
-    }
+    } */
   },
 
   // BARRA SEARCH ITEMS
   search: (req, res) => {
-    console.log(req.query.shoes);
     let loqueBuscoElUsuario = req.query.shoes.toLowerCase();
     let userResults = [];
 
     for (let i = 0; i < allShoes.length; i++) {
-      console.log("primera var ", allShoes[i].brand);
-      console.log("segunda var", allShoes[i].productName);
       if (
         allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario) ||
         allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)
@@ -89,15 +102,59 @@ const productController = {
 
   // Edit - Vista del Formulario
   edit: (req, res) => {
-    let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
+    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10))
+    idShoes
+    .then(function(productToEdit){
+    res.render("productEdit", { productToEdit: productToEdit });
+    
+  })
+    
+    /* let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
     let idProduct = parseInt(req.params.id);
     let productToEdit = allShoes.filter((i) => i.id === idProduct);
-    res.render("productEdit", { productToEdit: productToEdit });
+    res.render("productEdit", { productToEdit: productToEdit }); */
   },
 
   // Update - Metodo para editar producto
   update: (req, res) => {
-    let idProduct = parseInt(req.params.id);
+    if(req.file.filename){
+      db.Producto.update({
+                  nombre:req.body.nombre,
+                  rating: parseInt(req.body.rating,10),
+                  precio: parseInt(req.body.precio,10),
+                  breveDescripcion: req.body.breveDescripcion,
+                  informacionAdicional: req.body.informacionAdicional,
+                  imagenPrincipal:req.file.filename,
+                  idPlataforma:parseInt(req.body.plataforma,10),
+                  idConsola:parseInt(req.body.consola,10),
+                  idCategoria:parseInt(req.body.categoria,10)
+              },{
+        where: {
+          idProductos: req.params.id
+        }
+      });
+    }
+  }else{
+    db.Producto.update({
+              nombre:req.body.nombre,
+              rating: parseInt(req.body.rating,10),
+              precio: parseInt(req.body.precio,10),
+              breveDescripcion: req.body.breveDescripcion,
+              informacionAdicional: req.body.informacionAdicional,
+              idPlataforma:parseInt(req.body.plataforma,10),
+              idConsola:parseInt(req.body.consola,10),
+              idCategoria:parseInt(req.body.categoria,10)
+          },{
+              where: {
+                  idProductos: req.params.id
+              }
+          });
+  }
+  res.redirect('/products/detail/'+ parseInt(req.params.id,10))
+
+
+
+    /* let idProduct = parseInt(req.params.id);
     let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
     allShoes.forEach((product) => {
       if (product.id == idProduct) {
@@ -122,11 +179,11 @@ const productController = {
           });
           product.img1 = req.file.filename;
         }
-      }
+      } 
     });
     let allShoesJSON = JSON.stringify(allShoes, null, " ");
     fs.writeFileSync(allShoesFilePath, allShoesJSON);
-    res.redirect("/products");
+    res.redirect("/products"); */
   },
 
   // Delete - Borrar un producto de la base de datos

@@ -236,6 +236,11 @@ section a i {
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 
+ .sinestiloA {
+text-decoration: none;
+
+ }
+
 .titulo-cart {
   background-color: rgba(82, 176, 197, 0.95);
   padding: 10px;
