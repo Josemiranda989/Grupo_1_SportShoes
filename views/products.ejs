@@ -13,13 +13,14 @@
          
             <a class= "sinestiloA" href="/products/detail/<%= allShoes[i].product_id%>">
                 <div class="col">
-                    <div class="card">
-                        <img src="/images/shoes-img/<%= allShoes[i].productName%>/<%= allShoes[i].img1%>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
-                        <div class="card-body">
-                            <h5 class="card-title ">
+                    <div class="card">   
+                          <h5 class="card-title">
                            <%= allShoes[i].productName %>
                             </h5>
-                            <p class="card-text">$<%= allShoes[i].price %></p>
+                        <img src="/images/shoes-img/<%= allShoes[i].productName%>/<%= allShoes[i].img1%>" class="card-img-top" alt="imagen de <%=allShoes[i].productName%>">
+                        <div class="card-body">                       
+                            <p class="card-text"><strong>Price</strong> $<%= allShoes[i].price %></p>
+                            <p class="card-text"><strong>Brand</strong> <%= allShoes[i].brand %></p>
                         </div>
                     </div>
                 </div>

@@ -228,18 +228,30 @@ section a i {
   text-decoration: none;
 }
 
-
-
-
-
-/* <-------------- PRODUCT CART.HTML --------------> */
-/* <-------------- PRODUCT CART.HTML --------------> */
-/* <-------------- PRODUCT CART.HTML --------------> */
+h5.card-title {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  background-color: #95a1a3;
+}
 
  .sinestiloA {
 text-decoration: none;
+color : black
 
  }
+
+ .sinestiloA:hover {
+text-decoration: none;
+color : var(--verdeOscuro)
+
+ }
+
+/* <-------------- PRODUCT CART.HTML --------------> */
+/* <-------------- PRODUCT CART.HTML --------------> */
+/* <-------------- PRODUCT CART.HTML --------------> */
+
+
 
 .titulo-cart {
   background-color: rgba(82, 176, 197, 0.95);
