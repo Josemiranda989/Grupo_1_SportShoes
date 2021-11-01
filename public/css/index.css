@@ -247,6 +247,10 @@ color : var(--verdeOscuro)
 
  }
 
+.card-body {
+  background-color: rgb(233, 233, 233);
+}
+
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
