@@ -44,6 +44,9 @@ module.exports = (sequelize, DataTypes) => {
     deleted_at: {
       type: DataTypes.DATE,
     },
+    cartsId: {
+      type: DataTypes.INTEGER(11)
+    }
   }
 
   let config = {
