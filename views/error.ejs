@@ -1,3 +1,18 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<%- include('./partials/head', {title: "Error"}) %>
+<div class="container-fluid">
+  <div class="row ">
+
+    <div
+     class="col-md-6 text-center alert-primary rounded-pill m-3 p-5" style='padding-top: 60px;
+            '>
+      <h1><%= message %></h1>
+      <h2><%= error.status %></h2>
+    </div>
+    <div style="width:300px;
+                border-radius: 20px"
+         class=" col-md-6 mx-auto d-block">
+      <img src="/images/notfound.png" alt="...">
+    </div>
+  </div>
+  <pre class="alert-danger m-3 p-5 rounded"><%= error.stack %></pre>
+</div>
