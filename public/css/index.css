@@ -31,6 +31,12 @@
   background-color: #16414c;
 }
 
+.background-section{
+  background-color: #16414c;
+  border-bottom: 2px solid #e8f0f2;
+  padding:4px 0 0 0
+}
+
 .carousel {
   background: #91c9ea;
   background: -moz-linear-gradient(top, #91c9ea 0%, #1c6ea4 50%, #000000 100%);
@@ -68,8 +74,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-top: 5px solid #e8f0f2;
-  border-bottom: 5px solid #e8f0f2;
+  border-top: 3px solid #e8f0f2;
+  border-bottom: 2px solid #e8f0f2;
   height: 539px;
   display: flex;
   flex-direction: column;
