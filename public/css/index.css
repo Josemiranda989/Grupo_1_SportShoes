@@ -540,6 +540,7 @@ main div h1 {
 
 .fondo-form {
   background-color: var(--grisClaro);
+  margin : 10px 0;
 }
 
 .form-label {

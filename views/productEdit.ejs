@@ -73,14 +73,14 @@
                                 <textarea name="description" id="description"
                                     class="form-input"><%= productToEdit.description %></textarea>
                             </div>
-                            <div class="col-6">
-                                <button type="submit" name='edit' class="buy-now-button">Save Changes</button>
+                            <div class="col-6 d-flex justify-content-center mb-2">
+                                <button type="submit " name='edit' class="buy-now-button btn btn-secondary">Save Changes</button>
                             </div>
                         </form>
                             <!-- FORM DELETE -->
-                            <div class="col-6">
+                            <div class="col-6 d-flex justify-content-center mb-2">
                                 <form action="/products/<%= productToEdit.product_id %>?_method=DELETE" method="POST">
-                                    <button class="buy-now-button" type="submit" name="delete">Delete this Product</button>
+                                    <button class="buy-now-button btn btn-secondary" type="submit" name="delete">Delete this Product</button>
                                 </form>
                             </div>
                         </div>
