@@ -32,9 +32,9 @@
 }
 
 .background-section{
-  background-color: #16414c;
+  background-color: black;
   border-bottom: 2px solid #e8f0f2;
-  padding:4px 0 0 0
+  padding-top:4px;
 }
 
 .carousel {
@@ -540,6 +540,7 @@ main div h1 {
   .carrito {
     margin-left: 10px;
   }
+
 }
 
 /*====== Formulario Create ======*/
