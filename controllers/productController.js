@@ -118,7 +118,7 @@ const productController = {
 
   update: (req, res) => {
     let id = req.params.id
-    db.Producto.findByPk(id)
+    db.Product.findByPk(id)
       .then(prod => {
         db.Product.update(
           {
