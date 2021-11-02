@@ -1,27 +1,27 @@
-const fs = require("fs");
-const path = require("path");
-let db = require("../database/models");
-let allShoesDB = db.Product.findAll();
+const fs = require('fs')
+const path = require('path')
+let db = require('../database/models')
+let allShoesDB = db.Product.findAll()
 
 /* Lista de Productos .JSON */
-let allShoesFilePath = path.join(__dirname, "../data/productList.json");
-let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
+let allShoesFilePath = path.join(__dirname, '../data/productList.json')
+let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, 'utf-8'))
 
 const productController = {
   // Todos los productos
   products: (req, res) => {
     //res.render('products', { allShoes: allShoes })
     allShoesDB.then(function (products) {
-      res.render("products", { allShoes: products });
-    });
+      res.render('products', { allShoes: products })
+    })
   },
 
   // Detalle de un producto particular
   productDetail: (req, res) => {
-    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
+    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10))
     idShoes.then(function (productSelected) {
-      res.render("productDetail", { product: productSelected });
-    });
+      res.render('productDetail', { product: productSelected })
+    })
 
     /* let idShoes = parseInt(req.params.id)
         let productSelected;
@@ -35,12 +35,12 @@ const productController = {
   },
   // Productos de Carrito
   productCart: (req, res) => {
-    res.render("productCart");
+    res.render('productCart')
   },
 
   // Create - Vista del Formulario
   create: (req, res) => {
-    res.render("productCreate");
+    res.render('productCreate')
   },
 
   // Create - Metodo para almacenar
@@ -51,17 +51,17 @@ const productController = {
           productName: req.body.productName,
           price: parseInt(req.body.price, 10),
           brand: req.body.brand,
-          color:req.body.color,
+          color: req.body.color,
           description: req.body.description,
           size: parseInt(req.body.size, 10),
           category: req.body.category,
           img1: req.file.filename,
         }).then(function () {
-          res.redirect("/products");
-        });
+          res.redirect('/products')
+        })
       }
     } else {
-      res.send("Falta adjuntar imagen, intentalo de nuevo");
+      res.send('Falta adjuntar imagen, intentalo de nuevo')
     }
 
     /* if (req.file) {
@@ -86,27 +86,27 @@ const productController = {
 
   // BARRA SEARCH ITEMS
   search: (req, res) => {
-    let loqueBuscoElUsuario = req.query.shoes.toLowerCase();
-    let userResults = [];
+    let loqueBuscoElUsuario = req.query.shoes.toLowerCase()
+    let userResults = []
 
     for (let i = 0; i < allShoes.length; i++) {
       if (
         allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario) ||
         allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)
       ) {
-        userResults.push(allShoes[i]);
+        userResults.push(allShoes[i])
       }
     }
 
-    res.render("products", { allShoes: userResults });
+    res.render('products', { allShoes: userResults })
   },
 
   // Edit - Vista del Formulario
   edit: (req, res) => {
-    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
+    let idShoes = db.Product.findByPk(parseInt(req.params.id, 10))
     idShoes.then(function (productToEdit) {
-      res.render("productEdit", { productToEdit: productToEdit });
-    });
+      res.render('productEdit', { productToEdit: productToEdit })
+    })
 
     /* let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
     let idProduct = parseInt(req.params.id);
@@ -117,11 +117,36 @@ const productController = {
   // Update - Metodo para editar producto
 
   update: (req, res) => {
-    if (req.file) {
+    let id = req.params.id
+    db.Producto.findByPk(id)
+      .then(prod => {
+        db.Product.update(
+          {
+            productName: req.body.productName || prod.productName,
+            price: req.body.price || prod.price,
+            brand: req.body.brand || prod.brand,
+            description: req.body.description || prod.description,
+            size: req.body.size || prod.size,
+            color: req.body.color || prod.color,
+            category: req.body.category || prod.category,
+            img1: req.file == undefined ? prod.img1 : req.file.filename,
+          },
+          {
+            where: {
+              product_id: id,
+            },
+          },
+        )
+          .then(() => {
+            return res.redirect('/products/detail/' + id)
+          })
+          .catch((error) => res.send(error))
+      })
+    /*     if (req.file) {
       if (req.file.filename) {
         db.Product.update(
           {
-            productName: req.body.Name,
+            productName: req.body.productName,
             price: req.body.price,
             brand: req.body.brand,
             description: req.body.description,
@@ -140,7 +165,7 @@ const productController = {
     } else {
       db.Product.update(
         {
-          productName: req.body.Name,
+          productName: req.body.productName,
           price: req.body.price,
           brand: req.body.brand,
           description: req.body.description,
@@ -156,7 +181,7 @@ const productController = {
         }
       );
     }
-    res.redirect("/products/detail/" + parseInt(req.params.id, 10));
+    res.redirect("/products/detail/" + parseInt(req.params.id, 10)); */
 
     /* let idProduct = parseInt(req.params.id);
     let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
@@ -192,15 +217,13 @@ const productController = {
 
   // Delete - Borrar un producto de la base de datos
   delete: (req, res) => {
-    
     db.Product.destroy({
-      Where:{
-				product_id: parseInt(req.params.id,10)
-			}
+      Where: {
+        product_id: parseInt(req.params.id, 10),
+      },
     })
     res.redirect('/products')
- 
-    
+
     /*let idProduct = parseInt(req.params.id);
     let indexShoe = allShoes.findIndex((product) => product.id === idProduct);
     let imagePath = path.join(
@@ -218,7 +241,7 @@ const productController = {
     fs.writeFileSync(allShoesFilePath, allShoesUpdatedJSON);
     
     res.redirect('/products')*/
-  }
-};
+  },
+}
 
-module.exports = productController;
+module.exports = productController
