@@ -1,3 +1,5 @@
+const Cartproduct = require("./Cartproduct")
+
 module.exports = (sequelize, DataTypes) => {
   let alias = 'User'
   let cols = {
@@ -37,29 +39,32 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
 
-    modified_at: {
+    updated_at: {
       type: DataTypes.DATE,
     },
 
     deleted_at: {
       type: DataTypes.DATE,
     },
-    cartsId: {
-      type: DataTypes.INTEGER(11)
-    }
+
   }
 
   let config = {
     tableName: 'users',
-    timestamps: false
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+    deletedAt: "deleted_at",
+    paranoid: true
   }
 
   let User = sequelize.define(alias, cols, config)
 
   User.associate = function (models) {
-    User.belongsTo(models.Cartproduct, {
-      as: 'carts',
+    User.belongsToMany(models.Product, {
+      as: 'carts_products',
       foreingKey: 'user_id',
+      otherKey: "product_id",
+      through: "Cartproduct"
     })
   }
 

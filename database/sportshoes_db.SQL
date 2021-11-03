@@ -15,9 +15,8 @@ CREATE TABLE IF NOT EXISTS users (
     address varchar(250) NOT NULL,
     avatar varchar(250) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    cartsId int(11),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (user_id)
 );
 
@@ -31,8 +30,7 @@ insert into
         email,
         password,
         address,
-        avatar,
-        created_at
+        avatar
     )
 values
     (
@@ -43,8 +41,7 @@ values
         'abennough0@state.tx.us',
         'oDHi8dqXU',
         '19128 Anhalt Avenue',
-        'https://robohash.org/voluptatibusiureet.png?size=200x200&set=set1',
-        '2021-06-18 14:44:22'
+        'https://robohash.org/voluptatibusiureet.png?size=200x200&set=set1'
     ),
     (
         2,
@@ -54,8 +51,7 @@ values
         'jduly1@deliciousdays.com',
         'XmQsXg',
         '8356 Morning Lane',
-        'https://robohash.org/utametdolores.png?size=200x200&set=set1',
-        '2021-01-03 14:37:43'
+        'https://robohash.org/utametdolores.png?size=200x200&set=set1'
     ),
     (
         3,
@@ -65,8 +61,7 @@ values
         'pmcowis2@hugedomains.com',
         'tvRHxc4yElJ',
         '11821 Knutson Center',
-        'https://robohash.org/voluptatemestlibero.png?size=200x200&set=set1',
-        '2021-04-07 16:37:11'
+        'https://robohash.org/voluptatemestlibero.png?size=200x200&set=set1'
     ),
     (
         4,
@@ -76,8 +71,7 @@ values
         'vporker3@networksolutions.com',
         'y74iZn',
         '13618 Vernon Circle',
-        'https://robohash.org/etautatque.png?size=200x200&set=set1',
-        '2021-01-26 10:42:11'
+        'https://robohash.org/etautatque.png?size=200x200&set=set1'
     ),
     (
         5,
@@ -87,8 +81,7 @@ values
         'omcghie4@oracle.com',
         'bnS350',
         '010 Continental Terrace',
-        'https://robohash.org/utearumnon.png?size=200x200&set=set1',
-        '2021-07-05 18:58:26'
+        'https://robohash.org/utearumnon.png?size=200x200&set=set1'
     ),
     (
         6,
@@ -98,8 +91,7 @@ values
         'josemiranda989@gmail.com',
         '2a10XpHGYHJIr8J3Sx8ecx/BC.3IJgB4oJPvOI1kui5jRh8BtSExKM/Ky',
         '010 Continental Terrace',
-        '1632328081960-img.jpg',
-        '2021-07-05 18:58:26'
+        '1632328081960-img.jpg'
     ),
     (
         7,
@@ -109,8 +101,7 @@ values
         'gabokohen@gmail.com',
         '2a10X8VrYlVzNcNIcKfwR4/qxeh5.PTq/zaQ8fVZfgBpIPGAg8QT8qofG',
         '010 Continental Terrace',
-        '1632511645031-img.jpeg',
-        '2021-07-05 18:58:26'
+        '1632511645031-img.jpeg'
     ),
     (
         8,
@@ -120,8 +111,7 @@ values
         'gabriel_leo510@hotmail.com',
         '2a10fuSBl4T7QiuU3mwJejxQb.XdIGpVd9yYYqVJHL./fCpsMdHfHktpS',
         '010 Continental Terrace',
-        '1632511484424-img.jpg',
-        '2021-07-05 18:58:26'
+        '1632511484424-img.jpg'
     );
 
 -- CREACION DE TABLA PRODUCTS
@@ -136,8 +126,8 @@ CREATE TABLE IF NOT EXISTS products (
     brand varchar(50) NOT NULL,
     size int(11) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (product_id)
 );
 
@@ -152,8 +142,7 @@ insert into
         category,
         color,
         brand,
-        size,
-        created_at
+        size
     )
 values
     (
@@ -165,8 +154,7 @@ values
         'Women´s',
         'Fuscia',
         'Adidas',
-        8,
-        '2021-03-01 16:29:49'
+        8
     ),
     (
         2,
@@ -177,8 +165,7 @@ values
         'Men´s',
         'Indigo',
         'Adidas',
-        10,
-        '2021-09-16 08:37:12'
+        10
     ),
     (
         3,
@@ -189,8 +176,7 @@ values
         'Women´s',
         'Puce',
         'Adidas',
-        8,
-        '2021-05-09 14:13:28'
+        8
     ),
     (
         4,
@@ -201,8 +187,7 @@ values
         'Men´s',
         'Blue',
         'Adidas',
-        10,
-        '2020-12-23 19:17:34'
+        10
     ),
     (
         5,
@@ -213,8 +198,7 @@ values
         'Women´s',
         'Puce',
         'Crocs',
-        8,
-        '2021-09-18 00:41:42'
+        8
     ),
     (
         6,
@@ -225,8 +209,7 @@ values
         'Women´s',
         'Purple',
         'New Balance',
-        7,
-        '2021-03-18 21:12:57'
+        7
     ),
     (
         7,
@@ -237,8 +220,7 @@ values
         'Men´s',
         'Crimson',
         'Crocs',
-        9,
-        '2021-04-23 18:30:04'
+        9
     ),
     (
         8,
@@ -249,8 +231,7 @@ values
         'Women´s',
         'Blue',
         'Crocs',
-        8,
-        '2020-12-06 10:13:46'
+        8
     ),
     (
         9,
@@ -261,8 +242,7 @@ values
         'Men´s',
         'Goldenrod',
         'New Balance',
-        9,
-        '2020-11-01 00:21:17'
+        9
     ),
     (
         10,
@@ -273,8 +253,7 @@ values
         'Men´s',
         'Indigo',
         'New Balance',
-        8,
-        '2021-10-23 20:33:36'
+        8
     ),
     (
         11,
@@ -285,8 +264,7 @@ values
         'Men´s',
         'Red',
         'New Balance',
-        8,
-        '2021-07-03 11:13:48'
+        8
     ),
     (
         12,
@@ -297,8 +275,7 @@ values
         'Men´s',
         'Yellow',
         'New Balance',
-        9,
-        '2021-09-18 18:26:18'
+        9
     ),
     (
         13,
@@ -309,8 +286,7 @@ values
         'Men´s',
         'Green',
         'Nike',
-        6,
-        '2021-06-15 19:49:14'
+        6
     ),
     (
         14,
@@ -321,8 +297,7 @@ values
         'Men´s',
         'Fuscia',
         'Nike',
-        8,
-        '2021-06-18 04:36:44'
+        8
     ),
     (
         15,
@@ -333,8 +308,7 @@ values
         'Men´s',
         'Fuscia',
         'Nike',
-        8,
-        '2021-02-26 21:16:52'
+        8
     ),
     (
         16,
@@ -345,8 +319,7 @@ values
         'Men´s',
         'Turquoise',
         'Nike',
-        9,
-        '2020-12-03 02:04:18'
+        9
     ),
     (
         17,
@@ -357,8 +330,7 @@ values
         'Men´s',
         'Yellow',
         'Nike',
-        8,
-        '2020-12-31 03:05:49'
+        8
     ),
     (
         18,
@@ -369,8 +341,7 @@ values
         'Men´s',
         'Maroon',
         'Vans',
-        7,
-        '2021-06-11 08:23:45'
+        7
     ),
     (
         19,
@@ -381,8 +352,7 @@ values
         'Men´s',
         'Teal',
         'Vans',
-        9,
-        '2021-04-15 06:58:44'
+        9
     ),
     (
         20,
@@ -393,8 +363,7 @@ values
         'Men´s',
         'Indigo',
         'Vans',
-        8,
-        '2020-12-02 00:12:41'
+        8
     ),
     (
         21,
@@ -405,8 +374,7 @@ values
         'Women´s',
         'Green',
         'Vans',
-        8,
-        '2021-09-08 09:23:20'
+        8
     ),
     (
         22,
@@ -417,8 +385,7 @@ values
         'Women´s',
         'Puce',
         'Vans',
-        7,
-        '2021-02-14 19:00:52'
+        7
     );
 
 
@@ -432,8 +399,8 @@ CREATE TABLE IF NOT EXISTS cartproduct (
     product_id int(11) NOT NULL,
     quantity int unsigned NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (product_id) REFERENCES products(product_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)

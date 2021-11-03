@@ -1,7 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 let db = require('../database/models')
-let allShoesDB = db.Product.findAll()
 
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join(__dirname, '../data/productList.json')
@@ -11,7 +10,8 @@ const productController = {
   // Todos los productos
   products: (req, res) => {
     //res.render('products', { allShoes: allShoes })
-    allShoesDB.then(function (products) {
+      db.Product.findAll()
+        .then(function (products) {
       res.render('products', { allShoes: products })
     })
   },

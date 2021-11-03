@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
 
-    modified_at: {
+    updated_at: {
       type: DataTypes.DATE,
     },
 
@@ -50,17 +50,22 @@ module.exports = (sequelize, DataTypes) => {
 
   let config = {
     tableName: 'products',
-    timestamps: false
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+    deletedAt: "deleted_at",
+    paranoid: true
   }
 
   let Product = sequelize.define(alias, cols, config)
 
-  Product.associate = function (models) {
-    Product.belongsTo(models.Cartproduct, {
-      as: 'cartproducts',
-      foreignKey: "product_id",
-    })
-  }
+ Product.associate = function (models) {
+  Product.belongsToMany(models.User, {
+    as: 'carts_user',
+    foreingKey: 'product_id',
+    otherKey: "user_id",
+    through: "Cartproduct"
+  })
+}
 
 return Product
 }
