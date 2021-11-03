@@ -22,13 +22,13 @@ router.get('/create', productController.create);
 router.post('/', uploadImg.single("img1"), productController.store); 
 
 /* EDIT PRODUCT */
-router.get('/:id/edit', productController.edit);
-router.put('/:id/edit', uploadImg.single("img1"), productController.update); 
-
-/* BORRAR UN PRODUCTO */ 
-router.delete('/:id', productController.delete);
+router.get('/edit/:id', productController.edit);
+router.put('/edit/:id', uploadImg.single("img1"), productController.update); 
 
 /* SEARCH BAR */
 router.get('/search',productController.search);
+
+/* BORRAR UN PRODUCTO */ 
+router.delete('/delete/:id', productController.delete);
 
 module.exports = router

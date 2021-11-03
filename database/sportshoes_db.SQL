@@ -15,8 +15,8 @@ CREATE TABLE IF NOT EXISTS users (
     address varchar(250) NOT NULL,
     avatar varchar(250) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
-    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL,
     PRIMARY KEY (user_id)
 );
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS products (
     size int(11) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL,
     PRIMARY KEY (product_id)
 );
 
@@ -388,10 +388,6 @@ values
         7
     );
 
-
-
-
-
 -- CREACION DE TABLA CARTPRODUCTS
 CREATE TABLE IF NOT EXISTS cartproduct (
     id int(11) NOT NULL AUTO_INCREMENT,
@@ -400,7 +396,7 @@ CREATE TABLE IF NOT EXISTS cartproduct (
     quantity int unsigned NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (product_id) REFERENCES products(product_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)

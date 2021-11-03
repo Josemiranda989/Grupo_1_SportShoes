@@ -18,7 +18,7 @@
     <!-- FORM TO EDIT -->
 
     <div class="col-12">
-      <form action="/products/<%= productToEdit.product_id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form action="/products/edit/<%= productToEdit.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="row product-detail">
           <div class="col-12 col-md-6">
             <label for="productName" class="form-label">Name:</label>
@@ -71,7 +71,7 @@
       </form>
       <!-- FORM DELETE -->
       <div class="col-6 d-flex justify-content-center mb-2">
-        <form action="/products/<%= productToEdit.product_id %>?_method=DELETE" method="POST">
+        <form action="/products/delete/<%= productToEdit.product_id %>?_method=DELETE" method="POST">
           <button class="buy-now-button btn btn-secondary" type="submit" name="delete">Delete this Product</button>
         </form>
       </div>

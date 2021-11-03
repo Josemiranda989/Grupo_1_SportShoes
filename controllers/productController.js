@@ -25,7 +25,6 @@ const productController = {
 
     /* let idShoes = parseInt(req.params.id)
         let productSelected;
-
         for (let i = 0; i < allShoes.length; i++) {
             if (allShoes[i].id == idShoes) {
                 productSelected = allShoes[i];
@@ -37,12 +36,10 @@ const productController = {
   productCart: (req, res) => {
     res.render('productCart')
   },
-
   // Create - Vista del Formulario
   create: (req, res) => {
     res.render('productCreate')
   },
-
   // Create - Metodo para almacenar
   store: (req, res) => {
     if (req.file) {
@@ -83,7 +80,6 @@ const productController = {
       res.render("productCreate");
     } */
   },
-
   // BARRA SEARCH ITEMS
   search: (req, res) => {
     let loqueBuscoElUsuario = req.query.shoes.toLowerCase()

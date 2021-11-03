@@ -99,40 +99,43 @@ const userController = {
   },
 
   loginProcess: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.email)
+    db.User.findAll()
+      .then(users => {
+        let userToLogin = users.find(i => i.email == req.body.email)
 
-    if (userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(
-        req.body.password,
-        userToLogin.password,
-      )
-      if (isOkThePassword) {
-        delete userToLogin.password
-        req.session.userLogged = userToLogin
+        if (userToLogin) {
+          let isOkThePassword = bcryptjs.compareSync(
+            req.body.password,
+            userToLogin.password,
+          )
+          if (isOkThePassword) {
+            delete userToLogin.password
+            req.session.userLogged = userToLogin
 
-        if (req.body.remember_user) {
-          res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 }) //60 minutos
+            if (req.body.remember_user) {
+              res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 }) //60 minutos
+            }
+
+            return res.redirect('/user/profile')
+          }
+
+          return res.render('login', {
+            errors: {
+              email: {
+                msg: 'Password is invalid',
+              },
+            },
+          })
         }
 
-        return res.redirect('/user/profile')
-      }
-
-      return res.render('login', {
-        errors: {
-          email: {
-            msg: 'Password is invalid',
+        return res.render('login', {
+          errors: {
+            email: {
+              msg: 'This registered email cannot be found',
+            },
           },
-        },
+        })
       })
-    }
-
-    return res.render('login', {
-      errors: {
-        email: {
-          msg: 'This registered email cannot be found',
-        },
-      },
-    })
   },
 
   profile: (req, res) => {
@@ -141,11 +144,54 @@ const userController = {
     })
   },
 
+  edit: (req, res) => {
+    db.User.findByPk(parseInt(req.params.id, 10))
+      .then(function (profileToEdit) {
+      res.render('profileEdit', { profileToEdit: profileToEdit })
+    })
+  },
+
+  update: (req, res) => {
+    let id = req.params.id
+    db.User.findByPk(id)
+      .then(oneUser => {
+        db.User.update(
+          {
+            fullName: req.body.fullName || oneUser.fullName,
+            userName: req.body.userName || oneUser.userName,
+            country: req.body.country || oneUser.country,
+            email: req.body.email || oneUser.email,
+            password: req.body.password == undefined ? oneUser.password : bcryptjs.hashSync(req.body.password, 10),
+            address: req.body.address || oneUser.address,
+            avatar: req.file == undefined ? oneUser.avatar : req.file.filename,
+          },
+          {
+            where: {
+              user_id: id,
+            },
+          },
+        )
+          .then(() => {
+            return res.redirect('/user/profile/')
+          })
+          .catch((error) => res.send(error))
+      })
+  },
+
   logout: (req, res) => {
     res.clearCookie('userEmail')
     req.session.destroy()
     return res.redirect('/')
   },
+
+  delete: (req, res) => {
+    db.User.destroy({
+      Where: {
+        user_id: parseInt(req.params.id, 10),
+      },
+    })
+    res.redirect('/')
+  }
 }
 
 module.exports = userController

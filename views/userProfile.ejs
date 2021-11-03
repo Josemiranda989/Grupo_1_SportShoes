@@ -8,14 +8,22 @@
 
 <div class="container d-flex justify-content-center fondo-form " style="margin: 40px auto;height:700px;">
   <div class="row">
-    <div class="col-md-3">
-      <div class= "text-center fs-2 ">Hi <%= user.fullName %> </div>
+    <div class="col-md-12">
+      <div class="border border-primary  ">Hi <%= user.fullName %> </div>
+      <div class="border border-primary "> <%= user.userName %> </div>
+      <div class="border border-primary "> <%= user.country %> </div>
+      <div class="border border-primary "> <%= user.email %> </div>
+      <div class="border border-primary "> <%= user.address %> </div>
+
       <div>
           <img class = "imagenavatar" src ="/images/avatars/<%=user.avatar%>">
       </div>
       <br>
       <br>
       <div class="alert alert-success"><%= user.email %></div>
+    </div>
+    <div class="col-12  mb-2">
+      <a href="/user/edit/<%= user.user_id %>" class="buy-now-button btn btn-secondary">Edit</a>
     </div>
   </div>
 </div>

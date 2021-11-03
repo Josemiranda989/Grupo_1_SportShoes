@@ -26,7 +26,14 @@ router.post('/login', userController.loginProcess)
 //PERFIL DE USUARIO
 router.get('/profile/', authMiddleware, userController.profile)
 
+//EDITAR DE USUARIO
+router.get('/edit/:id', authMiddleware, userController.edit)
+router.put('/edit/:id', authMiddleware, userController.update)
+
 //LOGOUT
 router.get('/logout/', userController.logout);
+
+/* BORRAR UN USUARIO */ 
+router.delete('/delete/:id', userController.delete);
 
 module.exports = router
