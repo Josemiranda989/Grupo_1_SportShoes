@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS users (
     address varchar(250) NOT NULL,
     avatar varchar(250) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (user_id)
 );
@@ -34,44 +34,44 @@ insert into
     )
 values
     (
-        (1,
+        1,
         'Jose Miranda',
         'josemiranda989',
         'Argentina',
         'josemiranda989@gmail.com',
-'$2a$10$FBMOF3fafBVcnoPaofmDoOX5Lz7l7XBqhcXY28JaN7Gz24qOurIb6',
+        '$2a$10$FBMOF3fafBVcnoPaofmDoOX5Lz7l7XBqhcXY28JaN7Gz24qOurIb6',
         '010 Continental Terrace',
         '1632328081960-img.jpg'
-        ),
-(
-    2,
-    'Gabriel Figueroa',
-    'Gabi',
-    'Argentina',
-    'gabriel_leo510@hotmail.com',
-    '$2a$10$g4hy9GUAwuW4XAe0r4xaJuAhioQs0IS5pmTA86nI1TnUOlPwjpWqu',
-    'Republica 1730',
-    '1635973628067-img.jpeg'
-),(
-    3,
-    'Gabriel Kohen',
-    'Gabo',
-    'Argentina',
-    'gabokohen@gmail.com',
-    '$2a$10$or5sj0brM0JYapo54nrGMOvJS58DREYmMdM1NhebZbio.erUiVV7W',
-    'Continental Terrace 122',
-    '1632328081960-img.jpeg'
-),(
-    4,
-    'Invitado Nuevo',
-    'Invitado',
-    'Bolivia',
-    'invitado@gmail.com',
-    '$2a$10$ZyNDu4.8pMivokru37EoSezQN5QrCYGLOINobQypa26cBpxvWUw8C',
-    'Continental Terrace 122',
-    '1635974493484-img.png'
-)
-    
+    ),
+    (
+        2,
+        'Gabriel Figueroa',
+        'Gabi',
+        'Argentina',
+        'gabriel_leo510@hotmail.com',
+        '$2a$10$g4hy9GUAwuW4XAe0r4xaJuAhioQs0IS5pmTA86nI1TnUOlPwjpWqu',
+        'Republica 1730',
+        '1635973628067-img.jpeg'
+    ),
+    (
+        3,
+        'Gabriel Kohen',
+        'Gabo',
+        'Argentina',
+        'gabokohen@gmail.com',
+        '$2a$10$or5sj0brM0JYapo54nrGMOvJS58DREYmMdM1NhebZbio.erUiVV7W',
+        'Continental Terrace 122',
+        '1632328081960-img.jpeg'
+    ),
+    (
+        4,
+        'Invitado Nuevo',
+        'Invitado',
+        'Bolivia',
+        'invitado@gmail.com',
+        '$2a$10$ZyNDu4.8pMivokru37EoSezQN5QrCYGLOINobQypa26cBpxvWUw8C',
+        'Continental Terrace 122',
+        '1635974493484-img.png'
     );
 
 -- CREACION DE TABLA PRODUCTS
@@ -347,10 +347,6 @@ values
         'Vans',
         7
     );
-
-
-
-
 
 -- CREACION DE TABLA CARTPRODUCTS
 CREATE TABLE IF NOT EXISTS cartproduct (
