@@ -31,10 +31,10 @@
   background-color: #16414c;
 }
 
-.background-section{
+.background-section {
   background-color: black;
   border-bottom: 2px solid #e8f0f2;
-  padding-top:4px;
+  padding-top: 4px;
 }
 
 .carousel {
@@ -104,8 +104,7 @@
   margin-bottom: 10px;
   transition-property: all;
   transition-duration: 0.5s;
-  }
-
+}
 
 .call-index a:visited {
   text-decoration: none;
@@ -113,22 +112,19 @@
 
 /* <-FOOTER - INDEX-> */
 
-
 section a {
-  margin:5px ;
+  margin: 5px;
 }
 
 section a i {
-  font-size:30px ;
-  
+  font-size: 30px;
 }
 
-.bg-footer{
+.bg-footer {
   background-color: #000000;
-} 
+}
 
-
-.text-white{
+.text-white {
   text-decoration: none;
 }
 
@@ -241,17 +237,15 @@ h5.card-title {
   background-color: #95a1a3;
 }
 
- .sinestiloA {
-text-decoration: none;
-color : black
+.sinestiloA {
+  text-decoration: none;
+  color: black;
+}
 
- }
-
- .sinestiloA:hover {
-text-decoration: none;
-color : var(--verdeOscuro)
-
- }
+.sinestiloA:hover {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+}
 
 .card-body {
   background-color: rgb(233, 233, 233);
@@ -260,8 +254,6 @@ color : var(--verdeOscuro)
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
-
-
 
 .titulo-cart {
   background-color: rgba(82, 176, 197, 0.95);
@@ -428,8 +420,6 @@ main div h1 {
 
 /* <-CHECKBOX - REGISTER-> */
 
-
-
 /* <-FORMULARIO - REGISTER-> */
 
 .form-register {
@@ -540,14 +530,13 @@ main div h1 {
   .carrito {
     margin-left: 10px;
   }
-
 }
 
 /*====== Formulario Create ======*/
 
 .fondo-form {
   background-color: var(--grisClaro);
-  margin : 10px 0;
+  margin: 10px 0;
 }
 
 .form-label {
@@ -576,15 +565,13 @@ textarea.form-input {
 
 /*====== PROFILE ======*/
 
-.alert {
-  width: 500px;
-  text-align: center;
-}
-.imagenavatar {
-  width: 400px;
+.profile-picture {
+  border: 10px solid white;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-/* LOADER */
+/*====== LOADER ======*/
 .loader {
   position: fixed;
   left: 0px;
@@ -592,7 +579,7 @@ textarea.form-input {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url("/images/loader.gif") 50% 50% no-repeat rgb(249,249,249);
-  opacity: .8;
+  background: url('/images/loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+  opacity: 0.8;
   text-align: center;
 }
