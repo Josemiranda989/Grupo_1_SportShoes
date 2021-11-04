@@ -31,4 +31,5 @@ router.get('/search',productController.search);
 /* BORRAR UN PRODUCTO */ 
 router.delete('/delete/:id', productController.delete);
 
+
 module.exports = router

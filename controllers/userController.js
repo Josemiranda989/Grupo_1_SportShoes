@@ -184,14 +184,22 @@ const userController = {
     return res.redirect('/')
   },
 
-  delete: (req, res) => {
+  delete: function (req, res) {
+     db.User.destroy({
+            where: {user_id: parseInt(req.params.id, 10),},force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(() => {
+            return res.redirect('/')
+        })
+        .catch(error => res.send(error))
+      }
+  /* delete: (req, res) => {
     db.User.destroy({
       Where: {
         user_id: parseInt(req.params.id, 10),
       },
     })
     res.redirect('/')
-  }
+  } */
 }
 
 module.exports = userController
