@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 let db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join(__dirname, "../data/productList.json");
