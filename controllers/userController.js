@@ -170,7 +170,7 @@ const userController = {
               user_id: id,
             },
           },
-        )
+      )
           .then(() => {
             return res.redirect('/user/profile/')
           })

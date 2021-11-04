@@ -80,7 +80,21 @@ const productController = {
     } */
   },
   // BARRA SEARCH ITEMS
+   
   search: (req, res) => {
+    db.Product.findAll({
+       where: {
+         productName: { [Op.like]: `%${req.query.shoes}%` }
+        }
+    }).then(products => {
+       console.log(products.length)
+         return res.render('products', { allShoes: products })
+    })
+      .catch(error => res.send(error));
+  
+ 
+ 
+  /* search: (req, res) => {
     let loqueBuscoElUsuario = req.query.shoes.toLowerCase();
     let userResults = [];
 
@@ -93,9 +107,9 @@ const productController = {
       }
     }
 
-    res.render("products", { allShoes: userResults });
+    res.render("products", { allShoes: userResults });*/
+  
   },
-
   // Edit - Vista del Formulario
   edit: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
