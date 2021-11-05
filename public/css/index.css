@@ -31,6 +31,12 @@
   background-color: #16414c;
 }
 
+.background-section {
+  background-color: black;
+  border-bottom: 2px solid #e8f0f2;
+  padding-top: 4px;
+}
+
 .carousel {
   background: #91c9ea;
   background: -moz-linear-gradient(top, #91c9ea 0%, #1c6ea4 50%, #000000 100%);
@@ -68,8 +74,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-top: 5px solid #e8f0f2;
-  border-bottom: 5px solid #e8f0f2;
+  border-top: 3px solid #e8f0f2;
+  border-bottom: 2px solid #e8f0f2;
   height: 539px;
   display: flex;
   flex-direction: column;
@@ -98,8 +104,7 @@
   margin-bottom: 10px;
   transition-property: all;
   transition-duration: 0.5s;
-  }
-
+}
 
 .call-index a:visited {
   text-decoration: none;
@@ -107,22 +112,19 @@
 
 /* <-FOOTER - INDEX-> */
 
-
 section a {
-  margin:5px ;
+  margin: 5px;
 }
 
 section a i {
-  font-size:30px ;
-  
+  font-size: 30px;
 }
 
-.bg-footer{
+.bg-footer {
   background-color: #000000;
-} 
+}
 
-
-.text-white{
+.text-white {
   text-decoration: none;
 }
 
@@ -228,9 +230,26 @@ section a i {
   text-decoration: none;
 }
 
+h5.card-title {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  background-color: #95a1a3;
+}
 
+.sinestiloA {
+  text-decoration: none;
+  color: black;
+}
 
+.sinestiloA:hover {
+  text-decoration: none;
+  color: var(--verdeOscuro);
+}
 
+.card-body {
+  background-color: rgb(233, 233, 233);
+}
 
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
@@ -401,8 +420,6 @@ main div h1 {
 
 /* <-CHECKBOX - REGISTER-> */
 
-
-
 /* <-FORMULARIO - REGISTER-> */
 
 .form-register {
@@ -519,6 +536,7 @@ main div h1 {
 
 .fondo-form {
   background-color: var(--grisClaro);
+  margin: 10px 0;
 }
 
 .form-label {
@@ -547,11 +565,21 @@ textarea.form-input {
 
 /*====== PROFILE ======*/
 
-.alert {
-  width: 500px;
-  text-align: center;
-}
-.imagenavatar {
-  width: 400px;
+.profile-picture {
+  border: 10px solid white;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
+/*====== LOADER ======*/
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('/images/loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+  opacity: 0.8;
+  text-align: center;
+}

@@ -23,3 +23,5 @@ Se Agregaron nuevas tareas al trello en base a la reunion con el profesor.
 8/10/21 Se actualizó la lista de tareas en trello en base al sprint 6, se terminó el diagrama de relación de entidades con draw.io.
 14/10/21 Reunion sobre como crear la estructura de la base de datos y sus relaciones
 22/10/21 Se creó la base de datos en el branch beta. Falta agregar el contenido de las tablas
+27/10/21 Hace dos dias terminamos los models del sprint 6 y completamos la base de datos con informacion
+29/10/21  Hoy se creo el CRUD para los products del sprint 6. 

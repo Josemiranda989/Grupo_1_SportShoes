@@ -6,19 +6,52 @@
   <!-- NAVBAR -->
   <%- include('./partials/header') %>
 
-<div class="container d-flex justify-content-center fondo-form " style="margin: 40px auto;height:700px;">
-  <div class="row">
-    <div class="col-md-3">
-      <div class= "text-center fs-2 ">Hi <%= user.fullName %> </div>
-      <div>
-          <img class = "imagenavatar" src ="/images/avatars/<%=user.avatar%>">
+  <!-- bootstrap user profile -->
+  <div class="container fondo-form">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center pt-2">
+          <img class="profile-picture" src="/images/avatars/<%=user.avatar%>" alt="User profile" style="width:400px; object-fit:cover">
+        </div>
+        <div class="col">
+          <div>
+            <h5 class="card-title"><%= user.userName %></h5>
+            <table class="table table-bordered ">
+              <tr>
+                <td style="background:#b1afaf;color:#2f2a2a">Full Name</td>
+                <td style="background:#ebebeb;"><%= user.fullName %></td>
+              </tr>
+              <tr>
+                <td style="background:#b1afaf;color:#2f2a2a">E-mail</td>
+                <td style="background:#ebebeb;"><%= user.email %></td>
+              </tr>
+              <tr>
+                <td style="background:#b1afaf;color:#2f2a2a">Country</td>
+                <td style="background:#ebebeb;"><%= user.country %></td>
+              </tr>
+              <tr>
+                <td style="background:#b1afaf;color:#2f2a2a">Address</td>
+                <td style="background:#ebebeb;"><%= user.address %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+<div class='row'>
+        <div class="col-6 d-flex justify-content-center  mb-2">
+          <a href="/user/edit/<%= user.user_id %>" class="buy-now-button btn btn-secondary">Edit</a>
+        </div>
+        <div class="col-6 d-flex justify-content-center  mb-2">
+            <form action="/user/delete/<%= user.user_id %>?_method=DELETE" method="POST">
+              <button class="buy-now-button btn btn-danger" type="submit" name="delete">Delete</button>
+            </form>
+        </div>
+</div>        
+
       </div>
-      <br>
-      <br>
-      <div class="alert alert-success"><%= user.email %></div>
     </div>
   </div>
-</div>
 
   <!-- FOOTER -->
 

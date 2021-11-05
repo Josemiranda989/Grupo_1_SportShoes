@@ -1,8 +1,13 @@
-    <!-- NAVBAR -->
+<!-- Loader -->
+<h1 class='loader' style='margin-top:400px'>Wait a moment please...</h1>
+<div class="loader"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/javascripts/index.js"></script>
+   <!-- NAVBAR -->
     <nav class="navbar border-bottom navbar-expand-md navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/images/original.jpeg" alt="logo" width="200" />
+                <img src="/images/logo-w.png" alt="logo" width="200" />
             </a>
     
             <button class="navbar-toggler btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
@@ -13,7 +18,7 @@
     
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="products">CATALOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products">CATALOG</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">SALE</a></li>
 
                     <% if (locals.isLogged) { %>

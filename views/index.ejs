@@ -4,59 +4,68 @@
 
 
 <body class="body-index">
-    <!-- NAVBAR -->
-    <%- include('./partials/header') %>
+  <!-- NAVBAR -->
+  <%- include('./partials/header') %>
 
-    <!-- CALL TO ACTION -->
-    <main class="main-index">
+  <!-- CALL TO ACTION -->
+  <main class="main-index">
     <section class="section1-index">
-                    <h2 class="titulo1-index">Best Sneakers Shoes Online Store</h2>
-                    <a href="products" class="call-index"> Catalog  </a>               
+      <h2 class="titulo1-index">Best Sneakers Shoes Online Store</h2>
+      <a href="products" class="call-index"> Catalog </a>
     </section>
-    </main>
-
-    <!-- CARROUSEL -->
-
-    <div id="carousel-shoes" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="1" aria-label="Slide 2"> </button>
-            <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/images/shoes-img/Adidas-pw/1.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-                <img src="/images/shoes-img/Newbalance-Wnl 327/1.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-                <img src="/images/shoes-img/Nike-AirMax/1.png" class="d-block w-100" alt="..." />
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-shoes" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel-shoes" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  </main>
+  <div class="container-fluid background-section">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+        <iframe width="350" height="315" src="https://www.youtube.com/embed/qL1jBohpn_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+        <iframe width="350" height="315" src="https://www.youtube.com/embed/NljGurzPM2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-</div>
-    <!-- FOOTER -->
+  </div>
 
-    <%- include('./partials/footer') %>
 
-    <!-- SCRIPTS -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+  <!-- CARROUSEL -->
+
+  <div id="carousel-shoes" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="1" aria-label="Slide 2"> </button>
+      <button type="button" data-bs-target="#carousel-shoes" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/images/shoes-img/Adidas-pw/1.png" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/images/shoes-img/Newbalance-Wnl 327/1.png" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="/images/shoes-img/Nike-AirMax/1.png" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-shoes" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-shoes" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+  <!-- FOOTER -->
+
+  <%- include('./partials/footer') %>
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
+
 </html>
 
+<!--  -->
