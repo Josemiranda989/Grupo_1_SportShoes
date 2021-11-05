@@ -138,10 +138,14 @@ const userController = {
       })
   },
 
-  profile: (req, res) => {
-    res.render('userProfile', {
-      user: req.session.userLogged,
+  profile: (req, res) => { 
+    db.User.findByPk(parseInt(req.session.userLogged.user_id))
+      .then((user) => {
+        res.render('userProfile', {
+      user: user,
     })
+    })
+  
   },
 
   edit: (req, res) => {
@@ -161,7 +165,7 @@ const userController = {
             userName: req.body.userName || oneUser.userName,
             country: req.body.country || oneUser.country,
             email: req.body.email || oneUser.email,
-            password: req.body.password == undefined ? oneUser.password : bcryptjs.hashSync(req.body.password, 10),
+            password: req.body.password == "" ? oneUser.password : bcryptjs.hashSync(req.body.password, 10), 
             address: req.body.address || oneUser.address,
             avatar: req.file == undefined ? oneUser.avatar : req.file.filename,
           },

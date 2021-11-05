@@ -28,7 +28,7 @@ router.get('/profile/', authMiddleware, userController.profile)
 
 //EDITAR DE USUARIO
 router.get('/edit/:id', authMiddleware, userController.edit)
-router.put('/edit/:id', authMiddleware, userController.update)
+router.put('/edit/:id', authMiddleware, uploadAvatar.single('avatar'), userController.update)
 
 //LOGOUT
 router.get('/logout/', userController.logout);
