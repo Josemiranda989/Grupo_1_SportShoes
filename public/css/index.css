@@ -110,7 +110,94 @@
   text-decoration: none;
 }
 
+
+
 /* <-FOOTER - INDEX-> */
+
+
+/*FOOTER-map*/
+.map-footer{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 ;
+}
+
+/*----Footer-help*/
+.container-help {
+  padding: 100px;
+  align-items: center;
+}
+/*----- terms---*/
+
+.caja-terms {
+  padding: 60px;
+  text-align: justify;
+}
+/*----- covid-info--*/
+.caja-covidinfo {
+  margin-left: 10px;
+  font-size: 16px;
+  width: 1500px;
+  padding: 20px;
+}
+
+.caja-cdcwho {
+  text-align: center;
+  padding: 20px;
+}
+
+/*-- Contactus footer -*/
+
+.body-contactus {
+  background: url(/images/background.jpg) fixed;
+}
+
+.contactus-container {
+  padding-top: 80px;
+}
+
+/*--FooterHelp--*/
+
+.help-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+.helpcontainer {
+  min-height: 500px;
+}
+
+.contactus-container {
+  min-width: 460px;
+}
+
+.tarjeta-centrada {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+/*----- shippinginfo---*/
+.caja-shippinginfo {
+  margin: 0 auto;
+  text-align: left;
+  width: 80%;
+  display: block;
+  max-width: 750px;
+  padding-top: 15px;
+}
+
+/*----- privicy---*/
+.caja-privacy {
+  font-size: 15px;
+  height: 600px;
+  text-align: justify;
+  margin: 50px 50px;
+  vertical-align: middle;
+}
+
 
 section a {
   margin: 5px;
@@ -474,12 +561,10 @@ main div h1 {
 /* <-------------- TERMS.HTML --------------> */
 
 .body-terms {
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   background: var(--grisClaro);
-  min-width: 400px;
-  max-width: 1000px;
-  padding: 50px;
 }
+
 
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */

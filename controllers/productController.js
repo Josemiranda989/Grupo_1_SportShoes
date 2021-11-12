@@ -12,7 +12,7 @@ const productController = {
   products: (req, res) => {
     //res.render('products', { allShoes: allShoes })
     db.Product.findAll().then(function (products) {
-      res.render("products", { allShoes: products });
+      res.render("products/products", { allShoes: products });
     });
   },
 
@@ -20,25 +20,18 @@ const productController = {
   productDetail: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productSelected) {
-      res.render("productDetail", { product: productSelected });
+      res.render("products/detail", { product: productSelected });
     });
 
-    /* let idShoes = parseInt(req.params.id)
-        let productSelected;
-        for (let i = 0; i < allShoes.length; i++) {
-            if (allShoes[i].id == idShoes) {
-                productSelected = allShoes[i];
-            }
-        }
-        res.render('productDetail', { product: productSelected });*/
+    
   },
   // Productos de Carrito
   productCart: (req, res) => {
-    res.render("productCart");
+    res.render("products/cart");
   },
   // Create - Vista del Formulario
   create: (req, res) => {
-    res.render("productCreate");
+    res.render("products/create");
   },
   // Create - Metodo para almacenar
   store: (req, res) => {
@@ -54,7 +47,7 @@ const productController = {
           category: req.body.category,
           img1: req.file.filename,
         }).then(function () {
-          res.redirect("/products");
+          res.redirect("products/products");
         });
       }
     } else {
@@ -89,7 +82,7 @@ const productController = {
         }
     }).then(products => {
        console.log(products.length)
-         return res.render('products', { allShoes: products })
+         return res.render('products/products', { allShoes: products })
     })
       .catch(error => res.send(error));
   
@@ -115,7 +108,7 @@ const productController = {
   edit: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productToEdit) {
-      res.render("productEdit", { productToEdit: productToEdit });
+      res.render("products/edit", { productToEdit: productToEdit });
     });
 
     /* let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
@@ -192,36 +185,7 @@ const productController = {
     }
     res.redirect("/products/detail/" + parseInt(req.params.id, 10)); */
 
-    /* let idProduct = parseInt(req.params.id);
-    let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
-    allShoes.forEach((product) => {
-      if (product.id == idProduct) {
-        product.productName = req.body.productName;
-        product.price = req.body.price;
-        product.brand = req.body.brand;
-        product.description = req.body.description;
-        product.size = req.body.size;
-        product.category = req.body.category;
-        if (req.file) {
-          let indexShoe = allShoes.findIndex(
-            (product) => product.id == idProduct
-          );
-          let imagePath = path.join(
-            __dirname,
-            `../public/images/shoes-img/${req.body.productName}`,
-            allShoes[indexShoe].productName,
-            allShoes[indexShoe].img1
-          );
-          fs.unlink(imagePath, function (err) {
-            if (err) throw err;
-          });
-          product.img1 = req.file.filename;
-        }
-      } 
-    });
-    let allShoesJSON = JSON.stringify(allShoes, null, " ");
-    fs.writeFileSync(allShoesFilePath, allShoesJSON);
-    res.redirect("/products"); */
+    
   },
 
   // Delete - Borrar un producto de la base de datos
@@ -232,7 +196,7 @@ const productController = {
       force: true,
     }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
-        return res.redirect("/products");
+        return res.redirect("/products/products");
       })
       .catch((error) => res.send(error));
   },

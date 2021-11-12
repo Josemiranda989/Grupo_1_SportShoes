@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: product?.productName ? product.productName : 'Not Found'}) %>
-
+<%- include('../partials/head', {title: product && product.productName ? product.productName : 'Not Found'}) %>
 <body class="body-detail">
-  <%- include('./partials/header') %>
-
-
+  <%- include('../partials/header') %>
   <% if (product != undefined) { %>
-
   <!-- DETALLE DEL PRODUCTO -->
   <section class="section-detail ">
     <h1 class="titulo-detail"> <%= product.productName %> </h1>
@@ -43,9 +39,7 @@
       <button class="addcart-detail"> <a href="/productCart" type="submit">ADD TO CART> </a> </button>
     </form>
   </section>
-
   <% } else { %>
-
   <!-- PRODUCTO NO ENCONTRADO -->
   <div class="container fondo-form mt-1 mb-1 ">
     <h1 class="text-center fs-2 pt-4 fw-bold">We're sorry</h1>
@@ -53,11 +47,8 @@
       <img class='img-fluid ' src="/images/product-not-found.png" alt="Product not found">
     </div>
   </div>
-
   <% } %>
-
   <!-- FOOTER -->
-  <%- include('./partials/footer') %>
+  <%- include('../partials/footer') %>
 </body>
-
 </html>
