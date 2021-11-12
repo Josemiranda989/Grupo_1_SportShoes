@@ -15,7 +15,7 @@ router.get("/", productController.products);
 router.get("/detail/:id", productController.productDetail); 
 
 /* PRODUCT CART */
-router.get('/productCart', productController.productCart); 
+router.get('/cart', productController.productCart); 
 
 /* CREATE PRODUCTS */
 router.get('/create', productController.create); 
