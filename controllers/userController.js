@@ -13,14 +13,14 @@ const allUsers = JSON.parse(fs.readFileSync(allUsersFilePath, 'utf-8'))
 
 const userController = {
   register: (req, res) => {
-    res.render('register')
+    res.render('users/register')
   },
 
   processRegister: (req, res) => { //terminado
     const resultValidation = validationResult(req)
 
     if (resultValidation.errors.length > 0) {
-      return res.render('register', {
+      return res.render('users/register', {
         //mapped convierte un array en objeto literal
         errors: resultValidation.mapped(),
         oldData: req.body,
@@ -31,7 +31,7 @@ const userController = {
     .then(users => {
         let userInDB = users.find(i => i.email == req.body.email) 
       if (userInDB) {
-        return res.render('register', {
+        return res.render('users/register', {
           errors: {
             email: {
               msg: 'This email is already registered',
@@ -60,42 +60,11 @@ const userController = {
 
     
 
-    /* const resultValidation = validationResult(req)
-
-    if (resultValidation.errors.length > 0) {
-      return res.render('register', {
-        //mapped convierte un array en objeto literal
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      })
-    }
-
-    let userInJSON = User.findByField('email', req.body.email)
-
-    if (userInJSON) {
-      return res.render('register', {
-        errors: {
-          email: {
-            msg: 'This email is already registered',
-          },
-        },
-        oldData: req.body,
-      })
-    }
-
-    let userToCreate = {
-      ...req.body,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file.filename,
-    }
-
-    let userCreated = User.create(userToCreate)
-
-    return res.redirect('/user/login') */
+  
   },
 
   login: (req, res) => {
-    res.render('login')
+    res.render('users/login')
   },
 
   loginProcess: (req, res) => {
@@ -119,7 +88,7 @@ const userController = {
             return res.redirect('/user/profile')
           }
 
-          return res.render('login', {
+          return res.render('users/login', {
             errors: {
               email: {
                 msg: 'Password is invalid',
@@ -128,7 +97,7 @@ const userController = {
           })
         }
 
-        return res.render('login', {
+        return res.render('users/login', {
           errors: {
             email: {
               msg: 'This registered email cannot be found',
@@ -141,7 +110,7 @@ const userController = {
   profile: (req, res) => { 
     db.User.findByPk(parseInt(req.session.userLogged.user_id))
       .then((user) => {
-        res.render('userProfile', {
+        res.render('users/profile', {
       user: user,
     })
     })
@@ -151,7 +120,7 @@ const userController = {
   edit: (req, res) => {
     db.User.findByPk(parseInt(req.params.id, 10))
       .then(function (profileToEdit) {
-      res.render('profileEdit', { profileToEdit: profileToEdit })
+      res.render('users/edit', { profileToEdit: profileToEdit })
     })
   },
 

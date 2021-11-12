@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title: "Product Cart"}) %>
+
+<body class="body-cart">
+  <%- include('../partials/header') %>
+
+  <!-- CART ITEMS DETAILS -->
+  <div class="container-md cart-page">
+    <table class="table-cart">
+      <tr>
+        <th class="th-cart">Product</th>
+        <th class="th-cart">Quantity</th>
+        <th class="th-cart">Subtotal</th>
+      </tr>
+
+      <!-- PRODUCTO 1 -->
+      <tr style="border-bottom: 1px solid grey;">
+        <td class="td-cart">
+          <div class="cart-info">
+            <img class='img-cart' src="/images/shoes-img/Adidas-pw/1.png" alt="">
+            <div>
+              <p>Vans Old Skool Spongebob</p>
+              <small>Price $50</small>
+            </div>
+          </div>
+        </td>
+        <td class="td-cart"><input class="qty-cart" type="number" value='1'> <a class='remove-cart' href=""><i class="far fa-trash-alt"></i></a></td>
+        <td class="td-cart">$50</td>
+      </tr>
+
+      <!-- PRODUCTO 2 -->
+      <tr>
+        <td class="td-cart">
+          <div class="cart-info">
+            <img class='img-cart' src="/images/shoes-img/Newbalance Wnl/1.png" alt="">
+            <div>
+              <p>Adidas AllStarts Premium</p>
+              <small>Price $50</small>
+            </div>
+          </div>
+        </td>
+        <td class="td-cart"><input class="qty-cart" type="number" value='1'> <a class='remove-cart' href=""><i class="far fa-trash-alt"></i></a></td>
+        <td class="td-cart">$50</td>
+      </tr>
+    </table>
+
+    <!-- TOTAL -->
+    <div class="total-price">
+      <table class="table-cart">
+        <tr>
+          <td class="td-cart">Subtotal</td>
+          <td class="td-cart">$100.00</td>
+        </tr>
+        <tr>
+          <td class="td-cart">Tax</td>
+          <td class="td-cart">$21.00</td>
+        </tr>
+        <tr>
+          <td class="td-cart">Total</td>
+          <td class="td-cart">$121.00</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <body>
+    <%- include('../partials/footer') %>
+  </body>
+
+</html>

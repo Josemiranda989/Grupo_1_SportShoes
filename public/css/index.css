@@ -110,7 +110,94 @@
   text-decoration: none;
 }
 
+
+
 /* <-FOOTER - INDEX-> */
+
+
+/*FOOTER-map*/
+.map-footer{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 ;
+}
+
+/*----Footer-help*/
+.container-help {
+  padding: 100px;
+  align-items: center;
+}
+/*----- terms---*/
+
+.caja-terms {
+  padding: 60px;
+  text-align: justify;
+}
+/*----- covid-info--*/
+.caja-covidinfo {
+  margin-left: 10px;
+  font-size: 16px;
+  width: 1500px;
+  padding: 20px;
+}
+
+.caja-cdcwho {
+  text-align: center;
+  padding: 20px;
+}
+
+/*-- Contactus footer -*/
+
+.body-contactus {
+  background: url(/images/background.jpg) fixed;
+}
+
+.contactus-container {
+  padding-top: 80px;
+}
+
+/*--FooterHelp--*/
+
+.help-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+.helpcontainer {
+  min-height: 500px;
+}
+
+.contactus-container {
+  min-width: 460px;
+}
+
+.tarjeta-centrada {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+/*----- shippinginfo---*/
+.caja-shippinginfo {
+  margin: 0 auto;
+  text-align: left;
+  width: 80%;
+  display: block;
+  max-width: 750px;
+  padding-top: 15px;
+}
+
+/*----- privicy---*/
+.caja-privacy {
+  font-size: 15px;
+  height: 600px;
+  text-align: justify;
+  margin: 50px 50px;
+  vertical-align: middle;
+}
+
 
 section a {
   margin: 5px;
@@ -255,59 +342,73 @@ h5.card-title {
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 
-.titulo-cart {
-  background-color: rgba(82, 176, 197, 0.95);
-  padding: 10px;
-  color: var(--blanco);
+.cart-page {
+  margin: 80px auto;
 }
 
-.body-cart {
-  font-family: 'roboto', sans-serif;
-  background: var(--blanco);
-}
-
-.main-cart {
+.table-cart{
   width: 100%;
+  border-collapse: collapse;
 }
 
-.imagen-cart {
-  background-size: cover;
-  width: 80%;
-  background-color: var(--grisClaro);
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.imagen-cart img {
-  background-size: cover;
-  width: 75%;
+.cart-info p{
+/*   display: none; */
+margin-bottom:0px;
 }
-
-.zapatilla-cart1 {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 10px;
-  background-color: var(--grisClaro);
-}
-
-.button-cart {
-  font-size: 12px;
-  margin-left: 40px;
-  background-color: var(--grisOscuro);
-  border-radius: 30px;
+.th-cart {
+  text-align: left;
   padding: 5px;
+  color: var(--grisOscuro);
+  background: var(--grisClaro)
 }
 
-.total-cart {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 10px;
-  background-color: var(--grisClaro);
-  padding: 10px;
+.td-cart {
+  padding: 10px 5px;
 }
 
-.zapatilla-cart1 a:visited {
-  color: black;
+.qty-cart {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+background: var(--grisClaro)
+}
+
+.remove-cart {
+  color: rgb(255, 59, 52);
+  font-size: 16px;
+}
+
+.img-cart {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 300px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+.push{
+  margin-left: 25px;
 }
 
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
@@ -474,12 +575,10 @@ main div h1 {
 /* <-------------- TERMS.HTML --------------> */
 
 .body-terms {
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   background: var(--grisClaro);
-  min-width: 400px;
-  max-width: 1000px;
-  padding: 50px;
 }
+
 
 /* <-------------- MEDIA QUERIES --------------> */
 /* <-------------- MEDIA QUERIES --------------> */
@@ -529,6 +628,11 @@ main div h1 {
   .corazon,
   .carrito {
     margin-left: 10px;
+  }
+
+  .cart-info p{
+    display: block;
+    margin-bottom: 0px;
   }
 }
 
