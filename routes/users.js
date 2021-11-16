@@ -9,6 +9,7 @@ const uploadAvatar = require('../middlewares/multerMiddlewareAvatars');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validatedLog = require('../middlewares/validatedLogingMiddleware');
 
 //FORMULARIO DE REGISTRO
 router.get('/register', guestMiddleware, userController.register)
@@ -21,7 +22,7 @@ router.get('/login', guestMiddleware, userController.login)
 
 //PROCESAMIENTO DEL LOGIN
 
-router.post('/login', userController.loginProcess)
+router.post('/login', validatedLog, userController.loginProcess)
 
 //PERFIL DE USUARIO
 router.get('/profile/', authMiddleware, userController.profile)

@@ -14,8 +14,10 @@
         <p>
           <label for="fullName">Enter your name:</label>
         </p>
-        <input type="text" placeholder="<%= locals.errors && errors.fullName ? errors.fullName.msg : null %>" name="fullName" class='form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null  %>' value='<%= locals.oldData ? oldData.fullName : null  %>'>
-        </p>
+       
+        <input type="text" name="fullName" class='form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null  %>' value='<%= locals.oldData ? oldData.fullName : null  %>'>
+         <div class=' <%= locals.errors && errors.fullName ? 'invalid-feedback' : null  %> '><%= locals.errors && errors.fullName ? errors.fullName.msg : null %></div>
+      </p>
 
         <p>
           <label for="userName">Enter your Username:</label>
@@ -74,9 +76,14 @@
         <p>
           <label for="password">Enter a password:</label>
         </p>
-        <p>
-          <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+        
+          <input type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> '>
+          <div class=' <%= locals.errors && errors.password ? 'invalid-feedback' : null  %> '><%= locals.errors && errors.password ? errors.password.msg : null %></div>
+      
         </p>
+        
+        <!--  --> 
+        
         <!-- <p>
           <label for="password"> Re-enter password:</label>
         </p>
