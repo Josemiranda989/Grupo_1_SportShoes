@@ -91,7 +91,7 @@ const userController = {
           return res.render('users/login', {
             errors: {
               email: {
-                msg: 'Password is invalid',
+                msg: 'The provided credentials being incorrect',
               },
             },
           })
@@ -100,7 +100,7 @@ const userController = {
         return res.render('users/login', {
           errors: {
             email: {
-              msg: 'This registered email cannot be found',
+              msg: 'The provided credentials being incorrect',
             },
           },
         })

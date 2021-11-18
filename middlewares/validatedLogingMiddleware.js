@@ -1,5 +1,5 @@
 
-const { body, check } = require("express-validator");
+const { check } = require("express-validator");
 
 module.exports = [
   check("email")
