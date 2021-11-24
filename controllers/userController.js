@@ -175,14 +175,6 @@ const userController = {
         })
         .catch(error => res.send(error))
       }
-  /* delete: (req, res) => {
-    db.User.destroy({
-      Where: {
-        user_id: parseInt(req.params.id, 10),
-      },
-    })
-    res.redirect('/')
-  } */
 }
 
 module.exports = userController

@@ -687,3 +687,19 @@ textarea.form-input {
   opacity: 0.8;
   text-align: center;
 }
+
+/*====== Boton ======*/
+
+.button {
+  padding: 10px 70px;
+  color: rgb(255, 255, 255);
+  background-color: var(--celesteOscuro);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 6px 0px rgba(219, 219, 219, 0.85);
+}
+
+.button:hover {
+  background-color: var(--celesteClaro);
+  color: rgb(255, 255, 255);
+}

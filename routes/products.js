@@ -5,7 +5,7 @@ const uploadImg = require('../middlewares/multerMiddlewareImg');
 
 // Controller require
 const productController = require('../controllers/productController')
-
+const validatedProduct = require('../middlewares/validatedProductsMiddleware');
 
 
 /* TODOS LOS PRODUCTOS */
@@ -19,11 +19,11 @@ router.get('/cart', productController.productCart);
 
 /* CREATE PRODUCTS */
 router.get('/create', productController.create); 
-router.post('/', uploadImg.single("img1"), productController.store); 
+router.post('/', validatedProduct, uploadImg.single("img1"), productController.store); 
 
 /* EDIT PRODUCT */
 router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', uploadImg.single("img1"), productController.update); 
+router.put('/edit/:id', validatedProduct, uploadImg.single("img1"), productController.update); 
 
 /* SEARCH BAR */
 router.get('/search',productController.search);

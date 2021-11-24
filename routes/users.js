@@ -15,7 +15,7 @@ const validatedLog = require('../middlewares/validatedLogingMiddleware');
 router.get('/register', guestMiddleware, userController.register)
 
 //PROCESAMIENTO DEL REGISTRO
-router.post('/register', uploadAvatar.single('avatar'), validations, userController.processRegister)
+router.post('/register', /* validations, */ uploadAvatar.single('avatar'), userController.processRegister)
 
 //FORMULARIO DE LOGIN
 router.get('/login', guestMiddleware, userController.login)
@@ -28,7 +28,7 @@ router.post('/login', validatedLog, userController.loginProcess)
 router.get('/profile/', authMiddleware, userController.profile)
 
 //EDITAR DE USUARIO
-router.get('/edit/:id', authMiddleware, userController.edit)
+router.get('/edit/:id', userController.edit)
 router.put('/edit/:id', authMiddleware, uploadAvatar.single('avatar'), userController.update)
 
 //LOGOUT

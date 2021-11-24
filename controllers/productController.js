@@ -1,7 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require('express-validator')
 let db = require("../database/models");
 const Op = db.Sequelize.Op;
+
 
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join(__dirname, "../data/productList.json");
@@ -35,6 +37,16 @@ const productController = {
   },
   // Create - Metodo para almacenar
   store: (req, res) => {
+    const resultValidation = validationResult(req)
+
+    if (resultValidation.errors.length > 0) {
+      return res.render('products/create', {
+        //mapped convierte un array en objeto literal
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+
     if (req.file) {
       if (req.file.filename) {
         db.Product.create({
@@ -51,7 +63,7 @@ const productController = {
         });
       }
     } else {
-      res.send("Falta adjuntar imagen, intentalo de nuevo");
+      res.send("please send a picture");
     }
 
     /* if (req.file) {
@@ -120,6 +132,16 @@ const productController = {
   // Update - Metodo para editar producto
 
   update: (req, res) => {
+    const resultValidation = validationResult(req)
+
+    if (resultValidation.errors.length > 0) {
+      return res.render('products/edit', {
+        //mapped convierte un array en objeto literal
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+
     let id = req.params.id;
     db.Product.findByPk(id).then((prod) => {
       db.Product.update(

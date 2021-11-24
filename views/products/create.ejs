@@ -2,84 +2,85 @@
 <html lang="en">
 <%- include('../partials/head', {title: "Product Creator" }) %>
 
-    <body>
-        <!-- NAVBAR -->
-        <%- include('../partials/header') %>
+<body>
+  <!-- NAVBAR -->
+  <%- include('../partials/header') %>
 
-            <!-- CREATE FORM -->
-            <div class="container fondo-form products-wrapper">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="products-title">Product Creator</h2>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <form method="POST" action="/products" enctype="multipart/form-data">
-                        <div class="row product-detail">
-                            <div class="col-12 col-md-6">
-                                <label for="productName" class="form-label">Name:</label>
-                                <input type="text" id="productName" name="productName" placeholder="Ej: Zapatillas Reebok"
-                                    class="form-input">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="price" class="form-label">Price:</label>
-                                <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="size" class="form-label">Size:</label>
-                                <input type="text" id="size" name="size" placeholder="Ej: 8" class="form-input">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="color" class="form-label">Colors:</label>
-                                <input type="text" id="color" name="color" placeholder="Ej: Blue" class="form-input">
-                            </div>
-                    
-                            <div class="col-12 col-md-6">
-                                <label for="brand" class="form-label">Brand:</label>
-                                <input type="text" id="brand" name="brand" placeholder="Ej: Adidas" class="form-input">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="img1" class="form-label">Image 1:</label>
-                                <input type="file" id="img1" name="img1" placeholder="Image"
-                                    class="form-input">
-                            </div>
-                           
-                           
-                           <div class="col-12 col-md-6">
-                                <label for="category" class="form-label">Category:</label>
-                                <select name="category" id="category" class="form-input">
-                                    <option value="Men´s">Men´s</option>
-                                    <option value="Women´s">Women´s</option>
-                                </select>
-                            </div>
-                            
-                            
-                            <div class="col-12">
-                                <label for="description" class="form-label">Description:</label>
-                                <textarea name="description" id="description" class="form-input"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="buy-now-button">Save product</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+  <!-- CREATE FORM -->
+  <div class="container fondo-form products-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="products-title">Product Creator</h2>
+      </div>
+    </div>
+    <div class="col-12">
+      <form method="POST" action="/products" enctype="multipart/form-data">
+        <div class="row product-detail">
+          <div class="col-12 col-md-6">
+            <label for="productName" class="form-label">Name:</label>
+            <input type="text" id="productName" name="productName" placeholder="Ej: Zapatillas Reebok" class="form-input" required minlength="2">
+            <div class=' <%= locals.errors && errors.productName ? 'text-danger' : null  %> '><%= locals.errors && errors.productName ? errors.productName.msg : null %></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="price" class="form-label">Price:</label>
+            <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+            <div class=' <%= locals.errors && errors.price ? 'text-danger' : null  %> '><%= locals.errors && errors.price ? errors.price.msg : null %></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="size" class="form-label">Size:</label>
+            <input type="text" id="size" name="size" placeholder="Ej: 8" class="form-input">
+            <div class=' <%= locals.errors && errors.size ? 'text-danger' : null  %> '><%= locals.errors && errors.size ? errors.size.msg : null %></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="color" class="form-label">Colors:</label>
+            <input type="text" id="color" name="color" placeholder="Ej: Blue" class="form-input">
+            <div class=' <%= locals.errors && errors.color ? 'text-danger' : null  %> '><%= locals.errors && errors.color ? errors.color.msg : null %></div>
+          </div>
 
-            </div>
+          <div class="col-12 col-md-6">
+            <label for="brand" class="form-label">Brand:</label>
+            <input type="text" id="brand" name="brand" placeholder="Ej: Adidas" class="form-input">
+            <div class=' <%= locals.errors && errors.brand ? 'text-danger' : null  %> '><%= locals.errors && errors.brand ? errors.brand.msg : null %></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="img1" class="form-label">Image 1:</label>
+            <input accept="image/png, image/jpeg, image/jpg, image/gif" type="file" id="img1" name="img1" placeholder="Image" class="form-input">
+            <div class=' <%= locals.errors && errors.img1 ? 'text-danger' : null  %> '><%= locals.errors && errors.img1 ? errors.img1.msg : null %></div>
+          </div>
 
 
-            <!-- FOOTER -->
+          <div class="col-12 col-md-6">
+            <label for="category" class="form-label">Category:</label>
+            <select name="category" id="category" class="form-input">
+              <option value="Men´s">Men's</option>
+              <option value="Women´s">Women's</option>
+            </select>
+          </div>
 
-            <%- include('../partials/footer') %>
 
-                <!-- SCRIPTS -->
+          <div class="col-12">
+            <label for="description" class="form-label">Description:</label>
+            <textarea name="description" id="description" class="form-input"></textarea>
+            <div class=' <%= locals.errors && errors.description ? 'text-danger' : null  %> '><%= locals.errors && errors.description ? errors.description.msg : null %></div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="button">Save product</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-                    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-                    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-                    crossorigin="anonymous"></script>
-    </body>
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <%- include('../partials/footer') %>
+
+  <!-- SCRIPTS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
 
 </html>
