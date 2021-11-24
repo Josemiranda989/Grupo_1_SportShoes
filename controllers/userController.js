@@ -68,6 +68,16 @@ const userController = {
   },
 
   loginProcess: (req, res) => {
+    const resultValidation = validationResult(req)
+    if (resultValidation.errors.length > 0) {
+      return res.render('users/login', {
+        //mapped convierte un array en objeto literal
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+    
+    
     db.User.findAll()
       .then(users => {
         let userToLogin = users.find(i => i.email == req.body.email)

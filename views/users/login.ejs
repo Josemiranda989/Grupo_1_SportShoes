@@ -13,7 +13,7 @@
                         <i class="fa fa-user"></i>
                         <input type="text" name="email" placeholder=" Email@sportshoes.com" />
                         <% if (locals.errors && errors.email) { %>
-                            <p class=""><%= errors.email.msg %></p>
+                            <p class='text-danger'><%= errors.email.msg %></p>
                         <% } %>
                     </p>
                     <br>
