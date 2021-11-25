@@ -15,7 +15,7 @@ const validatedLog = require('../middlewares/validatedLogingMiddleware');
 router.get('/register', guestMiddleware, userController.register)
 
 //PROCESAMIENTO DEL REGISTRO
-router.post('/register', /* validations, */ uploadAvatar.single('avatar'), userController.processRegister)
+router.post('/register', validations, uploadAvatar.single('avatar'), userController.processRegister)
 
 //FORMULARIO DE LOGIN
 router.get('/login', guestMiddleware, userController.login)

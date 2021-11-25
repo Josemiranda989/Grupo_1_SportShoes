@@ -519,7 +519,9 @@ main div h1 {
   box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
-/* <-CHECKBOX - REGISTER-> */
+.spacing {
+  margin-bottom: 15px;
+}
 
 /* <-FORMULARIO - REGISTER-> */
 
@@ -702,4 +704,23 @@ textarea.form-input {
 .button:hover {
   background-color: var(--celesteClaro);
   color: rgb(255, 255, 255);
+}
+
+
+/* Errores Frontend */
+
+.show {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.msg-errors{
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
 }
