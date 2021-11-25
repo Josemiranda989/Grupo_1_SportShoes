@@ -69,15 +69,17 @@
 
         <!--* Password -->
         <label for="password">Enter a password:</label>
-        <input type="password" id="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null %> '>
+        <input type="password" id="password" name="password" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null %> '>
         <!--? Validacion Front -->
         <p id="errPassword" class="msg-errors hidden"></p>
         <!--? Validacion Back -->
-        <div class=' <%= locals.errors && errors.password ? 'invalid-feedback' : null  %> '><%= locals.errors && errors.password ? errors.password.msg : null %></div>
+        <div class=' <%= locals.errors && errors.password ? 'invalid-feedback' : null  %> '>
+          <%= locals.errors && errors.password ? errors.password.msg : null %>
+        </div>
 
         <!--* Re-Password -->
-        <label for="password"> Re-enter password:</label>
-        <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="confirmPassword" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+        <label for="password">Re-enter password:</label>
+        <input type="password" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="confirmPassword" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
         <!--? Validacion Front -->
         <p id="errPassword" class="msg-errors hidden"></p>
         <br>
