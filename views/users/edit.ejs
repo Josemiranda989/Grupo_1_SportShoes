@@ -21,41 +21,49 @@
       <form action="/user/edit/<%= profileToEdit.user_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="row product-detail">
 
+          <!--* FullName -->
           <div class="col-12 col-md-6">
             <label for="fullName" class="form-label">Name:</label>
             <input type="text" id="fullName" name="fullName" placeholder="Ej: Elon Musk" class="form-input" value="<%= profileToEdit.fullName %>">
           </div>
 
+          <!--* User -->
           <div class="col-12 col-md-6">
             <label for="userName" class="form-label">User:</label>
             <input type="text" id="userName" name="userName" placeholder="Ej: Billonaries" class="form-input" value="<%= profileToEdit.userName %>">
           </div>
 
+          <!--* Country -->
           <div class="col-12 col-md-6">
-          <label for="userName" class="form-label">Country:</label>
-          <select name='country' class='form-select <%= locals.errors && errors.country ? 'is-invalid' : null  %> '>
-            <option value=''>Choose a country</option>
-            <% let countries = ['Argentina', 'EEUU', 'Chile', 'Perú', 'Bolivia', 'Colombia', 'Paraguay'] %>
-            <% for( const oneCountry of countries ) { %>
-            <option value='<%= oneCountry %>' <%= (oneCountry == profileToEdit.country) ? 'selected' : null %>> <%= oneCountry  %> </option>
-            <% } %>
-          </select>
+            <label for="userName" class="form-label">Country:</label>
+            <select name='country' class='form-select <%= locals.errors && errors.country ? 'is-invalid' : null  %> '>
+              <option value=''>Choose a country</option>
+              <% let countries = ['Argentina', 'EEUU', 'Chile', 'Perú', 'Bolivia', 'Colombia', 'Paraguay'] %>
+              <% for( const oneCountry of countries ) { %>
+              <option value='<%= oneCountry %>' <%= (oneCountry == profileToEdit.country) ? 'selected' : null %>> <%= oneCountry  %> </option>
+              <% } %>
+            </select>
           </div>
 
+          <!--* Address -->
+          <div class="col-12 col-md-6">
+            <label for="address" class="form-label">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Ej: Avenue 1503" class="form-input" value="<%= profileToEdit.address %>">
+          </div>
+
+          <!--* Email -->
           <div class="col-12 col-md-6">
             <label for="email" class="form-label">Email:</label>
             <input type="text" id="email" name="email" placeholder="Ej: dogecoin@gmail.com" class="form-input" value="<%= profileToEdit.email %>">
           </div>
 
+          <!--* Password -->
           <div class="col-12 col-md-6">
             <label for="password" class="form-label">New password:</label>
             <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-input">
           </div>
-          <div class="col-12 col-md-6">
-            <label for="address" class="form-label">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Ej: Avenue 1503" class="form-input" value="<%= profileToEdit.address %>">
-          </div>
-          
+
+          <!--* Avatar -->
           <div class="col-12 col-md-12">
             <label for="avatar" class="form-label">Avatar :</label>
             <input type="file" id="avatar" name="avatar" placeholder="Image" class="form-input">
@@ -64,9 +72,9 @@
           <div class="col-6 d-flex justify-content-center mb-2">
             <button type="submit " name='edit' class="buy-now-button btn btn-secondary">Save Changes</button>
           </div>
-          
+
       </form>
-      <!-- FORM DELETE -->
+      <!--* FORM DELETE -->
       <div class="col-6 d-flex justify-content-center mb-2">
         <form action="/user/delete/<%= profileToEdit.user_id %>?_method=DELETE" method="POST">
           <button class="button" type="submit" name="delete">Delete this User</button>

@@ -17,7 +17,9 @@
         <!--? Validacion Front -->
         <p id="errFullName" class="msg-errors hidden"></p>
         <!--? Validacion Back -->
-        <div class=' <%= locals.errors && errors.fullName ? 'invalid-feedback' : null  %> '><%= locals.errors && errors.fullName ? errors.fullName.msg : null %></div>
+        <div class=' <%= locals.errors && errors.fullName ? 'invalid-feedback' : null  %> '>
+          <%= locals.errors && errors.fullName ? errors.fullName.msg : null %>
+        </div>
 
         <!--* User -->
         <label for="userName">Enter your Username:</label>
