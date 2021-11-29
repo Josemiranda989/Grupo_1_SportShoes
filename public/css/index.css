@@ -234,6 +234,31 @@ section a i {
   color: var(--grisOscuro);
   margin: 20px 0;
   font-size: 25px;
+  }
+
+  .input-login{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.input-login input {
+  width: 70%;
+  margin-left: 10px;
+
+}
+
+
+.input-login i {
+ font-size: 20px;
+
+}
+
+
+.form-check-input{
+  margin-bottom: 30px;
 }
 
 /* <-CAJA - LOGIN-> */
@@ -522,6 +547,8 @@ main div h1 {
 .spacing {
   margin-bottom: 15px;
 }
+
+
 
 /* <-FORMULARIO - REGISTER-> */
 

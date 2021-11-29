@@ -7,19 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function validarFormulario(evento) {
   evento.preventDefault()
 
-  /* FullName */
-  var fullName = document.getElementById('fullName').value
- var  errFullName = document.getElementById('errFullName')
-  if (fullName.length == 0) {
-    errFullName.classList.add('show')
-    errFullName.classList.remove('hidden')
-    errFullName.innerHTML = 'Debe ingresar su nombre'
-    return
-  } else {
-    errFullName.classList.remove('show')
-    errFullName.classList.add('hidden')
-  }
-
   /* Email */
   var email = document.getElementById('email').value
   errEmail = document.getElementById('errEmail')
@@ -39,25 +26,10 @@ function validarFormulario(evento) {
     errEmail.classList.add('hidden')
   }
 
-  /* Avatar */
-  var avatar = document.getElementById('avatar').value
-  errAvatar = document.getElementById('errAvatar')
-  var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
-  if (!allowedExtensions.exec(avatar)) {
-    errAvatar.classList.add('show')
-    errAvatar.classList.remove('hidden')
-    errAvatar.innerHTML =
-      'Please upload file having extensions .jpeg/.jpg/.png/.gif only.'
-    return
-  } else {
-    errAvatar.classList.remove('show')
-    errAvatar.classList.add('hidden')
-  }
-
   /* Password */
   var password = document.getElementById('password').value
   errPassword = document.getElementById('errPassword')
-  const charPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(
+  const charPass = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9]).{8,}$/.test(
     password,
   )
   if (password.length < 8) {
