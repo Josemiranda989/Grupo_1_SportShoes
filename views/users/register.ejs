@@ -17,9 +17,7 @@
         <!--? Validacion Front -->
         <p id="errFullName" class="msg-errors hidden"></p>
         <!--? Validacion Back -->
-        <div class=' <%= locals.errors && errors.fullName ? 'invalid-feedback' : null  %> '>
-          <%= locals.errors && errors.fullName ? errors.fullName.msg : null %>
-        </div>
+        <div class=' <%= locals.errors && errors.fullName ? 'invalid-feedback' : null  %> '><%= locals.errors && errors.fullName ? errors.fullName.msg : null %></div>
 
         <!--* User -->
         <label for="userName">Enter your Username:</label>
@@ -44,7 +42,6 @@
         <!--* Address -->
         <label for="address">Enter your address:</label>
         <input type="text" placeholder="<%= locals.errors && errors.address ? errors.address.msg : null %>" name="address" value='<%= locals.oldData ? oldData.address : null %>' class='form-control spacing <%= locals.errors && errors.address ? 'is-invalid' : null  %> '>
-
         <!--* Email -->
         <label for="email"> Enter your email </label>
         <input type="text" id="email" placeholder="<%= locals.errors && errors.email ? errors.email.msg : null %>" name="email" value='<%= locals.oldData ? oldData.email : null  %>' class='form-control spacing <%= locals.errors && errors.email ? 'is-invalid' : null  %> '>
