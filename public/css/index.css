@@ -450,62 +450,12 @@ th:last-child {
   margin: 0 auto;
 }
 
-.section-detail {
-  background-color: #ffffff;
-  width: 100%;
+.container-detail{
+  display: flex;
 }
 
-.titulo-detail {
-  padding: 15px;
-  text-align: center;
-  border-bottom: 1px solid lightgray;
-  margin-bottom: 10px;
-}
 
-.imagen-detail {
-  width: 90%;
-  background-color: rgb(0 189 183 / 32%);
-  display: block;
-  margin: 0 auto;
-  box-shadow: 1px 1px 2px;
-  max-width: 1000px;
-}
 
-.texto-detail {
-  width: 90%;
-  margin: 0 auto;
-  line-height: 30px;
-  padding: 20px 0;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-}
-.addcart-detail-signin {
-  font-size: 14px;
-  font-weight: bold;
-  background-color: lightgray;
-  border-radius: 50px;
-  padding: 7px;
-}
-
-.addcart-detail-signin a:visited {
-  color: black;
-}
-
-.addcart-detail {
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 40px;
-  background-color: lightgray;
-  border-radius: 50px;
-  padding: 7px;
-  margin: 0 0 20px 40px;
-}
-
-.addcart-detail a:visited {
-  color: black;
-}
 
 /* <-------------- REGISTER.HTML --------------> */
 /* <-------------- REGISTER.HTML --------------> */
