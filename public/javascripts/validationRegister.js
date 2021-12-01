@@ -13,7 +13,7 @@ function validarFormulario(evento) {
   if (fullName.length == 0) {
     errFullName.classList.add('show')
     errFullName.classList.remove('hidden')
-    errFullName.innerHTML = 'Debe ingresar su nombre'
+    errFullName.innerHTML = 'You must enter your name F'
     return
   } else {
     errFullName.classList.remove('show')
@@ -27,12 +27,12 @@ function validarFormulario(evento) {
   if (email === '') {
     errEmail.classList.add('show')
     errEmail.classList.remove('hidden')
-    errEmail.innerHTML = 'Ingrese su email'
+    errEmail.innerHTML = 'Enter your email F'
     return
   } else if (!charEmail) {
     errEmail.classList.add('show')
     errEmail.classList.remove('hidden')
-    errEmail.innerHTML = 'Formato invalido'
+    errEmail.innerHTML = 'Invalid format F'
     return
   } else {
     errEmail.classList.remove('show')
@@ -63,13 +63,13 @@ function validarFormulario(evento) {
   if (password.length < 8) {
     errPassword.classList.add('show')
     errPassword.classList.remove('hidden')
-    errPassword.innerHTML = 'La contraseña debe ser superior a 8 carácteres'
+    errPassword.innerHTML = 'The password must be greater than 8 characters F'
     return
   } else if (!charPass) {
     errPassword.classList.add('show')
     errPassword.classList.remove('hidden')
     errPassword.innerHTML =
-      'La clave debe contener letra mayuscula, minúscula, numero y caracter especial'
+      'The password must contain uppercase, lowercase, number and special character F'
     return
   } else {
     errPassword.classList.remove('show')

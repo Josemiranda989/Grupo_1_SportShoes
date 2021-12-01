@@ -8,12 +8,12 @@ function validarFormulario(evento) {
   evento.preventDefault();
 
   /* productName */
-  var productName = document.getElementById("fullName").value;
+  var productName = document.getElementById("productName").value;
   var errProductName = document.getElementById("errProductName");
   if (productName.length == 0) {
     errProductName.classList.add("show");
     errProductName.classList.remove("hidden");
-    errProductName.innerHTML = "Debe ingresar su nombre";
+    errProductName.innerHTML = "You must enter your name F";
     return;
   } else {
     errProductName.classList.remove("show");
@@ -27,7 +27,7 @@ function validarFormulario(evento) {
   if (brand === "") {
     errBrand.classList.add("show");
     errBrand.classList.remove("hidden");
-    errBrand.innerHTML = "Ingrese la Marca del Producto";
+    errBrand.innerHTML = "Enter Product Brand F";
     return;
   } else {
     errBrand.classList.add("show");
@@ -58,7 +58,7 @@ function validarFormulario(evento) {
     errDescription.classList.add("show");
     errDescription.classList.remove("hidden");
     errDescription.innerHTML =
-      "La descripcion debe ser superior a 20 carácteres";
+      "The description must be greater than 20 characters F";
     return;
   } else {
     errDescription.classList.remove("show");
