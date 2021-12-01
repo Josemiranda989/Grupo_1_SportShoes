@@ -234,6 +234,31 @@ section a i {
   color: var(--grisOscuro);
   margin: 20px 0;
   font-size: 25px;
+  }
+
+  .input-login{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.input-login input {
+  width: 70%;
+  margin-left: 10px;
+
+}
+
+
+.input-login i {
+ font-size: 20px;
+
+}
+
+
+.form-check-input{
+  margin-bottom: 30px;
 }
 
 /* <-CAJA - LOGIN-> */
@@ -519,7 +544,11 @@ main div h1 {
   box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.61);
 }
 
-/* <-CHECKBOX - REGISTER-> */
+.spacing {
+  margin-bottom: 15px;
+}
+
+
 
 /* <-FORMULARIO - REGISTER-> */
 
@@ -686,4 +715,39 @@ textarea.form-input {
   background: url('/images/loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
   opacity: 0.8;
   text-align: center;
+}
+
+/*====== Boton ======*/
+
+.button {
+  padding: 10px 70px;
+  color: rgb(255, 255, 255);
+  background-color: var(--celesteOscuro);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 6px 0px rgba(219, 219, 219, 0.85);
+}
+
+.button:hover {
+  background-color: var(--celesteClaro);
+  color: rgb(255, 255, 255);
+}
+
+
+/* Errores Frontend */
+
+.show {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.msg-errors{
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
 }

@@ -5,7 +5,9 @@ const { body } = require('express-validator');
 module.exports = [
   body('fullName')
     .notEmpty()
-    .withMessage('Invalid Full name, please write again'),
+     .withMessage('You must complete your Fullname').bail()
+    .isLength({ min: 2 })
+    .withMessage('Your fullname must have min 2 character '),
   body('userName')
     .notEmpty()
     .withMessage('Invalid Username, please write again'),
@@ -20,7 +22,11 @@ module.exports = [
     .withMessage('write a correct email format please'),
   body('password')
     .notEmpty()
-    .withMessage('Invalid Password, please write again'),
+    .withMessage('You must to complete your Password').bail()
+    .isLength({ min: 8  })
+    .withMessage("Must contain at least one number,uppercase andlowercase letter, min 8 or more characters" )
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,)
+    .withMessage("Must contain at least one number,uppercase andlowercase letter, min 8 or more characters" ),
   body('country').notEmpty().withMessage('Not selected, please choose again'),
   body('avatar').custom((value, { req }) => {
       let file = req.file;

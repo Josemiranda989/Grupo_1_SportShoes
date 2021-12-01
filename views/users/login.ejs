@@ -2,42 +2,41 @@
 <html>
 <%- include('../partials/head', {title: "Login" }) %>
 
-    <body class="body-login">
-
-        <main>
-            <div class="box-login">
-                <a href="/"> <img class="logo-login" src="../images/logo-b.png" alt="LogoSportShoes"></a>
-                <h1 class="text-login">Login</h1>
-                <form class="form-login" action="/user/login" method="POST">
-                    <p class="textLogin">
-                        <i class="fa fa-user"></i>
-                        <input type="text" name="email" placeholder=" Email@sportshoes.com" required />
-                        <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                          <%= errors.email.msg %>
-                        </div>
-                        <% } %>
-                    </p>
-                    <br>
-                    <p class="textLogin">
-                        <i class="fa fa-lock"></i>
-                        <input type="password" name="password" placeholder="     Your Password" required />
-                    </p>
-                    <br>
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="remember_user">Remember me
-                    </label>
-                    <br>
-                    <p>
-                        <input class="submit-login" type="submit" name="sent" value="Login">
-                    </p>
-                    <br>
-                    <a class="pregunta-login" href="#">Lost your password ?</a><br>
-                    <a class="pregunta-login" href="/user/register">Don't have an account ?</a>
-                </form>
-            </div>
-        </main>
-
-    </body>
+<body class="body-login">
+  <main>
+    <div class="box-login">
+      <a href="/"> <img class="logo-login" src="../images/logo-b.png" alt="LogoSportShoes"></a>
+      <h1 class="text-login">Login</h1>
+      <form class="form-login" id="formulario" action="/user/login" method="POST">
+        <p class="input-login ">
+          <i class="fa fa-user"></i>
+          <input type="email" name="email" id="email" placeholder=" Email@sportshoes.com" />
+          <!--? Validacion Front -->
+        <p id="errEmail" class="msg-errors hidden"></p>
+        <!--? Validacion Back -->
+        <% if (locals.errors && errors.email) { %>
+        <p class='text-danger'><%= errors.email.msg %></p>
+        <% } %>
+        </p>
+        <p class="input-login">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="password" name="password" placeholder="Your Password" />
+          <!--? Validacion Front -->
+        <p id="errPassword" class="msg-errors hidden"></p>
+        </p>
+        <input type="checkbox" class="form-check-input" name="remember_user">
+        <label class="form-check-label" style="padding-left:5px ;">
+          Remember me
+        </label>
+        <p>
+          <input class="submit-login" type="submit" name="sent" value="Login">
+        </p>
+        <a class="pregunta-login" href="#">Lost your password ?</a><br>
+        <a class="pregunta-login" href="/user/register">Don't have an account ?</a>
+      </form>
+    </div>
+  </main>
+  <script src="/javascripts/validationLogin.js"></script>
+</body>
 
 </html>

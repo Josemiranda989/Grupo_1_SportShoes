@@ -68,6 +68,16 @@ const userController = {
   },
 
   loginProcess: (req, res) => {
+    const resultValidation = validationResult(req)
+    if (resultValidation.errors.length > 0) {
+      return res.render('users/login', {
+        //mapped convierte un array en objeto literal
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      })
+    }
+    
+    
     db.User.findAll()
       .then(users => {
         let userToLogin = users.find(i => i.email == req.body.email)
@@ -91,7 +101,7 @@ const userController = {
           return res.render('users/login', {
             errors: {
               email: {
-                msg: 'Password is invalid',
+                msg: 'The provided credentials being incorrect',
               },
             },
           })
@@ -100,7 +110,7 @@ const userController = {
         return res.render('users/login', {
           errors: {
             email: {
-              msg: 'This registered email cannot be found',
+              msg: 'The provided credentials being incorrect',
             },
           },
         })
@@ -165,14 +175,6 @@ const userController = {
         })
         .catch(error => res.send(error))
       }
-  /* delete: (req, res) => {
-    db.User.destroy({
-      Where: {
-        user_id: parseInt(req.params.id, 10),
-      },
-    })
-    res.redirect('/')
-  } */
 }
 
 module.exports = userController
