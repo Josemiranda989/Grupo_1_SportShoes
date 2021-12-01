@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <%- include('../partials/head', {title: "Login" }) %>
+
 <body class="body-login">
-<main>
+  <main>
     <div class="box-login">
       <a href="/"> <img class="logo-login" src="../images/logo-b.png" alt="LogoSportShoes"></a>
       <h1 class="text-login">Login</h1>
@@ -12,23 +12,23 @@
           <i class="fa fa-user"></i>
           <input type="email" name="email" id="email" placeholder=" Email@sportshoes.com" />
           <!--? Validacion Front -->
-          <p id="errEmail" class="msg-errors hidden"></p>
-          <!--? Validacion Back -->
-          <% if (locals.errors && errors.email) { %>
+        <p id="errEmail" class="msg-errors hidden"></p>
+        <!--? Validacion Back -->
+        <% if (locals.errors && errors.email) { %>
         <p class='text-danger'><%= errors.email.msg %></p>
         <% } %>
         </p>
-         <p class="input-login ">
+        <p class="input-login">
           <i class="fa fa-lock"></i>
-          <input type="password" name="password" placeholder="Your Password"/>
+          <input type="password" id="password" name="password" placeholder="Your Password" />
           <!--? Validacion Front -->
-          <p id="errPassword" class="msg-errors hidden"></p>
+        <p id="errPassword" class="msg-errors hidden"></p>
         </p>
-      <input type="checkbox" id="password" class="form-check-input" name="remember_user">
+        <input type="checkbox" class="form-check-input" name="remember_user">
         <label class="form-check-label" style="padding-left:5px ;">
-           Remember me
+          Remember me
         </label>
-          <p>
+        <p>
           <input class="submit-login" type="submit" name="sent" value="Login">
         </p>
         <a class="pregunta-login" href="#">Lost your password ?</a><br>
@@ -40,26 +40,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

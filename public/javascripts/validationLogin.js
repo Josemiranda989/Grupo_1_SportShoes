@@ -29,7 +29,7 @@ function validarFormulario(evento) {
   /* Password */
   var password = document.getElementById('password').value
   errPassword = document.getElementById('errPassword')
-  const charPass = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9]).{8,}$/.test(
+  const charPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/.test(
     password,
   )
   if (password.length < 8) {
