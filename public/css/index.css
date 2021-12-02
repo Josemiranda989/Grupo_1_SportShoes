@@ -95,16 +95,18 @@
 .call-index {
   font-size: 15px;
   margin-left: 40px;
-  background-color: #5e5e5e87;
-  border-radius: 10px;
-  padding: 5px;
+  background-color: var(--verdeOscuro);
+  border-radius: 5px;
+  padding: 7px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 10px;
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 0.25s;
+  border: 2px solid transparent;
 }
+  
 
 .call-index a:visited {
   text-decoration: none;
@@ -454,6 +456,41 @@ th:last-child {
   display: flex;
 }
 
+.description-detail {
+position: relative;
+left: 20%;
+padding-top: 5%;
+/* ajustar descripcion para q cuando se cambie de dispositivo se ajuste automaticamente */
+
+}
+
+.imagen-detail {
+
+  position: relative;
+  left: 10%;
+  background-size: cover;
+  height: auto;
+  width: auto;
+}
+.submit-detail {
+  border: 2px solid transparent;
+  background:var(--celesteOscuro);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 12px;
+  padding: 10px 5px;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+  display: inline;
+}
+
+
 
 
 
@@ -525,10 +562,10 @@ main div h1 {
 
 .submit-login {
   border: 2px solid transparent;
-  background: var(--celesteClaro);
+  background:var(--celesteOscuro);
   color: #ffffff;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 20px;
   padding: 10px 0;
   text-decoration: none;
   text-shadow: none;

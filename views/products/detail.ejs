@@ -7,25 +7,50 @@
     <!-- DETALLE DEL PRODUCTO -->
 
     <section class="container-detail fondo-form"> 
-      
+      <div> 
+        <!-- verificar el tamaño de la imagen, se rompe al cambiar de dispositivo -->
       <img
         class="imagen-detail"
         src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>"
-        alt="producto para agregar"
-      />
+        alt="producto para agregar" style="width: 550px; height: 550px;"/>
+      </div>
 
       <div class="description-detail" >
-      
+      <!-- se rompe cuando se cambia la vista para otro dispositivo -->
         <h2><%= product.productName %></h2>
-        <p><%= product.price %></p>
-        <p><%= product.description%></p>
-     
-      <p><%= product.brand %></p>
-      <p><%= product.color %></p>
-      <p><%= product.size%></p>
-      <p><%= product.quantity %></p>
-      <button>add to card</button>
-      <button>buy now</button>
+        <p> Price: $ <%= product.price %></p>
+        <p>Description: <%= product.description%></p>
+        <p>Brand: <%= product.brand %></p>
+
+        <div>
+          <label>Select Color</label>
+          <select name="color">
+            <option value="black">Black</option>
+            <option value="white">White </option>
+            <option value="red">Red </option>
+            <option value="blue">Blue </option>
+          </select>
+        </div>
+        <br>
+      
+        <div>
+          <label>Select a Size</label>
+          <select name="size">
+            <option value="8.0">8.0 </option>
+            <option value="8.5">8.5 </option>
+            <option value="9.0">9.0 </option>
+            <option value="10.0">10.0 </option>
+          </select>
+         </div>
+         <br>
+        <form action="/action_page.php">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </form>
+        <br>
+      <button class="submit-detail">add to card</button>
+      <button class="submit-detail">buy now</button>
+      
    <!-- fijarse si va mejor adentro del div o afuera de section  -->
     </div>
  
