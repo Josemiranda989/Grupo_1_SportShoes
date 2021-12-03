@@ -3,30 +3,50 @@ const Op = db.Sequelize.Op
 
 const productApi = {
   products: (req, res) => {
-    //res.render('products', { allShoes: allShoes })
+    let countMens = db.Product.findAndCountAll({
+      where: {
+        category: { [Op.like]: 'Men´s' }
+      }
+    }).then(result => {
+      countMens = result.count
+    });
+    let countWomens = db.Product.findAndCountAll({
+      where: {
+        category: { [Op.like]: 'Women´s' }
+      }
+    }).then(result => {
+      countWomens = result.count
+    });
+    
 
-    /* crear variables */
-    db.Product.findAll().then((products) =>
-      res.status(200).json({
-        count: products.length,
-        countByCategory:{
-            men:  db.Product.findAll({
-                where: {
-                  category: { [Op.like]: 'Men´s' }
-                 }
-             }) ,
-            women:    db.Product.findAll({
-                   where: {
-                    category: { [Op.like]: 'Women´s' }
-                    }
-                }) ,  
-        },
-              
-        data: products,
-        status: 200,
-      }),
-    )
+    db.Product
+      .findAll()
+      .then(products => {
+        let IfcountMens = 0
+        let IfcountWomens = 0
+        for (let i = 1; i < products.length; i++) {
+          if (products[i].category == 'Women´s') {
+            IfcountWomens += 1
+          } else {
+            IfcountMens += 1
+          }
+        }
+        res.status(200).json({
+          count: products.length,
+          countByCategory: {
+            men: countMens,
+            women: countWomens,
+          },
+          countIF: {
+            men: IfcountMens,
+            women: IfcountWomens
+          },
+          data: products,
+          status: 200,
+        })
+      })
   },
+        
   productDetail: (req, res) => {
     db.Product.findByPk(req.params.id).then(function (productSelected) {
       res.status(200).json({

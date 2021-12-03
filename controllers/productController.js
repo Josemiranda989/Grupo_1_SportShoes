@@ -18,15 +18,20 @@ const productController = {
     });
   },
 
+  sale: (req, res) => {
+    //res.render('products', { allShoes: allShoes })
+    db.Product.findAll().then(function (products) {
+      res.render("products/products", { allShoes: products });
+    });
+  },
   // Detalle de un producto particular
   productDetail: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productSelected) {
       res.render("products/detail", { product: productSelected });
-    });
-
-    
+    });    
   },
+
   // Productos de Carrito
   productCart: (req, res) => {
     res.render("products/cart");
@@ -65,28 +70,9 @@ const productController = {
     } else {
       res.send("please send a picture");
     }
-
-    /* if (req.file) {
-      let newShoe = {
-        id: allShoes[allShoes.length - 1].id + 1,
-        productName: req.body.productName,
-        price: req.body.price,
-        brand: req.body.brand,
-        description: req.body.description,
-        size: req.body.size,
-        category: req.body.category,
-        img1: req.file.filename,
-      };
-      allShoes.push(newShoe);
-      let AllShoesJSON = JSON.stringify(allShoes, null, " ");
-      fs.writeFileSync(allShoesFilePath, AllShoesJSON);
-      res.redirect("/products");
-    } else {
-      res.render("productCreate");
-    } */
   },
-  // BARRA SEARCH ITEMS
-   
+
+  // BARRA SEARCH ITEMS   
   search: (req, res) => {
     db.Product.findAll({
        where: {
@@ -97,40 +83,17 @@ const productController = {
          return res.render('products/products', { allShoes: products })
     })
       .catch(error => res.send(error));
-  
- 
- 
-  /* search: (req, res) => {
-    let loqueBuscoElUsuario = req.query.shoes.toLowerCase();
-    let userResults = [];
-
-    for (let i = 0; i < allShoes.length; i++) {
-      if (
-        allShoes[i].brand.toLowerCase().includes(loqueBuscoElUsuario) ||
-        allShoes[i].productName.toLowerCase().includes(loqueBuscoElUsuario)
-      ) {
-        userResults.push(allShoes[i]);
-      }
-    }
-
-    res.render("products", { allShoes: userResults });*/
-  
   },
+
   // Edit - Vista del Formulario
   edit: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productToEdit) {
       res.render("products/edit", { productToEdit: productToEdit });
     });
-
-    /* let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
-    let idProduct = parseInt(req.params.id);
-    let productToEdit = allShoes.filter((i) => i.id === idProduct);
-    res.render("productEdit", { productToEdit: productToEdit }); */
   },
 
   // Update - Metodo para editar producto
-
   update: (req, res) => {
     const resultValidation = validationResult(req)
 
@@ -166,52 +129,9 @@ const productController = {
         })
         .catch((error) => res.send(error));
     });
-    /*     if (req.file) {
-      if (req.file.filename) {
-        db.Product.update(
-          {
-            productName: req.body.productName,
-            price: req.body.price,
-            brand: req.body.brand,
-            description: req.body.description,
-            size: req.body.size,
-            color:req.body.color,
-            category: req.body.category,
-            img1: req.file.filename,
-          },
-          {
-            where: {
-              product_id: req.params.id,
-            },
-          }
-        );
-      }
-    } else {
-      db.Product.update(
-        {
-          productName: req.body.productName,
-          price: req.body.price,
-          brand: req.body.brand,
-          description: req.body.description,
-          size: req.body.size,
-          color:req.body.color,
-          category: req.body.category,
-         
-        },
-        {
-          where: {
-            product_id: req.params.id,
-          },
-        }
-      );
-    }
-    res.redirect("/products/detail/" + parseInt(req.params.id, 10)); */
-
-    
   },
 
   // Delete - Borrar un producto de la base de datos
-
   delete: function (req, res) {
     db.Product.destroy({
       where: { product_id: parseInt(req.params.id, 10) },
@@ -222,24 +142,6 @@ const productController = {
       })
       .catch((error) => res.send(error));
   },
-
-  /*let idProduct = parseInt(req.params.id);
-    let indexShoe = allShoes.findIndex((product) => product.id === idProduct);
-    let imagePath = path.join(
-      __dirname,
-      "../public/images/shoes-img",
-      allShoes[indexShoe].productName,
-      allShoes[indexShoe].img1
-    );
-    fs.unlink(imagePath, function (err) {
-      if (err) throw err;
-      console.log("Could not delete file!");
-    });
-    let allShoesUpdated = allShoes.filter((i) => i.id !== idProduct);
-    let allShoesUpdatedJSON = JSON.stringify(allShoesUpdated, null, " ");
-    fs.writeFileSync(allShoesFilePath, allShoesUpdatedJSON);
-    
-    res.redirect('/products')*/
 };
 
 module.exports = productController;
