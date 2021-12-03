@@ -365,6 +365,7 @@ h5.card-title {
   background-color: rgb(233, 233, 233);
 }
 
+
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
@@ -448,51 +449,36 @@ th:last-child {
   min-width: 300px;
   width: 100%;
   padding: 2px;
-  max-width: 1500px;
   margin: 0 auto;
 }
 
-.container-detail{
+.container-detail {
   display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .description-detail {
-position: relative;
-left: 20%;
-padding-top: 5%;
-/* ajustar descripcion para q cuando se cambie de dispositivo se ajuste automaticamente */
+  padding: 20px 90px 70px 90px;
+}
 
+.description-detail p {
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .imagen-detail {
-
-  position: relative;
-  left: 10%;
-  background-size: cover;
-  height: auto;
-  width: auto;
+  width: 100%;
+  max-width: 600px;
 }
+
 .submit-detail {
   border: 2px solid transparent;
-  background:var(--celesteOscuro);
+  background: var(--celesteOscuro);
   color: #ffffff;
-  font-size: 16px;
-  line-height: 12px;
-  padding: 10px 5px;
-  text-decoration: none;
-  text-shadow: none;
+  padding: 5px 25px;
   border-radius: 3px;
-  box-shadow: none;
-  transition: 0.25s;
-  display: block;
-  width: 80px;
-  margin: 0 auto;
-  display: inline;
 }
-
-
-
-
 
 /* <-------------- REGISTER.HTML --------------> */
 /* <-------------- REGISTER.HTML --------------> */
@@ -649,6 +635,13 @@ main div h1 {
   .cart-info p{
     display: block;
     margin-bottom: 0px;
+  }
+  .container-detail {
+    flex-direction: row;
+  }
+
+  .description-detail {
+    padding: 70px 90px;
   }
 }
 

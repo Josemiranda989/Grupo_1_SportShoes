@@ -6,22 +6,18 @@
     <%- include('../partials/header') %> <% if (product != undefined) { %>
     <!-- DETALLE DEL PRODUCTO -->
 
-    <section class="container-detail fondo-form"> 
-      <div> 
-        <!-- verificar el tamaño de la imagen, se rompe al cambiar de dispositivo -->
-      <img
-        class="imagen-detail"
-        src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>"
-        alt="producto para agregar" style="width: 550px; height: 550px;"/>
-      </div>
+    <section class="container-detail fondo-form">
 
-      <div class="description-detail" >
-      <!-- se rompe cuando se cambia la vista para otro dispositivo -->
+      <!-- verificar el tamaño de la imagen, se rompe al cambiar de dispositivo -->
+      <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>" alt="producto para agregar" />
+  
+  
+      <div class="description-detail">
+        <!-- se rompe cuando se cambia la vista para otro dispositivo -->
         <h2><%= product.productName %></h2>
-        <p> Price: $ <%= product.price %></p>
+        <h4> Price: $ <%= product.price %></h4>
         <p>Description: <%= product.description%></p>
-        <p>Brand: <%= product.brand %></p>
-
+        <h4>Brand: <%= product.brand %></h4>
         <div>
           <label>Select Color</label>
           <select name="color">

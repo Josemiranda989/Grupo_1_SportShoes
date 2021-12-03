@@ -59,7 +59,7 @@ const productController = {
           category: req.body.category,
           img1: req.file.filename,
         }).then(function () {
-          res.redirect("products/products");
+          res.redirect("/products");
         });
       }
     } else {

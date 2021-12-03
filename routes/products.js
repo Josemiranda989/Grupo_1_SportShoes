@@ -19,7 +19,7 @@ router.get('/cart', productController.productCart);
 
 /* CREATE PRODUCTS */
 router.get('/create', productController.create); 
-router.post('/', validatedProduct, uploadImg.single("img1"), productController.store); 
+router.post('/', uploadImg.single("img1"), validatedProduct, productController.store); 
 
 /* EDIT PRODUCT */
 router.get('/edit/:id', productController.edit);

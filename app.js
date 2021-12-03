@@ -2,14 +2,21 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+/* Routers Apis */
+var indexApiRouter = require('./routes/Api/indexApi');
+var productsApiRouter = require('./routes/Api/productsApi');
+var usersApiRouter = require('./routes/Api/usersApi');
+/* Routers */
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
+
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require ('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 
 var app = express();
 
@@ -35,6 +42,10 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/products', productsRouter);
 app.use('/error', indexRouter);
+/* RUTAS DE API */
+/* app.use('/api', indexApiRouter);
+app.use('/api/user', usersApiRouter);*/
+app.use('/api/products', productsApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
