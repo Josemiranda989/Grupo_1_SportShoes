@@ -12,7 +12,10 @@ const validatedProduct = require('../middlewares/validatedProductsMiddleware');
 router.get("/", productController.products);
 
 /* DETALLE DE UN PRODUCTO */
-router.get("/detail/:id", productController.productDetail); 
+router.get("/detail/:id", productController.productDetail);
+
+/* Productos en descuento */
+router.get("/sale", productController.sale); 
 
 /* PRODUCT CART */
 router.get('/cart', productController.productCart); 

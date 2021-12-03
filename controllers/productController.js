@@ -14,14 +14,15 @@ const productController = {
   products: (req, res) => {
     //res.render('products', { allShoes: allShoes })
     db.Product.findAll().then(function (products) {
-      res.render("products/products", { allShoes: products });
+      res.render("products/products", { allShoes: products, titulo: "All Shoes" });
     });
   },
 
   sale: (req, res) => {
     //res.render('products', { allShoes: allShoes })
     db.Product.findAll().then(function (products) {
-      res.render("products/products", { allShoes: products });
+      let resultado = products.filter(product => product.price < 90)
+      res.render("products/products", { allShoes: resultado, titulo: "In Offer" });
     });
   },
   // Detalle de un producto particular
