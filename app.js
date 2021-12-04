@@ -43,8 +43,8 @@ app.use('/user', usersRouter);
 app.use('/products', productsRouter);
 app.use('/error', indexRouter);
 /* RUTAS DE API */
-/* app.use('/api', indexApiRouter);
-app.use('/api/user', usersApiRouter);*/
+/* app.use('/api', indexApiRouter);*/
+app.use('/api/users', usersApiRouter);
 app.use('/api/products', productsApiRouter);
 
 // catch 404 and forward to error handler
