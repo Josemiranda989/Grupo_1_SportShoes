@@ -35,7 +35,7 @@ const userApi = {
           username: userP.userName,
           email: userP.email,
           country: userP.country,
-          avatar: "/images/avatars/" + userP.avatar,
+          avatar: "http://localhost:3020/images/avatars/" + userP.avatar,
         });
       })
       .catch((error) => console.error(error));

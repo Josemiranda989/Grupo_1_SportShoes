@@ -22,7 +22,7 @@ const productController = {
     //res.render('products', { allShoes: allShoes })
     db.Product.findAll().then(function (products) {
       let resultado = products.filter(product => product.price < 90)
-      res.render("products/products", { allShoes: resultado, titulo: "In Offer" });
+      res.render("products/products", { allShoes: resultado, titulo: "On Sale" });
     });
   },
   // Detalle de un producto particular
