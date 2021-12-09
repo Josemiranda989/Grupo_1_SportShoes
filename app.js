@@ -10,6 +10,9 @@ var usersApiRouter = require('./routes/Api/usersApi');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
+/* Cors */
+var cors = require('cors');
+
 
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -33,6 +36,7 @@ app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(userLoggedMiddleware);
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

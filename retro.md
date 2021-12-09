@@ -5,11 +5,11 @@ Designar tareas individuales para avanzar con el proyecto y luego coordinar con 
 
 2. Hacer más.
 
-Focalizarnos en la practica tanto personal como grupal para de esta manera poder coordinar bien al momento de realizar los proyectos.
+Focalizarnos en la practica  personal y grupal para adquirir con mayor entendimiento los conocimientos nuevos .
 
 3. Continuar haciendo.
 
-Seguir con la misma comunicacion y siempre estar actualizandonos con los conocimientos. 
+Seguir con la misma comunicacion y siempre estar actualizandonos con los conocimientos y seguir ayudandonos entre si para terminar el proyecto y seguir aprendiendo. 
 
 4. Hacer menos.
 
@@ -17,5 +17,4 @@ Reuniones largas que no sean tan productivas.
 
 5. Dejar de hacer
 
-Hacer foco en informacion irelevante.
-Subir código incompleto. 
+ 
