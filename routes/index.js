@@ -1,4 +1,8 @@
 var express = require('express');
+<<<<<<< HEAD
+
+=======
+>>>>>>> c3976c5b008303c19b0630c06ad8c67d98582a0f
 var router = express.Router();
 const mainController = require('../controllers/mainController')
 
