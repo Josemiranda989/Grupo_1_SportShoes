@@ -4,7 +4,6 @@ const Op = db.Sequelize.Op
 const productApi = {
   products: (req, res) => {
     db.Product.findAll().then((products) => {
-
       let countMens = 0
       let countWomens = 1
       /* Contador de productos por categoria */
@@ -33,13 +32,17 @@ const productApi = {
             products[i].img1,
         )
       }
-      
+
       res.status(200).json({
         count: products.length,
-        countByCategory: {
-          men: countMens,
-          women: countWomens,
-        },
+        countByCategory: [
+          {
+            men: countMens,
+          },
+          {
+            women: countWomens,
+          },
+        ],
         data: products,
         status: 200,
       })
