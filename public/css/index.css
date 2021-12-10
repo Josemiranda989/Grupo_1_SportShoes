@@ -478,6 +478,7 @@ th:last-child {
   color: #ffffff;
   padding: 5px 25px;
   border-radius: 3px;
+  text-decoration: none;
 }
 
 /* <-------------- REGISTER.HTML --------------> */
