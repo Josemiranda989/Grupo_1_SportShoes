@@ -2,14 +2,24 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+/* Routers Apis */
+var indexApiRouter = require('./routes/Api/indexApi');
+var productsApiRouter = require('./routes/Api/productsApi');
+var usersApiRouter = require('./routes/Api/usersApi');
+/* Routers */
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
+/* Cors */
+var cors = require('cors');
+
+
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require ('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 
 var app = express();
 
@@ -26,6 +36,7 @@ app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(userLoggedMiddleware);
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -35,6 +46,10 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/products', productsRouter);
 app.use('/error', indexRouter);
+/* RUTAS DE API */
+/* app.use('/api', indexApiRouter);*/
+app.use('/api/users', usersApiRouter);
+app.use('/api/products', productsApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

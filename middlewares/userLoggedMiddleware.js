@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const db = require("../database/models")
+const db = require('../database/models')
 
 function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false
@@ -7,39 +7,22 @@ function userLoggedMiddleware(req, res, next) {
   if (req.session && req.session.userLogged) {
     res.locals.isLogged = true
     res.locals.userLogged = req.session.userLogged
-    }
-    
+  }
+
   let emailInCookie = req.cookies.userEmail
-/* DataBase */
- db.User.findAll()
-        .then(users => {
-            let userFromCookie = users.find(i => i.email == emailInCookie)
-            if (userFromCookie) {
-                req.session.userLogged = userFromCookie
-            }
+  /* DataBase */
+  db.User.findAll().then((users) => {
+    let userFromCookie = users.find((i) => i.email == emailInCookie)
+    if (userFromCookie) {
+      req.session.userLogged = userFromCookie
+    }
 
-            if (req.session.userLogged) {
-                res.locals.isLogged = true
-                res.locals.userLogged = req.session.userLogged
-            }
-
-        next()
-})
-  
-  
-  //JSON
-  /* let userFromCookie = User.findByField('email', emailInCookie) //usuario sacado de cookie
-
-  if (userFromCookie) {
-    req.session.userLogged = userFromCookie
-  }
-
-  if (req.session.userLogged) {
-    res.locals.isLogged = true
-    res.locals.userLogged = req.session.userLogged
-  }
-
-  next() */
+    if (req.session.userLogged) {
+      res.locals.isLogged = true
+      res.locals.userLogged = req.session.userLogged
+    }
+    next()
+  })
 }
 
 module.exports = userLoggedMiddleware

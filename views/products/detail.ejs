@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', {title: product && product.productName ? product.productName : 'Not Found'}) %>
-<body class="body-detail">
-  <%- include('../partials/header') %>
-  <% if (product != undefined) { %>
-  <!-- DETALLE DEL PRODUCTO -->
-  <section class="section-detail ">
-    <h1 class="titulo-detail"> <%= product.productName %> </h1>
-    <div>
-      <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>" alt="producto para agregar">
-    </div>
-    <form action="/" method="POST">
-      <div class="texto-detail">
+  <%- include('../partials/head', {title: product && product.productName ?
+  product.productName : 'Not Found'}) %>
+  <body class="body-detail">
+    <%- include('../partials/header') %> <% if (product != undefined) { %>
+    <!-- DETALLE DEL PRODUCTO -->
+
+    <section class="container-detail fondo-form">
+
+      <!-- verificar el tamaño de la imagen, se rompe al cambiar de dispositivo -->
+      <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>" alt="producto para agregar" />
+  
+  
+      <div class="description-detail">
+        <!-- se rompe cuando se cambia la vista para otro dispositivo -->
+        <h2><%= product.productName %></h2>
+        <h4> Price: $ <%= product.price %></h4>
+        <p>Description: <%= product.description%></p>
+        <h4>Brand: <%= product.brand %></h4>
         <div>
           <label>Select Color</label>
           <select name="color">
@@ -21,6 +27,8 @@
             <option value="blue">Blue </option>
           </select>
         </div>
+        <br>
+      
         <div>
           <label>Select a Size</label>
           <select name="size">
@@ -29,26 +37,36 @@
             <option value="9.0">9.0 </option>
             <option value="10.0">10.0 </option>
           </select>
-          <div> Price $<%= product.price %> </div>
-        </div>
-        <p> IMPORTANT MESSAGE
-          Your order is not finalized until you've received a shipment confirmation email. To checkout faster, please
-          <button class="button"> <a href="/login" type="submit">Sign In> </a> </button>
-        </p>
-      </div>
-      <button class="button"> <a href="/products/cart" type="submit">ADD TO CART> </a> </button>
-    </form>
-  </section>
-  <% } else { %>
-  <!-- PRODUCTO NO ENCONTRADO -->
-  <div class="container fondo-form mt-1 mb-1 ">
-    <h1 class="text-center fs-2 pt-4 fw-bold">We're sorry</h1>
-    <div class="d-flex justify-content-center ">
-      <img class='img-fluid ' src="/images/product-not-found.png" alt="Product not found">
+         </div>
+         <br>
+        <form action="/action_page.php">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </form>
+        <br>
+      <a href="/products/cart" class="submit-detail" >add to card</a>
+      
+      <a href="/products/cart"class="submit-detail">buy now</a>
+      
+   <!-- fijarse si va mejor adentro del div o afuera de section  -->
     </div>
-  </div>
-  <% } %>
-  <!-- FOOTER -->
-  <%- include('../partials/footer') %>
-</body>
+ 
+    </section>
+
+    <% } else { %>
+    <!-- PRODUCTO NO ENCONTRADO -->
+    <div class="container fondo-form mt-1 mb-1">
+      <h1 class="text-center fs-2 pt-4 fw-bold">We're sorry</h1>
+      <div class="d-flex justify-content-center">
+        <img
+          class="img-fluid"
+          src="/images/product-not-found.png"
+          alt="Product not found"
+        />
+      </div>
+    </div>
+    <% } %>
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+  </body>
 </html>
