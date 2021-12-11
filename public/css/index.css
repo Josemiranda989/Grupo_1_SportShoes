@@ -365,6 +365,43 @@ h5.card-title {
   background-color: rgb(233, 233, 233);
 }
 
+.btn-catalog {
+  padding:10px;
+  color: rgb(255, 255, 255);
+  background-color: var(--celesteOscuro);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 6px 0px rgba(219, 219, 219, 0.85);
+  display: flex;
+  align-items: center;
+
+}
+
+.btn-catalog:hover {
+  background-color: var(--celesteClaro);
+  color: rgb(255, 255, 255);
+}
+
+.ttl-catalog {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content:center
+}
+
+.contenedor-imagen {
+  min-height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-imagen img {
+
+  object-fit: contain;
+}
+
+
 
 /* <-------------- PRODUCT CART.HTML --------------> */
 /* <-------------- PRODUCT CART.HTML --------------> */
@@ -456,6 +493,7 @@ th:last-child {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  min-height: 720px;
 }
 
 .description-detail {
@@ -644,13 +682,15 @@ main div h1 {
   .description-detail {
     padding: 70px 90px;
   }
+
 }
+
 
 /*====== Formulario Create ======*/
 
 .fondo-form {
   background-color: var(--grisClaro);
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .form-label {

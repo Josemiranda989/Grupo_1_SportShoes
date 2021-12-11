@@ -19,7 +19,6 @@ const productController = {
   },
 
   sale: (req, res) => {
-    //res.render('products', { allShoes: allShoes })
     db.Product.findAll().then(function (products) {
       let resultado = products.filter(product => product.price < 90)
       res.render("products/products", { allShoes: resultado, titulo: "On Sale" });
@@ -98,16 +97,15 @@ const productController = {
   update: (req, res) => {
     const resultValidation = validationResult(req)
 
-    if (resultValidation.errors.length > 0) {
-      return res.render('products/edit', {
-        //mapped convierte un array en objeto literal
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      })
-    }
-
     let id = req.params.id;
     db.Product.findByPk(id).then((prod) => {
+      if (resultValidation.errors.length > 0) {
+        return res.render('products/edit' , {
+          //mapped convierte un array en objeto literal
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        })
+      }
       db.Product.update(
         {
           productName: req.body.productName || prod.productName,
