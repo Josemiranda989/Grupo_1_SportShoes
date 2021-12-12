@@ -18,39 +18,39 @@
       <tr style="border-bottom: 1px solid grey;">
         <td class="td-cart">
           <div class="cart-info">
-            <img class='img-cart' src="/images/shoes-img/Adidas-pw/1.png" alt="">
+            <img class='img-cart' src="/images/shoes-img/<%=allShoes[0].productName%>/<%=allShoes[0].img1%>" alt="">
             <div>
-              <p>Vans Old Skool Spongebob</p>
-              <small>Price $50</small>
+              <p><%= allShoes[0].productName %></p>
+              <small>Price $<%= allShoes[0].price %></small>
             </div>
           </div>
         </td>
         <td class="td-cart"><input class="qty-cart" type="number" value='1'> <a class='remove-cart' href=""><i class="far fa-trash-alt"></i></a></td>
-        <td class="td-cart">$50</td>
+        <td class="td-cart">$<%= allShoes[0].price %></td>
       </tr>
 
       <!-- PRODUCTO 2 -->
-      <tr>
+ <tr>
         <td class="td-cart">
           <div class="cart-info">
-            <img class='img-cart' src="/images/shoes-img/Newbalance Wnl/1.png" alt="">
+            <img class='img-cart' src="/images/shoes-img/<%=allShoes[1].productName%>/<%=allShoes[1].img1%>" alt="">
             <div>
-              <p>Adidas AllStarts Premium</p>
-              <small>Price $50</small>
+              <p><%= allShoes[1].productName %></p>
+              <small>Price $<%= allShoes[1].price %></small>
             </div>
           </div>
         </td>
         <td class="td-cart"><input class="qty-cart" type="number" value='1'> <a class='remove-cart' href=""><i class="far fa-trash-alt"></i></a></td>
-        <td class="td-cart">$50</td>
+        <td class="td-cart">$<%= allShoes[1].price %></td>
       </tr>
-    </table>
+    </table> 
 
     <!-- TOTAL -->
     <div class="total-price">
       <table class="table-cart">
         <tr>
           <td class="td-cart">Subtotal</td>
-          <td class="td-cart">$100.00</td>
+          <td class="td-cart">$<%- allShoes[1].price + allShoes[0].price %></td>
         </tr>
         <tr>
           <td class="td-cart">Tax</td>
@@ -58,10 +58,12 @@
         </tr>
         <tr>
           <td class="td-cart">Total</td>
-          <td class="td-cart">$121.00</td>
+          <td class="td-cart">$<%- allShoes[1].price + allShoes[0].price + 21 %></td>
         </tr>
       </table>
+      
     </div>
+    <a href="https://www.binance.com/en"class="submit-cart">Buy Now</a>
   </div>
 
   <body>

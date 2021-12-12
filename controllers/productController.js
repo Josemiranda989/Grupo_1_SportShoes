@@ -34,7 +34,10 @@ const productController = {
 
   // Productos de Carrito
   productCart: (req, res) => {
-    res.render("products/cart");
+    db.Product.findAll().then(function (products) {
+      res.render("products/cart", { allShoes: products, titulo: "All Shoes" });
+    });
+    
   },
   // Create - Vista del Formulario
   create: (req, res) => {

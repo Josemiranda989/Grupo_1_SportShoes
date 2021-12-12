@@ -476,6 +476,19 @@ th:last-child {
   margin-left: 25px;
 }
 
+.submit-cart {
+  border: 2px solid transparent;
+  background: #16414c;
+  color: #ffffff;
+  padding: 5px 25px;
+  border-radius: 3px;
+  text-decoration: none;
+  position: absolute;
+  bottom: -20px;
+  right: 60px;
+ 
+}
+
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
