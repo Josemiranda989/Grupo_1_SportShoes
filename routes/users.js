@@ -28,8 +28,8 @@ router.post('/login', validatedLog, userController.loginProcess)
 router.get('/profile/', authMiddleware, userController.profile)
 
 //EDITAR DE USUARIO
-router.get('/edit/:id', userController.edit)
-router.put('/edit/:id', authMiddleware, uploadAvatar.single('avatar'), userController.update)
+router.get('/edit/:id', authMiddleware, userController.edit)
+router.put('/edit/:id',  uploadAvatar.single('avatar'), userController.update)
 
 //LOGOUT
 router.get('/logout/', userController.logout);

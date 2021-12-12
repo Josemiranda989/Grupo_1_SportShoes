@@ -6,7 +6,8 @@ const uploadImg = require('../middlewares/multerMiddlewareImg');
 // Controller require
 const productController = require('../controllers/productController')
 const validatedProduct = require('../middlewares/validatedProductsMiddleware');
-const validatedEditProduct = require('../middlewares/validatedEditProdMiddleware')
+const validatedEditProduct = require('../middlewares/validatedEditProdMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 /* TODOS LOS PRODUCTOS */
@@ -22,11 +23,11 @@ router.get("/sale", productController.sale);
 router.get('/cart', productController.productCart); 
 
 /* CREATE PRODUCTS */
-router.get('/create', productController.create); 
+router.get('/create', authMiddleware, productController.create); 
 router.post('/', uploadImg.single("img1"), validatedProduct, productController.store); 
 
 /* EDIT PRODUCT */
-router.get('/edit/:id', productController.edit);
+router.get('/edit/:id', authMiddleware, productController.edit);
 router.put('/edit/:id', uploadImg.single("img1"), validatedEditProduct, productController.update); 
 
 /* SEARCH BAR */
