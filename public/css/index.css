@@ -116,6 +116,19 @@
 
 /* <-FOOTER - INDEX-> */
 
+.containerabout-us{
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  height: 700px;
+  
+}
+
+.containerabout-us h2{
+  width:20vw;
+  display: flex;
+  align-items: center;
+}
 
 /*FOOTER-map*/
 .map-footer{

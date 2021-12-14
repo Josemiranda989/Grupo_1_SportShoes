@@ -165,6 +165,8 @@ const userController = {
       force: true,
     }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
+        res.clearCookie('userEmail')
+        req.session.destroy()
         return res.redirect('/')
       })
       .catch((error) => res.send(error))

@@ -82,8 +82,7 @@ const productController = {
          productName: { [Op.like]: `%${req.query.shoes}%` }
         }
     }).then(products => {
-       console.log(products.length)
-         return res.render('products/products', { allShoes: products })
+         return res.render('products/products', { allShoes: products,titulo: "Search Result's" })
     })
       .catch(error => res.send(error));
   },

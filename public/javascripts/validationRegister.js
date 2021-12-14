@@ -56,7 +56,7 @@ function validarFormulario(evento) {
 
   /* Password */
   var password = document.getElementById('password').value
-  errPassword = document.getElementById('errPassword')
+   var errPassword = document.getElementById('errPassword')
   const charPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(
     password,
   )
@@ -74,6 +74,20 @@ function validarFormulario(evento) {
   } else {
     errPassword.classList.remove('show')
     errPassword.classList.add('hidden')
+  }
+
+  var rePassword = document.getElementById('rePassword').value
+  var errRePassword = document.getElementById('errRePassword')
+  
+  if(rePassword != password) {
+    errRePassword.classList.add('show')
+    errRePassword.classList.remove('hidden')
+    errRePassword.innerHTML = 'The password does not match'
+    return
+   
+  }else{
+    errRePassword.classList.remove('show')
+    errRePassword.classList.add('hidden')
   }
 
   this.submit()

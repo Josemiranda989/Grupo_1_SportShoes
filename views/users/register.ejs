@@ -81,9 +81,9 @@
 
         <!--* Re-Password -->
         <label for="password">Re-enter password:</label>
-        <input type="password" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="confirmPassword" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
+        <input  id= "rePassword" type="password" placeholder="<%= locals.errors && errors.password ? errors.password.msg : null %>" name="confirmPassword" value='<%= locals.oldData ? oldData.password : null  %>' class='form-control spacing <%= locals.errors && errors.password ? 'is-invalid' : null  %> '>
         <!--? Validacion Front -->
-        <p id="errPassword" class="msg-errors hidden"></p>
+        <p id="errRePassword" class="msg-errors hidden"></p>
         <br>
         <input type="submit" id="btnSubmit" class="submit-login" value="Register">
       </form>

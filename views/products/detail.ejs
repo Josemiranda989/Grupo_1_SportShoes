@@ -45,7 +45,11 @@
         </form>
         <br>
       <a href="/products/cart" class="submit-detail" >add to card</a>
-      
+      <% if (locals.isLogged) { %>
+        <a  class="submit-detail" href="/products/edit/<%= product.product_id%>">
+          Edit
+        </a>
+        <% } %>
             
    <!-- fijarse si va mejor adentro del div o afuera de section  -->
     </div>
