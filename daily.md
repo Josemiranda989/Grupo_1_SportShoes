@@ -68,6 +68,28 @@ Pusimos en practica lo aprendido en las ultimas clases. Migramos el proyecto con
         Se organizaron las carpetas de views por secciones
         Footer terminado con links y vistas terminadas
         Vista cart.ejs terminada (sin lógica para productos variables)
+15/11/21: 
+        Reunión para distribuir tareas para el sprint 7 
+17/11/21: 
+        Validaciones de frontend termiandas 
+22/11/21: 
+        Validaciones del backend y frontend terminadas. 
+30/11/21: 
+        Sprint 7 terminado. 
+2/12/21: 
+        Reunion para distribuir tareas del sprint 8. 
+3/12/21: 
+        Se crearon apis de productos y usuarios. 
+5/12/21: 
+        Correccion de apis. 
+6/12/21: 
+        Creamos el dashboard de react. 
+10/12/21: 
+        Maquetado de componentes en react necesarios para cumplir con el sprint . 
+11/12/21: 
+        Implementacion de fetchs y logica dinamica para la pagina. 
+14/12/21: 
+        Practica de exposición y chequeo general de la pagina. 
         
 
         
