@@ -496,10 +496,16 @@ th:last-child {
   padding: 5px 25px;
   border-radius: 3px;
   text-decoration: none;
-  position: absolute;
-  bottom: -20px;
-  right: 60px;
- 
+ margin-top: 20px;
+}
+
+.submit-cart:hover {
+  color:rgb(204, 202, 202);
+}
+
+.boton-carrito {
+  display:flex;
+  justify-content: flex-end;
 }
 
 /* <-------------- PRODUCT DETAIL.HTML --------------> */
@@ -538,11 +544,15 @@ th:last-child {
 
 .submit-detail {
   border: 2px solid transparent;
-  background: var(--celesteOscuro);
+  background: var(--verdeOscuro);
   color: #ffffff;
   padding: 5px 25px;
   border-radius: 3px;
   text-decoration: none;
+}
+
+.submit-detail:hover {
+  color:rgb(204, 202, 202);
 }
 
 /* <-------------- REGISTER.HTML --------------> */
