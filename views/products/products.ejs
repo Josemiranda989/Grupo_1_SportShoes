@@ -17,6 +17,17 @@
 <% } %>
   </div>
 
+  <div class="dropdown px-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      ORDENAR
+    </button >
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="/products/asc">Menor a mayor</a></li>
+      <li><a class="dropdown-item" href="/products/desc">Mayor a menor</a></li>
+    </ul>
+  </div>
+
+
   <div class="row row-cols-1 row-cols-md-4 g-4 fondo-form">
 
     <% for (i=0 ; i < allShoes.length ; i++) { %>

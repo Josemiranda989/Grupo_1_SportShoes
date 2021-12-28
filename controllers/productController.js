@@ -17,6 +17,18 @@ const productController = {
       res.render("products/products", { allShoes: products, titulo: "All Shoes" });
     });
   },
+  asc: (req, res) => {
+
+    db.Product.findAll({order:[['price', 'Asc']]}).then(function (products) {
+      res.render("products/products", { allShoes: products, titulo: "De menor a mayor" });
+    });
+  },
+  desc: (req, res) => {
+    //res.render('products', { allShoes: allShoes })
+    db.Product.findAll({order:[['price', 'desc']]}).then(function (products) {
+      res.render("products/products", { allShoes: products, titulo: "De mayor a menor", });
+    });
+  },
 
   sale: (req, res) => {
     db.Product.findAll().then(function (products) {
