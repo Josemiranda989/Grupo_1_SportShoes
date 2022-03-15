@@ -11,7 +11,7 @@
 
 :point_right: **Gabriel Figueroa** de 33 años, de Tucuman - Argentina. @gabrielfigue
 
-:point_right: **José Miranda** de 31 años, de Tucuman - Argentina. @Josemiranda989
+:point_right: **José Miranda** de 32 años, de Tucuman - Argentina. @Josemiranda989
 
 Nuestros pasos en la planificación usando [Trello](https://trello.com/b/sqaH3YHP/proyecto-final-dh) :bookmark_tabs:<h4>
  
