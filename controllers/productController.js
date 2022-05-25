@@ -44,6 +44,8 @@ const productController = {
     });    
   },
 
+  contacto,
+
   // Productos de Carrito
   productCart: (req, res) => {
     db.Product.findAll().then(function (products) {
