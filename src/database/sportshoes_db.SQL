@@ -1,11 +1,9 @@
-DROP DATABASE IF EXISTS SportShoes_DB;
-
 CREATE DATABASE sportshoes_db;
 
 use sportshoes_db;
 
 -- CREACION DE TABLA USERS
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
     user_id int(11) NOT NULL AUTO_INCREMENT,
     fullName varchar(50) NOT NULL,
     userName varchar(50) NOT NULL,
@@ -75,7 +73,7 @@ values
     );
 
 -- CREACION DE TABLA PRODUCTS
-CREATE TABLE IF NOT EXISTS products (
+CREATE TABLE products (
     product_id int(11) NOT NULL AUTO_INCREMENT,
     productName varchar(50) NOT NULL,
     price int(11) NOT NULL,
@@ -349,7 +347,7 @@ values
     );
 
 -- CREACION DE TABLA CARTPRODUCTS
-CREATE TABLE IF NOT EXISTS cartproduct (
+CREATE TABLE cartproduct (
     id int(11) NOT NULL AUTO_INCREMENT,
     user_id int(11) NOT NULL,
     product_id int(11) NOT NULL,

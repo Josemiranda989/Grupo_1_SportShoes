@@ -5,13 +5,13 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 /* Routers Apis */
-var indexApiRouter = require("./routes/Api/indexApi");
-var productsApiRouter = require("./routes/Api/productsApi");
-var usersApiRouter = require("./routes/Api/usersApi");
+var indexApiRouter = require("./src/routes/Api/indexApi");
+var productsApiRouter = require("./src/routes/Api/productsApi");
+var usersApiRouter = require("./src/routes/Api/usersApi");
 /* Routers */
-var indexRouter = require("./routes/index");
-var productsRouter = require("./routes/products");
-var usersRouter = require("./routes/users");
+var indexRouter = require("./src/routes/index");
+var productsRouter = require("./src/routes/products");
+var usersRouter = require("./src/routes/users");
 /* Cors */
 var cors = require("cors");
 
@@ -19,7 +19,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var methodOverride = require("method-override");
 var session = require("express-session");
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
 var app = express();
 
@@ -33,14 +33,14 @@ app.use(
 );
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src/public")));
 app.use(methodOverride("_method"));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(userLoggedMiddleware);
 app.use(cors());
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "src/views"));
 app.set("view engine", "ejs");
 
 /* RUTAS DE INDEX */

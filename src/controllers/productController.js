@@ -43,9 +43,7 @@ const productController = {
       res.render("products/detail", { product: productSelected });
     });    
   },
-
-  contacto,
-
+  
   // Productos de Carrito
   productCart: (req, res) => {
     db.Product.findAll().then(function (products) {
