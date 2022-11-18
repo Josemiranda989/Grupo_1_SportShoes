@@ -1,27 +1,26 @@
 require("dotenv").config();
 
 /* REQUIRES */
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
+let createError = require("http-errors");
+let express = require("express");
+let path = require("path");
 /* Routers Apis */
-var indexApiRouter = require("./src/routes/Api/indexApi");
-var productsApiRouter = require("./src/routes/Api/productsApi");
-var usersApiRouter = require("./src/routes/Api/usersApi");
+let productsApiRouter = require("./src/routes/Api/productsApi.routes");
+let usersApiRouter = require("./src/routes/Api/usersApi.routes");
 /* Routers */
-var indexRouter = require("./src/routes/index");
-var productsRouter = require("./src/routes/products");
-var usersRouter = require("./src/routes/users");
+let indexRouter = require("./src/routes/index.routes");
+let productsRouter = require("./src/routes/products.routes");
+let usersRouter = require("./src/routes/users.routes");
 /* Cors */
-var cors = require("cors");
+let cors = require("cors");
 
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-var methodOverride = require("method-override");
-var session = require("express-session");
+let cookieParser = require("cookie-parser");
+let logger = require("morgan");
+let methodOverride = require("method-override");
+let session = require("express-session");
 const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
-var app = express();
+let app = express();
 
 /* MIDDLEWARES*/
 app.use(
@@ -49,7 +48,6 @@ app.use("/user", usersRouter);
 app.use("/products", productsRouter);
 app.use("/error", indexRouter);
 /* RUTAS DE API */
-/* app.use('/api', indexApiRouter);*/
 app.use("/api/users", usersApiRouter);
 app.use("/api/products", productsApiRouter);
 
