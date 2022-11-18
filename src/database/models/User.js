@@ -1,5 +1,3 @@
-const Cartproduct = require("./Cartproduct")
-
 module.exports = (sequelize, DataTypes) => {
   let alias = 'User'
   let cols = {

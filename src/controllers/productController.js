@@ -13,42 +13,58 @@ const productController = {
   // Todos los productos
   products: (req, res) => {
     //res.render('products', { allShoes: allShoes })
-    db.Product.findAll().then(function (products) {
-      res.render("products/products", { allShoes: products, titulo: "All Shoes" });
-    });
+    db.Product.findAll()
+      .then(function (products) {
+        res.render("products/products", {
+          allShoes: products,
+          titulo: "All Shoes",
+        });
+      })
+      .catch((error) => res.json(error));
   },
   asc: (req, res) => {
 
-    db.Product.findAll({order:[['price', 'Asc']]}).then(function (products) {
-      res.render("products/products", { allShoes: products, titulo: "De menor a mayor" });
-    });
+    db.Product.findAll({ order: [["price", "Asc"]] })
+      .then(function (products) {
+        res.render("products/products", {
+          allShoes: products,
+          titulo: "De menor a mayor",
+        });
+      })
+      .catch((error) => res.json(error));
   },
   desc: (req, res) => {
     //res.render('products', { allShoes: allShoes })
-    db.Product.findAll({order:[['price', 'desc']]}).then(function (products) {
-      res.render("products/products", { allShoes: products, titulo: "De mayor a menor", });
-    });
+    db.Product.findAll({ order: [["price", "desc"]] })
+      .then(function (products) {
+        res.render("products/products", {
+          allShoes: products,
+          titulo: "De mayor a menor",
+        });
+      })
+      .catch((error) => res.json(error));
   },
 
   sale: (req, res) => {
     db.Product.findAll().then(function (products) {
       let resultado = products.filter(product => product.price < 90)
       res.render("products/products", { allShoes: resultado, titulo: "On Sale" });
-    });
+    }).catch((error) => res.json(error));
+      ;
   },
   // Detalle de un producto particular
   productDetail: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productSelected) {
       res.render("products/detail", { product: productSelected });
-    });    
+    }).catch((error=> res.send(error)));    
   },
   
   // Productos de Carrito
   productCart: (req, res) => {
     db.Product.findAll().then(function (products) {
       res.render("products/cart", { allShoes: products, titulo: "All Shoes" });
-    });
+    }).catch((error=> res.send(error)));
     
   },
   // Create - Vista del Formulario
@@ -104,7 +120,7 @@ const productController = {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
     idShoes.then(function (productToEdit) {
       res.render("products/edit", { productToEdit: productToEdit });
-    });
+    }).catch(error => res.send(error));
   },
 
   // Update - Metodo para editar producto
