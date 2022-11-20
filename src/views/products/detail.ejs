@@ -7,53 +7,61 @@
     <!-- DETALLE DEL PRODUCTO -->
 
     <section class="container-detail fondo-form">
-
       <!-- verificar el tamaño de la imagen, se rompe al cambiar de dispositivo -->
-      <img class="imagen-detail" src="/images/shoes-img/<%=product.productName%>/<%=product.img1%>" alt="producto para agregar" />
-  
-  
+      <img
+        class="imagen-detail"
+        src="/images/shoes-img/<%=product.productName%>/<%=product.img%>"
+        alt="producto para agregar"
+      />
+
       <div class="description-detail">
         <!-- se rompe cuando se cambia la vista para otro dispositivo -->
         <h2><%= product.productName %></h2>
-        <h4> Price: $ <%= product.price %></h4>
+        <h4>Price: $ <%= product.price %></h4>
         <p>Description: <%= product.description%></p>
         <h4>Brand: <%= product.brand %></h4>
         <div>
           <label>Select Color</label>
           <select name="color">
             <option value="black">Black</option>
-            <option value="white">White </option>
-            <option value="red">Red </option>
-            <option value="blue">Blue </option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
           </select>
         </div>
-        <br>
-      
+        <br />
+
         <div>
           <label>Select a Size</label>
           <select name="size">
-            <option value="8.0">8.0 </option>
-            <option value="8.5">8.5 </option>
-            <option value="9.0">9.0 </option>
-            <option value="10.0">10.0 </option>
+            <option value="8.0">8.0</option>
+            <option value="8.5">8.5</option>
+            <option value="9.0">9.0</option>
+            <option value="10.0">10.0</option>
           </select>
-         </div>
-         <br>
+        </div>
+        <br />
         <form action="/action_page.php">
           <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" value='1' min="1" max="10">
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            value="1"
+            min="1"
+            max="10"
+          />
         </form>
-        <br>
-      <a href="/products/cart" class="submit-detail" >add to card</a>
-      <% if (locals.isLogged) { %>
-        <a  class="submit-detail" href="/products/edit/<%= product.product_id%>">
+        <br />
+        <a href="/products/cart" class="submit-detail">add to card</a>
+        <% if (locals.isLogged) { %>
+        <a class="submit-detail" href="/products/edit/<%= product.product_id%>">
           Edit
         </a>
         <% } %>
-            
-   <!-- fijarse si va mejor adentro del div o afuera de section  -->
-    </div>
- 
+
+        <!-- fijarse si va mejor adentro del div o afuera de section  -->
+      </div>
     </section>
 
     <% } else { %>

@@ -8,22 +8,22 @@ function validarFormulario(evento) {
   evento.preventDefault();
 
   /* productName */
-  var productNameInput = document.getElementById("productName")
+  var productNameInput = document.getElementById("productName");
   var productName = document.getElementById("productName").value;
   var errProductName = document.getElementById("errProductName");
   if (productName.length == 0) {
     errProductName.classList.add("show");
     errProductName.classList.remove("hidden");
     errProductName.innerHTML = "You must enter your name F";
-    productNameInput.focus()
+    productNameInput.focus();
     return;
   } else {
     errProductName.classList.remove("show");
     errProductName.classList.add("hidden");
   }
-  
+
   /* price */
-  var priceInput = document.getElementById("price")
+  var priceInput = document.getElementById("price");
   var price = document.getElementById("price").value;
   errPrice = document.getElementById("errPrice");
 
@@ -31,7 +31,7 @@ function validarFormulario(evento) {
     errPrice.classList.add("show");
     errPrice.classList.remove("hidden");
     errPrice.innerHTML = "Enter Product price F";
-    priceInput.focus()
+    priceInput.focus();
     return;
   } else {
     errPrice.classList.remove("show");
@@ -39,7 +39,7 @@ function validarFormulario(evento) {
   }
 
   /* size */
-  var sizeInput = document.getElementById("size")
+  var sizeInput = document.getElementById("size");
   var size = document.getElementById("size").value;
   errSize = document.getElementById("errSize");
 
@@ -47,7 +47,7 @@ function validarFormulario(evento) {
     errSize.classList.add("show");
     errSize.classList.remove("hidden");
     errSize.innerHTML = "Enter Product size F";
-    sizeInput.focus()
+    sizeInput.focus();
     return;
   } else {
     errSize.classList.remove("show");
@@ -55,7 +55,7 @@ function validarFormulario(evento) {
   }
 
   /* colors */
-  var colorInput = document.getElementById("color")
+  var colorInput = document.getElementById("color");
   var color = document.getElementById("color").value;
   errColor = document.getElementById("errColor");
 
@@ -63,7 +63,7 @@ function validarFormulario(evento) {
     errColor.classList.add("show");
     errColor.classList.remove("hidden");
     errColor.innerHTML = "Enter Product color F";
-    colorInput.focus()
+    colorInput.focus();
     return;
   } else {
     errColor.classList.remove("show");
@@ -71,7 +71,7 @@ function validarFormulario(evento) {
   }
 
   /* Brand */
-  var brandInput = document.getElementById("brand")
+  var brandInput = document.getElementById("brand");
   var brand = document.getElementById("brand").value;
   errBrand = document.getElementById("errBrand");
 
@@ -79,7 +79,7 @@ function validarFormulario(evento) {
     errBrand.classList.add("show");
     errBrand.classList.remove("hidden");
     errBrand.innerHTML = "Enter Product Brand F";
-    brandInput.focus()
+    brandInput.focus();
     return;
   } else {
     errBrand.classList.remove("show");
@@ -87,33 +87,33 @@ function validarFormulario(evento) {
   }
 
   /* Avatar */
-  var img1Input = document.getElementById("img1")
-  var img1 = document.getElementById("img1").value;
-  errImg1 = document.getElementById("errImg1");
+  var imgInput = document.getElementById("img");
+  var img = document.getElementById("img").value;
+  errimg = document.getElementById("errimg");
   var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
-  if (!allowedExtensions.exec(img1)) {
-    errImg1.classList.add("show");
-    errImg1.classList.remove("hidden");
-    errImg1.innerHTML =
+  if (!allowedExtensions.exec(img)) {
+    errimg.classList.add("show");
+    errimg.classList.remove("hidden");
+    errimg.innerHTML =
       "Please upload file having extensions .jpeg/.jpg/.png/.gif only.";
-    img1Input.focus()
+    imgInput.focus();
     return;
   } else {
-    errImg1.classList.remove("show");
-    errImg1.classList.add("hidden");
+    errimg.classList.remove("show");
+    errimg.classList.add("hidden");
   }
 
   /* Description */
-  var descriptionInput = document.getElementById("description")
+  var descriptionInput = document.getElementById("description");
   var description = document.getElementById("description").value;
   errDescription = document.getElementById("errDescription");
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(description);
+  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(description);
   if (description.length < 20) {
     errDescription.classList.add("show");
     errDescription.classList.remove("hidden");
     errDescription.innerHTML =
       "The description must be greater than 20 characters F";
-    descriptionInput.focus()
+    descriptionInput.focus();
     return;
   } else {
     errDescription.classList.remove("show");

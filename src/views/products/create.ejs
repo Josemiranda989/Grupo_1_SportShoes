@@ -68,14 +68,14 @@
             <div class=' <%= locals.errors && errors.brand ? 'text-danger' : null  %> '><%= locals.errors && errors.brand ? errors.brand.msg : null %></div>
           </div>
 
-          <!--* img1 -->
+          <!--* img -->
           <div class="col-12 col-md-6">
-            <label for="img1" class="form-label">Image 1:</label>
-            <input accept="image/png, image/jpeg, image/jpg, image/gif" type="file" id="img1" name="img1" placeholder="Image" class="form-input">
+            <label for="img" class="form-label">Image 1:</label>
+            <input accept="image/png, image/jpeg, image/jpg, image/gif" type="file" id="img" name="img" placeholder="Image" class="form-input">
             <!--? Validacion Front -->
-            <p id="errImg1" class="msg-errors hidden"></p>
+            <p id="errimg" class="msg-errors hidden"></p>
             <!--? Validacion Back -->
-            <div class=' <%= locals.errors && errors.img1 ? 'text-danger' : null  %> '><%= locals.errors && errors.img1 ? errors.img1.msg : null %></div>
+            <div class=' <%= locals.errors && errors.img ? 'text-danger' : null  %> '><%= locals.errors && errors.img ? errors.img.msg : null %></div>
           </div>
 
           <!--* productName -->

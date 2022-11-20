@@ -27,7 +27,7 @@ const productApi = {
         for (let i = 0; i < products.length; i++) {
           products[i].setDataValue(
             "pathImg",
-            `http://localhost:${process.env.PORT}/images/shoes-img/${products[i].productName}/${products[i].img1}`
+            `http://localhost:${process.env.PORT}/images/shoes-img/${products[i].productName}/${products[i].img}`
           );
         }
 
@@ -61,7 +61,7 @@ const productApi = {
           color: productSelected.color,
           price: productSelected.price,
           size: productSelected.size,
-          pathImg: `http://localhost:${process.env.PORT}/images/shoes-img/${productSelected.productName}/${productSelected.img1}`,
+          pathImg: `http://localhost:${process.env.PORT}/images/shoes-img/${productSelected.productName}/${productSelected.img}`,
           status: 200,
         };
 
@@ -109,7 +109,7 @@ const productApi = {
           for (let i = 0; i < products.length; i++) {
             products[i].setDataValue(
               "pathImg",
-              `http://localhost:${process.env.PORT}/images/shoes-img/${products[i].productName}/${products[i].img1}`
+              `http://localhost:${process.env.PORT}/images/shoes-img/${products[i].productName}/${products[i].img}`
             );
           }
           res.status(200).json({

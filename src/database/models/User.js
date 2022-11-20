@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   let alias = 'User'
   let cols = {
-    user_id: {
+    id: {
       type: DataTypes.INTEGER(11),
       primaryKey: true,
       autoIncrement: true,
@@ -15,33 +15,34 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     country: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(50),
     },
 
     email: {
-      type: DataTypes.STRING(250),
+      type: DataTypes.TEXT,
     },
     password: {
-      type: DataTypes.STRING(150),
+      type: DataTypes.STRING(255),
     },
-
+    admin: {
+      type: DataTypes.INTEGER(1)
+    },
     address: {
-      type: DataTypes.STRING(250),
+      type: DataTypes.STRING(255),
     },
-
     avatar: {
-      type: DataTypes.STRING(250),
+      type: DataTypes.STRING(255),
     },
 
-    created_at: {
+    createdAt: {
       type: DataTypes.DATE,
     },
 
-    updated_at: {
+    updatedAt: {
       type: DataTypes.DATE,
     },
 
-    deleted_at: {
+    deletedAt: {
       type: DataTypes.DATE,
     },
 
@@ -49,22 +50,19 @@ module.exports = (sequelize, DataTypes) => {
 
   let config = {
     tableName: 'users',
-    createdAt: "created_at",
-    updatedAt: "updated_at",
-    deletedAt: "deleted_at",
     paranoid: true
   }
 
   let User = sequelize.define(alias, cols, config)
 
-  User.associate = function (models) {
+/*   User.associate = function (models) {
     User.belongsToMany(models.Product, {
       as: 'carts_products',
       foreingKey: 'user_id',
       otherKey: "product_id",
       through: "Cartproduct"
     })
-  }
+  } */
 
   return User
 }

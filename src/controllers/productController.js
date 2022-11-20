@@ -1,9 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { validationResult } = require('express-validator')
+const { validationResult } = require("express-validator");
 let db = require("../database/models");
 const Op = db.Sequelize.Op;
-
 
 /* Lista de Productos .JSON */
 let allShoesFilePath = path.join(__dirname, "../data/productList.json");
@@ -23,7 +22,6 @@ const productController = {
       .catch((error) => res.json(error));
   },
   asc: (req, res) => {
-
     db.Product.findAll({ order: [["price", "Asc"]] })
       .then(function (products) {
         res.render("products/products", {
@@ -46,26 +44,36 @@ const productController = {
   },
 
   sale: (req, res) => {
-    db.Product.findAll().then(function (products) {
-      let resultado = products.filter(product => product.price < 90)
-      res.render("products/products", { allShoes: resultado, titulo: "On Sale" });
-    }).catch((error) => res.json(error));
-      ;
+    db.Product.findAll()
+      .then(function (products) {
+        let resultado = products.filter((product) => product.price < 90);
+        res.render("products/products", {
+          allShoes: resultado,
+          titulo: "On Sale",
+        });
+      })
+      .catch((error) => res.json(error));
   },
   // Detalle de un producto particular
   productDetail: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
-    idShoes.then(function (productSelected) {
-      res.render("products/detail", { product: productSelected });
-    }).catch((error=> res.send(error)));    
+    idShoes
+      .then(function (productSelected) {
+        res.render("products/detail", { product: productSelected });
+      })
+      .catch((error) => res.send(error));
   },
-  
+
   // Productos de Carrito
   productCart: (req, res) => {
-    db.Product.findAll().then(function (products) {
-      res.render("products/cart", { allShoes: products, titulo: "All Shoes" });
-    }).catch((error=> res.send(error)));
-    
+    db.Product.findAll()
+      .then(function (products) {
+        res.render("products/cart", {
+          allShoes: products,
+          titulo: "All Shoes",
+        });
+      })
+      .catch((error) => res.send(error));
   },
   // Create - Vista del Formulario
   create: (req, res) => {
@@ -73,14 +81,14 @@ const productController = {
   },
   // Create - Metodo para almacenar
   store: (req, res) => {
-    const resultValidation = validationResult(req)
+    const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-      return res.render('products/create', {
+      return res.render("products/create", {
         //mapped convierte un array en objeto literal
         errors: resultValidation.mapped(),
         oldData: req.body,
-      })
+      });
     }
 
     if (req.file) {
@@ -93,7 +101,7 @@ const productController = {
           description: req.body.description,
           size: parseInt(req.body.size, 10),
           category: req.body.category,
-          img1: req.file.filename,
+          img: req.file.filename,
         }).then(function () {
           res.redirect("/products");
         });
@@ -103,38 +111,44 @@ const productController = {
     }
   },
 
-  // BARRA SEARCH ITEMS   
+  // BARRA SEARCH ITEMS
   search: (req, res) => {
     db.Product.findAll({
-       where: {
-         productName: { [Op.like]: `%${req.query.shoes}%` }
-        }
-    }).then(products => {
-         return res.render('products/products', { allShoes: products,titulo: "Search Result's" })
+      where: {
+        productName: { [Op.like]: `%${req.query.shoes}%` },
+      },
     })
-      .catch(error => res.send(error));
+      .then((products) => {
+        return res.render("products/products", {
+          allShoes: products,
+          titulo: "Search Result's",
+        });
+      })
+      .catch((error) => res.send(error));
   },
 
   // Edit - Vista del Formulario
   edit: (req, res) => {
     let idShoes = db.Product.findByPk(parseInt(req.params.id, 10));
-    idShoes.then(function (productToEdit) {
-      res.render("products/edit", { productToEdit: productToEdit });
-    }).catch(error => res.send(error));
+    idShoes
+      .then(function (productToEdit) {
+        res.render("products/edit", { productToEdit: productToEdit });
+      })
+      .catch((error) => res.send(error));
   },
 
   // Update - Metodo para editar producto
   update: (req, res) => {
-    const resultValidation = validationResult(req)
+    const resultValidation = validationResult(req);
 
     let id = req.params.id;
     db.Product.findByPk(id).then((prod) => {
       if (resultValidation.errors.length > 0) {
-        return res.render('products/edit' , {
+        return res.render("products/edit", {
           //mapped convierte un array en objeto literal
           errors: resultValidation.mapped(),
           oldData: req.body,
-        })
+        });
       }
       db.Product.update(
         {
@@ -145,7 +159,7 @@ const productController = {
           size: req.body.size || prod.size,
           color: req.body.color || prod.color,
           category: req.body.category || prod.category,
-          img1: req.file == undefined ? prod.img1 : req.file.filename,
+          img: req.file == undefined ? prod.img : req.file.filename,
         },
         {
           where: {
