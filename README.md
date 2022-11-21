@@ -34,3 +34,11 @@ Conocé la combinación de colores de nuestra Empresa [ColorHunt](https://colorh
  
  :arrow_forward: [Adidas](https://www.adidas.com.ar)
 <h5>
+
+Create db with name sportshoes_db_v2
+
+Migrate tables 
+npx sequelize db:migrate
+
+Migrate data
+npx sequelize db:seed:all
