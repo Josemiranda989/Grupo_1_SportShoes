@@ -18,9 +18,6 @@ router.get("/detail/:id", productController.productDetail);
 /* Productos en descuento */
 router.get("/sale", productController.sale);
 
-/* PRODUCT CART */
-router.get("/cart", productController.productCart);
-
 /* CREATE PRODUCTS */
 router.get("/create", authMiddleware, productController.create);
 router.post(

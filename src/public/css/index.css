@@ -31,6 +31,16 @@
   background-color: #16414c;
 }
 
+/* .nav-link {
+  position:relative;
+  padding:0 40px;
+}
+.cart-number {
+  position:absolute;
+  top:0;  
+  background-color:red;
+} */
+
 .background-section {
   background-color: black;
   border-bottom: 2px solid #e8f0f2;

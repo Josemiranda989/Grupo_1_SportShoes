@@ -54,7 +54,7 @@ const productApi = {
     db.Product.findByPk(req.params.id)
       .then(function (productSelected) {
         let response = {
-          id: productSelected.product_id,
+          id: productSelected.id,
           productName: productSelected.productName,
           brand: productSelected.brand,
           description: productSelected.description,

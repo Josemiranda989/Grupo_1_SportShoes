@@ -1,4 +1,4 @@
-$(window).load(function () {
+/* window.onload = function () {
     document.querySelector("#buy-cart").addEventListener("click", function (e) {
         Swal.fire({
           icon: 'success',
@@ -7,7 +7,7 @@ $(window).load(function () {
           timer: 1500
         })
     });
-});
+} */
 
 
 

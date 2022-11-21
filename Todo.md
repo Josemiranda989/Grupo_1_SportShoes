@@ -4,5 +4,5 @@ Pendientes
 - Plantear lógica de usuarios administradores y clientes.
 - Crear vista para gestión del administrador
 
-MINUTO 34
+MINUTO 1:43
 https://www.youtube.com/watch?v=f-e9_8YCFI0&list=WL&index=30
