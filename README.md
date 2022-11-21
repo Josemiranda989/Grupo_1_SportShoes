@@ -35,10 +35,21 @@ Conocé la combinación de colores de nuestra Empresa [ColorHunt](https://colorh
  :arrow_forward: [Adidas](https://www.adidas.com.ar)
 <h5>
 
-Create db with name sportshoes_db_v2
+# INSTALACION 
+Instalar las dependencias
 
-Migrate tables 
-npx sequelize db:migrate
+`npm install`
 
-Migrate data
-npx sequelize db:seed:all
+Crear .env para variables de entorno
+
+`cp .env.example .env`
+
+Crear db con el nombre sportshoes_db_v2
+
+Ejecutar migración para crear las tablas
+
+`npx sequelize db:migrate`
+
+Ejecutar los seeders para cargar los datos
+
+`npx sequelize db:seed:all`

@@ -1,4 +1,3 @@
-const User = require('../models/User')
 const db = require('../database/models')
 
 function userLoggedMiddleware(req, res, next) {
@@ -7,6 +6,9 @@ function userLoggedMiddleware(req, res, next) {
   if (req.session && req.session.userLogged) {
     res.locals.isLogged = true
     res.locals.userLogged = req.session.userLogged
+    if (req.session.userLogged.admin == 1) {
+      res.locals.userAdmin = true;
+    }
   }
 
   let emailInCookie = req.cookies.userEmail

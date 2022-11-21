@@ -9,7 +9,7 @@
   <!-- todos los productos -->
   <div class="d-flex justify-content-between p-3">
         <h1> <%- titulo %> </h1>
-<% if (locals.isLogged) { %>
+<% if (locals.userAdmin) { %>
 
 <a class="sinestiloA btn-catalog" href="/products/create">
   Create a new product
@@ -52,7 +52,8 @@
             <strong>Brand</strong> <%= allShoes[i].brand %>
           </p>
         </div>
-        <% if (locals.isLogged) { %>
+        <button class="btn btn-primary btn-block agregar_carrito" data-id="<%= allShoes[i].id %>">Comprar</button>
+        <% if (locals.userAdmin) { %>
         <a class="sinestiloA btn-catalog" href="/products/edit/<%= allShoes[i].product_id%>">
           Edit
         </a>

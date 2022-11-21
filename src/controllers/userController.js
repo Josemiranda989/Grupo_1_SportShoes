@@ -36,7 +36,7 @@ const userController = {
           email: req.body.email,
           password: bcryptjs.hashSync(req.body.password, 10),
           address: req.body.address,
-          avatar: req.file.filename,
+          avatar: req.file.filename || 'batman.png',
         })
           .then(() => {
             return res.redirect("/user/login");
@@ -107,7 +107,7 @@ const userController = {
   },
 
   profile: (req, res) => {
-    db.User.findByPk(parseInt(req.session.userLogged.user_id))
+    db.User.findByPk(parseInt(req.session.userLogged.id))
       .then((user) => {
         res.render("users/profile", {
           user: user,
@@ -144,7 +144,7 @@ const userController = {
         },
         {
           where: {
-            user_id: id,
+            id: id,
           },
         }
       )
@@ -163,7 +163,7 @@ const userController = {
 
   delete: function (req, res) {
     db.User.destroy({
-      where: { user_id: parseInt(req.params.id, 10) },
+      where: { id: parseInt(req.params.id, 10) },
       force: true,
     }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
