@@ -75,6 +75,11 @@ const productController = {
       })
       .catch((error) => res.send(error));
   },
+ /* Order  */
+  order: (req, res) => {
+
+  },
+
   // Create - Vista del Formulario
   create: (req, res) => {
     res.render("products/create");
@@ -186,17 +191,6 @@ const productController = {
       .catch((error) => res.send(error));
   },
 
-  checkout: (req, res) => {
-    db.Order.create(
-      {
-        ...req.body,
-        id: req.session.userLogged.id,
-      },
-      { include: db.Order.OrderItems }
-    ).then((order) => {
-      res.json({ ok: true, status: 200, order: order });
-    });
-  },
 };
 
 module.exports = productController;

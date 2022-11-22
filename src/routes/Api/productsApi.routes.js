@@ -21,6 +21,7 @@ router.get('/:id', productApi.productDetail);
 /* Borrar producto http://localhost:3020/api/products/:id */
 router.delete('/:id', productApi.delete)
 
-
+/* Checkout cart */
+router.post('/checkout', productApi.checkout);
 
 module.exports = router

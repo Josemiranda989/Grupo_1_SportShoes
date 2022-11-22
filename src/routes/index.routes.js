@@ -2,12 +2,14 @@ var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainController');
 const productController = require('../controllers/productController');
+const authMiddleware = require("../middlewares/authMiddleware");
 
 /* GET home page. */
 router.get('/', mainController.index);
 
 /* PRODUCT CART */
-router.get("/cart", productController.productCart);
+router.get("/cart", authMiddleware, productController.productCart);
+router.get('/order/:id', authMiddleware, productController.order);
 
 router.get('/error', mainController.error);
 router.get('/terms', mainController.terms);

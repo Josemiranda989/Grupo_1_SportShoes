@@ -68,5 +68,24 @@ let checkoutCart = document.querySelector("#checkoutCart");
 
 checkoutCart.onsubmit = (e) => {
   e.preventDefault();
-  console.log(e);
+  const formData = {
+    orderItems: products,
+    paymentMethod: checkoutCart.paymentMethod.value,
+    shippingMethod: checkoutCart.shippingMethod.value,
+    total: calcularTotal(products)
+  };
+  fetch("/api/products/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.ok) {
+        vaciarCarrito();
+        location.href = ``
+      };
+    });
 }
