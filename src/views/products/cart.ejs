@@ -5,74 +5,6 @@
   <body class="body-cart">
     <%- include('../partials/header') %>
 
-<!--     <div class="container-md cart-page">
-      <table class="table-cart">
-        <tr>
-          <th class="th-cart">Product</th>
-          <th class="th-cart">Quantity</th>
-          <th class="th-cart">Subtotal</th>
-        </tr>
-
-        <tr style="border-bottom: 1px solid grey">
-          <td class="td-cart">
-            <div class="cart-info">
-              <img
-                class="img-cart"
-                src="/images/shoes-img/<%=allShoes[0].productName%>/<%=allShoes[0].img%>"
-                alt=""
-              />
-              <div>
-                <p><%= allShoes[0].productName %></p>
-                <small>Price $<%= allShoes[0].price %></small>
-              </div>
-            </div>
-          </td>
-          <td class="td-cart">
-            <input class="qty-cart" type="number" value="1" />
-            <a class="remove-cart" href=""><i class="far fa-trash-alt"></i></a>
-          </td>
-          <td class="td-cart">$<%= allShoes[0].price %></td>
-        </tr>
-
-        <tr>
-          <td class="td-cart">
-            <div class="cart-info">
-              <img
-                class="img-cart"
-                src="/images/shoes-img/<%=allShoes[1].productName%>/<%=allShoes[1].img%>"
-                alt=""
-              />
-              <div>
-                <p><%= allShoes[1].productName %></p>
-                <small>Price $<%= allShoes[1].price %></small>
-              </div>
-            </div>
-          </td>
-          <td class="td-cart">
-            <input class="qty-cart" type="number" value="1" />
-            <a class="remove-cart" href=""><i class="far fa-trash-alt"></i></a>
-          </td>
-          <td class="td-cart">$<%= allShoes[1].price %></td>
-        </tr>
-      </table>
-
-      <div class="total-price">
-        <table class="table-cart">
-          <tr>
-            <td class="td-cart">Total</td>
-            <td class="td-cart">
-              $<%- allShoes[1].price + allShoes[0].price %>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="boton-carrito">
-        <a href="https://mpago.la/1pY3Qhq" id="buy-cart" class="submit-cart"
-          >Buy Now</a
-        >
-      </div>
-    </div> -->
-
     <main class="mt-5 pt-4">
         <div class="container wow fadeIn animated">
             <h2 class="mt-5 mb-3 h2 text-center"> Productos en mi carrito</h2>
@@ -143,7 +75,7 @@
 
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+                    <button class="button w-100"
                         type="submit">Comprar</button>
                 </form>
             </div>

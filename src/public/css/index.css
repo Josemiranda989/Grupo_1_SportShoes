@@ -31,7 +31,7 @@
   background-color: #16414c;
 }
 
-/* .nav-link {
+.nav-link {
   position:relative;
   padding:0 40px;
 }
@@ -39,7 +39,11 @@
   position:absolute;
   top:0;  
   background-color:red;
-} */
+}
+
+.cart-spacing {
+  margin-right: 15px;
+}
 
 .background-section {
   background-color: black;
@@ -121,6 +125,7 @@
 .call-index a:visited {
   text-decoration: none;
 }
+
 
 
 
