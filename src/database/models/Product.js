@@ -55,14 +55,5 @@ module.exports = (sequelize, DataTypes) => {
 
   let Product = sequelize.define(alias, cols, config)
 
-/*  Product.associate = function (models) {
-  Product.belongsToMany(models.User, {
-    as: 'carts_user',
-    foreingKey: 'product_id',
-    otherKey: "user_id",
-    through: "Cartproduct"
-  })
-} */
-
 return Product
 }

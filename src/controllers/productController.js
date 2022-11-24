@@ -10,49 +10,61 @@ let allShoes = JSON.parse(fs.readFileSync(allShoesFilePath, "utf-8"));
 
 const productController = {
   // Todos los productos
-  products: (req, res) => {
+  products: async (req, res) => {
     //res.render('products', { allShoes: allShoes })
-    db.Product.findAll()
-      .then(function (products) {
-        res.render("products/products", {
-          allShoes: products,
-          titulo: "All Shoes",
-        });
-      })
-      .catch((error) => res.json(error));
+    try {
+      let products = await db.Product.findAll();
+      res.render("products/products", {
+        allShoes: products,
+        titulo: "All Shoes",
+      });
+    } catch (error) {
+      res.json(error);
+    }
   },
-  asc: (req, res) => {
-    db.Product.findAll({ order: [["price", "Asc"]] })
-      .then(function (products) {
-        res.render("products/products", {
-          allShoes: products,
-          titulo: "De menor a mayor",
-        });
-      })
-      .catch((error) => res.json(error));
+  asc: async (req, res) => {
+    try {
+      let products = await db.Product.findAll({ order: [["price", "Asc"]] });
+      res.render("products/products", {
+        allShoes: products,
+        titulo: "De menor a mayor",
+      });
+    } catch (error) {
+      res.json(error);
+    }
   },
-  desc: (req, res) => {
-    //res.render('products', { allShoes: allShoes })
-    db.Product.findAll({ order: [["price", "desc"]] })
-      .then(function (products) {
-        res.render("products/products", {
-          allShoes: products,
-          titulo: "De mayor a menor",
-        });
-      })
-      .catch((error) => res.json(error));
+  desc: async (req, res) => {
+    try {
+      let products = await db.Product.findAll({ order: [["price", "Desc"]] });
+      res.render("products/products", {
+        allShoes: products,
+        titulo: "De mayor a menor",
+      });
+    } catch (error) {
+      res.json(error);
+    }
   },
 
-  sale: (req, res) => {
-    db.Product.findAll()
-      .then(function (products) {
-        let resultado = products.filter((product) => product.price < 90);
-        res.render("products/products", {
-          allShoes: resultado,
-          titulo: "On Sale",
-        });
-      })
-      .catch((error) => res.json(error));
+  sale: async (req, res) => {
+    try {
+      let inSale = await db.Product.findAll({
+        Where: {
+          [Op.lt]: {
+            price: 130,
+          },
+        },
+      });
+      console.log(inSale.length);
+      let products = await db.Product.findAll();
+      let resultado = products.filter((product) => product.price < 130);
+      console.log(resultado.length);
+      res.render("products/products", {
+        allShoes: resultado,
+        titulo: "On Sale",
+      });
+    } catch (error) {
+      res.json(error);
+    }
   },
   // Detalle de un producto particular
   productDetail: (req, res) => {

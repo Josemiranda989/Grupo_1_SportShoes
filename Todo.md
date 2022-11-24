@@ -4,6 +4,6 @@ Pendientes
 - Plantear lógica de usuarios administradores y clientes.
 - Crear vista para gestión del administrador.
 - Organizar rutas y vistas.
+- In sale -> where.
 
-2:10'
 https://www.youtube.com/watch?v=f-e9_8YCFI0&list=WL&index=30

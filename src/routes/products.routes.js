@@ -1,13 +1,13 @@
 // Require's
 const express = require("express");
 const router = express.Router();
-const uploadImg = require("../middlewares/multerMiddlewareImg");
+const uploadImg = require("../middlewares/multer/multerImg");
 
 // Controller require
 const productController = require("../controllers/productController");
-const validatedProduct = require("../middlewares/validatedProductsMiddleware");
-const validatedEditProduct = require("../middlewares/validatedEditProdMiddleware");
-const authMiddleware = require("../middlewares/authMiddleware");
+const validatedProduct = require("../middlewares/validations/validatedProductsMiddleware");
+const validatedEditProduct = require("../middlewares/validations/validatedEditProdMiddleware");
+const authMiddleware = require("../middlewares/auth/authMiddleware");
 
 /* TODOS LOS PRODUCTOS */
 router.get("/", productController.products);
@@ -45,7 +45,5 @@ router.delete("/delete/:id", productController.delete);
 /* ORDENAR */
 router.get("/asc", productController.asc);
 router.get("/desc", productController.desc);
-
-
 
 module.exports = router;

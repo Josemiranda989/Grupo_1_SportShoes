@@ -7,7 +7,7 @@ const logger = require("morgan");
 const methodOverride = require("method-override");
 const path = require("path");
 const session = require("express-session");
-const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
+const userLoggedMiddleware = require("./src/middlewares/auth/userLoggedMiddleware");
 
 // Routers
 const indexRouter = require("./src/routes/index.routes");
