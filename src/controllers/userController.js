@@ -106,14 +106,11 @@ const userController = {
       });
   },
 
-  profile: (req, res) => {
-    db.User.findByPk(parseInt(req.session.userLogged.id))
-      .then((user) => {
-        res.render("users/profile", {
-          user: user,
-        });
-      })
-      .catch((err) => res.send(err));
+  profile: async (req, res) => {
+    let orders = await db.Order.findAll({
+          where: { userId: req.session.userLogged.id },
+        });    
+        res.render("users/profile", { orders });
   },
 
   edit: (req, res) => {

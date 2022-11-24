@@ -1,26 +1,30 @@
-require("dotenv").config();
-
-/* REQUIRES */
-let createError = require("http-errors");
-let express = require("express");
-let path = require("path");
-/* Routers Apis */
-let productsApiRouter = require("./src/routes/Api/productsApi.routes");
-let usersApiRouter = require("./src/routes/Api/usersApi.routes");
-/* Routers */
-let indexRouter = require("./src/routes/index.routes");
-let productsRouter = require("./src/routes/products.routes");
-let usersRouter = require("./src/routes/users.routes");
-/* Cors */
-let cors = require("cors");
-
-let cookieParser = require("cookie-parser");
-let logger = require("morgan");
-let methodOverride = require("method-override");
-let session = require("express-session");
+// Requires
+const createError = require("http-errors");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const express = require("express");
+const logger = require("morgan");
+const methodOverride = require("method-override");
+const path = require("path");
+const session = require("express-session");
 const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
-let app = express();
+// Routers
+const indexRouter = require("./src/routes/index.routes");
+const productsRouter = require("./src/routes/products.routes");
+const usersRouter = require("./src/routes/users.routes");
+const productsApiRouter = require("./src/routes/Api/productsApi.routes");
+const usersApiRouter = require("./src/routes/Api/usersApi.routes");
+
+// Express
+const app = express();
+
+// .env
+require("dotenv").config();
+
+// view engine setup
+app.set("views", path.join(__dirname, "src/views"));
+app.set("view engine", "ejs");
 
 /* MIDDLEWARES*/
 app.use(
@@ -38,16 +42,12 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(userLoggedMiddleware);
 app.use(cors());
-// view engine setup
-app.set("views", path.join(__dirname, "src/views"));
-app.set("view engine", "ejs");
 
-/* RUTAS DE INDEX */
+// Routes
 app.use("/", indexRouter);
 app.use("/user", usersRouter);
 app.use("/products", productsRouter);
-app.use("/error", indexRouter);
-/* RUTAS DE API */
+// Api routes
 app.use("/api/users", usersApiRouter);
 app.use("/api/products", productsApiRouter);
 

@@ -75,9 +75,13 @@ const productController = {
       })
       .catch((error) => res.send(error));
   },
- /* Order  */
-  order: (req, res) => {
-
+  //  Order
+  order: async (req, res) => {
+    let order = await db.Order.findByPk(req.params.id, {
+      include: db.Order.OrderItems,
+    });
+    console.log(order);
+    return res.render("products/order", { order });
   },
 
   // Create - Vista del Formulario
@@ -190,7 +194,6 @@ const productController = {
       })
       .catch((error) => res.send(error));
   },
-
 };
 
 module.exports = productController;

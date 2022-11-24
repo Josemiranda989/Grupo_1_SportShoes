@@ -11,7 +11,6 @@ router.get('/', mainController.index);
 router.get("/cart", authMiddleware, productController.productCart);
 router.get('/order/:id', authMiddleware, productController.order);
 
-router.get('/error', mainController.error);
 router.get('/terms', mainController.terms);
 router.get('/privacy',mainController.privacy);
 router.get('/shippinginfo',mainController.shippinginfo);

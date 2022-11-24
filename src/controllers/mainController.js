@@ -3,37 +3,33 @@ const mainController = {
     res.render("index", { title: "SPORT SHOES" });
   },
 
-  error: (req, res) => {
-    res.render("error");
-  },
-
   terms: (req, res) => {
-    res.render("footer/terms");
+    res.render("others/terms");
   },
 
   privacy: (req, res) => {
-    res.render("footer/privacy");
+    res.render("others/privacy");
   },
 
   shippinginfo: (req, res) => {
-    res.render("footer/shippinginfo");
+    res.render("others/shippinginfo");
   },
 
   covidinfo: (req, res) => {
-    res.render("footer/covidinfo");
+    res.render("others/covidinfo");
   },
 
   contactus: (req, res) => {
-    res.render("footer/contactus");
+    res.render("others/contactus");
   },
   map: (req, res) => {
-    res.render("footer/map");
+    res.render("others/map");
   },
   aboutus: (req, res) => {
-    res.render("footer/aboutus");
+    res.render("others/aboutus");
   },
   help: (req, res) => {
-    res.render("footer/help");
+    res.render("others/help");
   },
 };
 

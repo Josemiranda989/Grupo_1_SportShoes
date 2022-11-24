@@ -1,3 +1,26 @@
+function removeItem(index) {
+  let carrito = JSON.parse(localStorage.getItem("carrito"));
+  if (carrito.length > 1) {
+    carrito.splice(index, 1);
+    products.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    document.getElementById(`row${index}`).remove();
+  } else {
+    localStorage.removeItem("carrito");
+    products = [];
+    setCarritoVacio();
+  }
+
+  let cartNumber = document.querySelector(".cart-number");
+  cartNumber.innerText = productosEnElCarrito();
+
+  document.querySelector(".totalAmount").innerText = `$ ${calcularTotal(
+    products
+  )}`;
+
+  toastr.success("Se borro el item del carrito");
+}
+
 function setCarritoVacio() {
   cartRows.innerHTML = `
     <tr>     
@@ -10,15 +33,10 @@ function vaciarCarrito() {
 }
 
 function calcularTotal(products) {
-  return products.reduce(
-    (acum, product) => {
-
-      return (acum += Number(product.price) * Number(product.quantity))
-    },
-    0
-  );
+  return products.reduce((acum, product) => {
+    return (acum += Number(product.price) * Number(product.quantity));
+  }, 0);
 }
-
 
 let cartRows = document.querySelector(".cartRows");
 
@@ -32,7 +50,6 @@ if (localStorage.carrito) {
       .then((res) => res.json())
       .then((productDB) => {
         if (productDB) {
-
           cartRows.innerHTML += `
            <tr id="row${index}">
               <th scope="row">${index + 1}</th>
@@ -40,26 +57,26 @@ if (localStorage.carrito) {
               <td>${productDB.price}</td>
               <td class="text-center">${itemL.quantity}</td>
               <td class="text-center">$ ${parseFloat(
-            productDB.price * itemL.quantity,
-            2
-          ).toFixed(2)}</td>
+                productDB.price * itemL.quantity,
+                2
+              ).toFixed(2)}</td>
               <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})><i class="fas fa-eye"></i></button></td>
           </tr>
           `;
           products.push({
             productId: productDB.id,
             name: productDB.productName,
-            price:productDB.price,
-            quantity: itemL.quantity
-          })
+            price: productDB.price,
+            quantity: itemL.quantity,
+          });
         } else {
           /* lo borro del localstorage */
-          carrito.splice(index, 1)
-          localStorage.setItem('carrito', JSON.stringify(carrito))
-        }      
+          carrito.splice(index, 1);
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+        }
       })
       .then(() => {
-        total.innerText = `$ ${calcularTotal(products)}`
+        total.innerText = `$ ${calcularTotal(products)}`;
       });
   });
 }
@@ -72,7 +89,7 @@ checkoutCart.onsubmit = (e) => {
     orderItems: products,
     paymentMethod: checkoutCart.paymentMethod.value,
     shippingMethod: checkoutCart.shippingMethod.value,
-    total: calcularTotal(products)
+    total: calcularTotal(products),
   };
   fetch("/api/products/checkout", {
     method: "POST",
@@ -85,7 +102,7 @@ checkoutCart.onsubmit = (e) => {
     .then((res) => {
       if (res.ok) {
         vaciarCarrito();
-        location.href = ``
-      };
+        location.href = `/order/${res.order.id}`;
+      }
     });
-}
+};

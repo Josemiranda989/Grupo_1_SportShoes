@@ -1,66 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', {title: "Profile"}) %>
+  <%- include('../partials/head', {title: "Profile"}) %>
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../partials/header') %>
 
-<body>
-  <!-- NAVBAR -->
-  <%- include('../partials/header') %>
-
-  <!-- bootstrap user profile -->
-  <div class="container fondo-form">
-    <div class="row">
-      <div class="col">
-        <div class="d-flex justify-content-center pt-2">
-          <img class="profile-picture" src="/images/avatars/<%=user.avatar%>" alt="User profile" style="width:400px; object-fit:cover">
-        </div>
+    <!-- bootstrap user profile -->
+    <div class="container fondo-form">
+      <div class="row">
         <div class="col">
-          <div>
-            <h5 class="card-title"><%= user.userName %></h5>
-            <table class="table table-bordered ">
-              <tr>
-                <td style="background:#b1afaf;color:#2f2a2a">Full Name</td>
-                <td style="background:#ebebeb;"><%= user.fullName %></td>
-              </tr>
-              <tr>
-                <td style="background:#b1afaf;color:#2f2a2a">E-mail</td>
-                <td style="background:#ebebeb;"><%= user.email %></td>
-              </tr>
-              <tr>
-                <td style="background:#b1afaf;color:#2f2a2a">Country</td>
-                <td style="background:#ebebeb;"><%= user.country %></td>
-              </tr>
-              <tr>
-                <td style="background:#b1afaf;color:#2f2a2a">Address</td>
-                <td style="background:#ebebeb;"><%= user.address %></td>
-              </tr>
-            </table>
+          <div class="d-flex justify-content-center pt-2">
+            <img
+              class="profile-picture"
+              src="/images/avatars/<%= locals.userLogged.avatar%>"
+              alt="User profile"
+              style="width: 400px; object-fit: cover"
+            />
+          </div>
+          <div class="col">
+            <div>
+              <h5 class="card-title"><%= locals.userLogged.userName %></h5>
+              <table class="table table-bordered">
+                <tr>
+                  <td style="background: #b1afaf; color: #2f2a2a">Full Name</td>
+                  <td style="background: #ebebeb">
+                    <%= locals.userLogged.fullName %>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="background: #b1afaf; color: #2f2a2a">E-mail</td>
+                  <td style="background: #ebebeb">
+                    <%= locals.userLogged.email %>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="background: #b1afaf; color: #2f2a2a">Country</td>
+                  <td style="background: #ebebeb">
+                    <%= locals.userLogged.country %>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="background: #b1afaf; color: #2f2a2a">Address</td>
+                  <td style="background: #ebebeb">
+                    <%= locals.userLogged.address %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6 d-flex justify-content-center mb-2">
+              <a
+                href="/user/edit/<%= locals.userLogged.user_id %>"
+                class="buy-now-button btn btn-secondary"
+                >Edit</a
+              >
+            </div>
+            <div class="col-6 d-flex justify-content-center mb-2">
+              <form
+                action="/user/delete/<%= locals.userLogged.user_id %>?_method=DELETE"
+                method="POST"
+              >
+                <button
+                  class="buy-now-button btn btn-danger"
+                  type="submit"
+                  name="delete"
+                >
+                  Delete
+                </button>
+              </form>
+            </div>
           </div>
         </div>
+      </div>
 
-
-<div class='row'>
-        <div class="col-6 d-flex justify-content-center  mb-2">
-          <a href="/user/edit/<%= user.user_id %>" class="buy-now-button btn btn-secondary">Edit</a>
+      <div class="card mb-5">
+        <div class="card-header">Mis Pedidos</div>
+        <div class="card-body">
+          <table class="table table-responsive-md mb-0">
+            <thead>
+              <tr>
+                <th style="width: 50px">
+                  <strong>#</strong>
+                </th>
+                <th class="th-lg">
+                  <strong>Fecha</strong>
+                </th>
+                <th class="th-lg">
+                  <strong>Envío</strong>
+                </th>
+                <th class="th-lg">
+                  <strong>Pago</strong>
+                </th>
+                <th>
+                  <strong>Total</strong>
+                </th>
+                <th style="width: 50px"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% orders.forEach((order,index)=> { %>
+              <tr>
+                <th scope="row"><%= index + 1 %></th>
+                <td>
+                  <%= new Intl.DateTimeFormat('es-ES', { year: 'numeric' ,
+                  month: 'numeric' , day: '2-digit' ,hour: 'numeric' , minute:
+                  'numeric' }).format(order.createdAt) %>
+                </td>
+                <td><%= order.shippingMethod %></td>
+                <td><%= order.paymentMethod %></td>
+                <td>$ <%= order.total %></td>
+                <td>
+                  <a
+                    class="btn btn-warning btn-sm"
+                    href="<%= `/order/${order.id}` %> "
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
         </div>
-        <div class="col-6 d-flex justify-content-center  mb-2">
-            <form action="/user/delete/<%= user.user_id %>?_method=DELETE" method="POST">
-              <button class="buy-now-button btn btn-danger" type="submit" name="delete">Delete</button>
-            </form>
-        </div>
-</div>        
-
       </div>
     </div>
-  </div>
 
-  <!-- FOOTER -->
+    <!-- FOOTER -->
 
-  <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 
-  <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
