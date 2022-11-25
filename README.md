@@ -1,12 +1,22 @@
 ![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/src/public/images/logo-w.png)
 
+Proyecto integrador realizado en Node JS para el curso Full Stack de [Digital House Coding School](https://www.digitalhouse.com/ar)
+
+:point_right:  Frontend -> EJS, CSS, JS, Boostrap, Toastr
+
+:point_right:  DB -> JSON & MYSQL (Sequelize)
+
+:point_right:  Backend -> Express, API REST, COOKIES, SESSION, .ENV
+
+:point_right:  Validations -> Express Validator & JS front
+
 # ScreenShots
 
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\home.png)
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\catalog.png)
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\cart.png)
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\profile.png)
-![Logo](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\edit-create.png)
+![Home](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info/demo/home.png)
+![Catalog](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info/demo/catalog.png)
+![Cart](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info/demo/cart.png)
+![Profile](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info/demo/profile.png)
+![CreateForm](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info/demo/edit-create.png)
 
 [Workflow](https://github.com/Josemiranda989/Grupo_1_SportShoes/blob/master/info\demo\workflow.pdf)
 
@@ -29,12 +39,6 @@ Ejecutar los seeders para cargar los datos
 
 `npx sequelize db:seed:all`
 
-
-<h3> Proyecto integrador realizado en Node JS <h3>4
-- Frontend -> EJS, CSS, JS, Boostrap, Toastr
-- DB -> JSON & MYSQL (Sequelize)
-- Backend -> Express, API REST, COOKIES, SESSION, .ENV
-- Validations -> Express Validator & JS front
 
 # El grupo de desarrolladores está Formado por :
 
