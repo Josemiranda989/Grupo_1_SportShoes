@@ -28,7 +28,7 @@ module.exports = [
     .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,)
     .withMessage("Must contain at least one number,uppercase andlowercase letter, min 8 or more characters" ),
   body('country').notEmpty().withMessage('Not selected, please choose again'),
-  body('avatar').custom((value, { req }) => {
+  /* body('avatar').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
@@ -43,7 +43,7 @@ module.exports = [
       }
     }
     return true
-  }),
+  }), */
 ]
 
 

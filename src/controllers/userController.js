@@ -17,8 +17,7 @@ const userController = {
       });
     }
 
-    db.User.findAll().then((users) => {
-      let userInDB = users.find((i) => i.email == req.body.email);
+    db.User.findOne({ where: { email: req.body.email } }).then((userInDB) => {
       if (userInDB) {
         return res.render("users/register", {
           errors: {
@@ -36,7 +35,7 @@ const userController = {
           email: req.body.email,
           password: bcryptjs.hashSync(req.body.password, 10),
           address: req.body.address,
-          avatar: req.file.filename || 'batman.png',
+          avatar: req.file?.filename || "batman.png",
         })
           .then(() => {
             return res.redirect("/user/login");
@@ -61,11 +60,8 @@ const userController = {
         oldData: req.body,
       });
     }
-
-    db.User.findAll()
-      .then((users) => {
-        let userToLogin = users.find((i) => i.email == req.body.email);
-
+    db.User.findOne({ where: { email: req.body.email } })
+      .then((userToLogin) => {
         if (userToLogin) {
           let isOkThePassword = bcryptjs.compareSync(
             req.body.password,
@@ -107,10 +103,15 @@ const userController = {
   },
 
   profile: async (req, res) => {
-    let orders = await db.Order.findAll({
-          where: { userId: req.session.userLogged.id },
-        });    
-        res.render("users/profile", { orders });
+    try {
+        let orders = await db.Order.findAll({
+      where: { id: req.session.userLogged.id },
+    });
+    res.render("users/profile", { orders });
+    } catch (error) {
+      res.send(error);
+    }
+  
   },
 
   edit: (req, res) => {
@@ -160,8 +161,7 @@ const userController = {
 
   delete: function (req, res) {
     db.User.destroy({
-      where: { id: parseInt(req.params.id, 10) },
-      force: true,
+      where: { id: parseInt(req.params.id, 10) }
     }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
         res.clearCookie("userEmail");

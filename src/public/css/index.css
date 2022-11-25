@@ -379,12 +379,12 @@ h5.card-title {
   background-color: #95a1a3;
 }
 
-.sinestiloA {
+.clean-anchor {
   text-decoration: none;
   color: black;
 }
 
-.sinestiloA:hover {
+.clean-anchor:hover {
   text-decoration: none;
   color: var(--verdeOscuro);
 }
@@ -397,12 +397,16 @@ h5.card-title {
   padding:10px;
   color: rgb(255, 255, 255);
   background-color: var(--celesteOscuro);
-  text-decoration: none;
+  /* text-decoration: none; */
   border-radius: 5px;
   box-shadow: 0px 5px 6px 0px rgba(219, 219, 219, 0.85);
   display: flex;
   align-items: center;
-
+  /* text-align: center; */
+  justify-content: center;
+  /* padding: 10px; */
+  margin: 10px;
+  /* width: 70%; */
 }
 
 .btn-catalog:hover {
@@ -741,7 +745,8 @@ main div h1 {
 
 .fondo-form {
   background-color: var(--grisClaro);
-  margin: 10px auto;
+  margin: 30px auto;
+  border-radius: 10px;
 }
 
 .form-label {

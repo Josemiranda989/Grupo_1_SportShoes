@@ -7,10 +7,12 @@
   <%- include('../partials/header') %>
 
   <!-- EDIT CONTAINER -->
+
+  
   <div class="container products-wrapper fondo-form">
     <div class="row">
       <div class="col-12">
-        <h2 class="products-title">
+        <h2 class="products-title pt-5">
           Edit: <%= productToEdit.productName %>
         </h2>
       </div>
@@ -18,7 +20,7 @@
     <!-- FORM TO EDIT -->
 
     <div class="col-12">
-      <form action="/products/edit/<%= productToEdit.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data"id="formulario">
+      <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"id="formulario">
         <div class="row product-detail">
           <div class="col-12 col-md-6">
             <label for="productName" class="form-label">Name:</label>
@@ -75,7 +77,7 @@
       </form>
       <!-- FORM DELETE -->
       <div class="col-6 d-flex justify-content-center mb-2">
-        <form action="/products/delete/<%= productToEdit.product_id %>?_method=DELETE" method="POST">
+        <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
           <button class="button" type="submit" name="delete">Delete this Product</button>
         </form>
       </div>
@@ -83,15 +85,11 @@
   </div>
   </div>
 
-
   <!-- FOOTER -->
-
-  <%- include('../partials/footer') %>
+   <%- include('../partials/footer', {fixed: "fixed-bottom"}) %>
 
   <!-- SCRIPTS -->
-  <%- incluide('../partials/scripts') %> 
-
-
+  <%- include('../partials/scripts') %> 
 </body>
 
 </html>

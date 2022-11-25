@@ -3,7 +3,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, `../public/images/avatars/`))
+    cb(null, path.join(__dirname, `../../public/images/avatars/`))
   },
   filename: function (req, file, cb) {
     let FileName = Math.round(Math.random() * 1E9) + '-img' + path.extname(file.originalname)

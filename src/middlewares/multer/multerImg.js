@@ -13,8 +13,8 @@ const storage = multer.diskStorage({
     } */
     destination: function (req, file, cb) {
         var newFolderName = req.body.productName
-        fs.mkdirSync(path.join(__dirname,`../public/images/shoes-img/${newFolderName}/`),{recursive:true});
-        cb(null, path.join(__dirname, `../public/images/shoes-img/${newFolderName}/`)) 
+        fs.mkdirSync(path.join(__dirname,`../../public/images/shoes-img/${newFolderName}/`),{recursive:true});
+        cb(null, path.join(__dirname, `../../public/images/shoes-img/${newFolderName}/`)) 
     },
     filename: function (req, file, cb) {
         const newFileName = '1' + path.extname(file.originalname)

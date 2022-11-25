@@ -19,7 +19,7 @@ const productApi = {
         for (let i = 0; i < products.length; i++) {
           products[i].setDataValue(
             "detail",
-            `http://localhost:${process.env.PORT}/api/products/${products[i].product_id}`
+            `http://localhost:${process.env.PORT}/api/products/${products[i].id}`
           );
         }
 
@@ -87,7 +87,7 @@ const productApi = {
 
   delete: (req, res) => {
     db.Product.destroy({
-      where: { product_id: parseInt(req.params.id, 10) },
+      where: { id: parseInt(req.params.id, 10) },
     })
       .then(() => {
         return res.json("Product Deleted");

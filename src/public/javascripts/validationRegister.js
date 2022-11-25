@@ -90,7 +90,7 @@ function validarFormulario(evento) {
   }
 
   /* Avatar */
-  const avatarInput = document.getElementById('avatar')
+/*   const avatarInput = document.getElementById('avatar')
   const avatar = document.getElementById('avatar').value
   errAvatar = document.getElementById('errAvatar')
   const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i
@@ -104,7 +104,7 @@ function validarFormulario(evento) {
   } else {
     errAvatar.classList.remove('show')
     errAvatar.classList.add('hidden')
-  }
+  } */
 
   /* Password */
   const passwordInput = document.getElementById('password')
