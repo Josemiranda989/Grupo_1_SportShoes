@@ -90,7 +90,7 @@ const productController = {
     let order = await db.Order.findByPk(req.params.id, {
       include: db.Order.OrderItems,
     });
-    console.log(order);
+    // console.log(order);
     return res.render("products/order", { order });
   },
 
@@ -195,7 +195,7 @@ const productController = {
       await db.Product.destroy({
         where: { id: parseInt(req.params.id, 10) }
       });
-      return res.redirect("/products/products");
+      return res.redirect("/products");
     } catch (error) {
       res.send(error);
     }

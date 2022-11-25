@@ -20,11 +20,11 @@
 
   <div class="dropdown px-5">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      ORDENAR
+      Order by price
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="/products/asc">Menor a mayor</a></li>
-      <li><a class="dropdown-item" href="/products/desc">Mayor a menor</a></li>
+      <li><a class="dropdown-item" href="/products/asc">min to max</a></li>
+      <li><a class="dropdown-item" href="/products/desc">max to min</a></li>
     </ul>
   </div>
 
@@ -68,7 +68,7 @@
 
 
   <!-- FOOTER -->
-  <%- include('../partials/footer') %>
+  <%- include('../partials/footer', { fixed:false}) %>
 
   <!-- SCRIPTS -->
   <%- include('../partials/scripts') %>

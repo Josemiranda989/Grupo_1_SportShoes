@@ -30,12 +30,16 @@
 
           <!--* price -->
           <div class="col-12 col-md-6">
+
             <label for="price" class="form-label">Price:</label>
             <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
             <!--? Validacion Front -->
             <p id="errPrice" class="msg-errors hidden"></p>
              <!--? Validacion Back -->
-            <div class=' <%= locals.errors && errors.price ? 'text-danger' : null  %> '><%= locals.errors && errors.price ? errors.price.msg : null %></div>
+            <div class=' <%= locals.errors && errors.price ? 'text-danger' : null  %> '>
+              <%= locals.errors && errors.price ? errors.price.msg : null %>
+            </div>
+
           </div>
 
           <!--* size -->
@@ -106,7 +110,7 @@
   </div>
 
   <!-- FOOTER -->
-  <%- include('../partials/footer') %>
+  <%- include('../partials/footer', { fixed:false }) %>
 
   <!-- SCRIPTS -->
   <%- include('../partials/scripts') %> 

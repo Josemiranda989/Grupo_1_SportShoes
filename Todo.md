@@ -6,5 +6,6 @@ Pendientes
 - Organizar rutas y vistas. OK
 - In sale -> where. OK
 - Agregar checkout a mercadoPago.
+- Mejorar front detalle de producto
 
 https://www.youtube.com/watch?v=f-e9_8YCFI0&list=WL&index=30
