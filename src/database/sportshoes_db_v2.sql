@@ -1,17 +1,3 @@
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `sportshoes_db_v2`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `orders`
---
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
@@ -22,13 +8,7 @@ CREATE TABLE `orders` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `deletedAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `order_items`
---
+); 
 
 CREATE TABLE `order_items` (
   `id` int(11) NOT NULL,
@@ -40,13 +20,8 @@ CREATE TABLE `order_items` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `deletedAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+); 
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `products`
---
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
@@ -61,13 +36,7 @@ CREATE TABLE `products` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `deletedAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
+)
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -76,63 +45,37 @@ CREATE TABLE `users` (
   `country` varchar(50) NOT NULL,
   `email` text NOT NULL,
   `password` varchar(255) NOT NULL,
-  `admin` tinyint(1) NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT 0,
   `address` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   `deletedAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_886af709-241b-4177-a045-d7a5c2c7e39b` (`userId`);
 
---
--- Indices de la tabla `order_items`
---
+
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_06ee2bbc-90a5-4413-8ff9-d229c0bc71b9` (`orderId`),
   ADD KEY `FK_6e92068c-e9d1-41a4-8e51-09c4bb672b53` (`productId`);
 
---
--- Indices de la tabla `products`
---
+
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `orders`
---
 ALTER TABLE `orders`
   ADD CONSTRAINT `FK_886af709-241b-4177-a045-d7a5c2c7e39b` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
 
---
--- Filtros para la tabla `order_items`
---
+
 ALTER TABLE `order_items`
   ADD CONSTRAINT `FK_06ee2bbc-90a5-4413-8ff9-d229c0bc71b9` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `FK_6e92068c-e9d1-41a4-8e51-09c4bb672b53` FOREIGN KEY (`productId`) REFERENCES `products` (`id`);
-COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
