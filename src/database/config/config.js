@@ -1,8 +1,8 @@
 module.exports = {
   development: {
-    username: 'root',
+    username: "root",
     password: process.env.DB_PASS,
-    database: 'sportshoes_db_v2',
+    database: "sportshoes_db_v2",
     port: process.env.DB_PORT,
     host: process.env.DB_HOST,
     dialect: "mysql",
@@ -15,11 +15,19 @@ module.exports = {
     dialect: "mysql",
   },
   production: {
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
-    dialect: "mysql",
+      database: process.env.DB_NAME,
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      // port: process.env.DB_PORT,
+      host: process.env.DB_HOST,
+      dialect: "mysql",
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false,
+        },
+      },
+    
   },
 };
 
