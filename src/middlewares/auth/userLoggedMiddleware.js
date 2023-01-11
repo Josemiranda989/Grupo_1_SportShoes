@@ -27,4 +27,4 @@ function userLoggedMiddleware(req, res, next) {
   })
 }
 
-module.exports = userLoggedMiddleware
+module.exports = userLoggedMiddleware;

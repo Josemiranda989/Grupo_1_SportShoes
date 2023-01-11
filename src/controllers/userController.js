@@ -51,7 +51,7 @@ const userController = {
     res.render("users/login");
   },
 
-  loginProcess: (req, res) => {
+  loginProcess: async (req, res) => {
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render("users/login", {
@@ -60,42 +60,42 @@ const userController = {
         oldData: req.body,
       });
     }
-    db.User.findOne({ where: { email: req.body.email } })
-      .then((userToLogin) => {
-        if (userToLogin) {
-          let isOkThePassword = bcryptjs.compareSync(
-            req.body.password,
-            userToLogin.password
-          );
-          if (isOkThePassword) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
+    userToLogin = await db.User.findOne({ where: { email: req.body.email } });
 
-            if (req.body.remember_user) {
-              res.cookie("userEmail", req.body.email, {
-                maxAge: 1000 * 60 * 60,
-              }); //60 minutos
-            }
+    if (userToLogin) {
+      let isOkThePassword = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (isOkThePassword) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
 
-            return res.redirect("/user/profile");
-          }
-
-          return res.render("users/login", {
-            errors: {
-              email: {
-                msg: "The provided credentials being incorrect",
-              },
-            },
-          });
+        if (req.body.remember_user) {
+          res.cookie("userEmail", req.body.email, {
+            maxAge: 1000 * 60 * 60,
+          }); //60 minutos
         }
 
-        return res.render("users/login", {
-          errors: {
-            email: {
-              msg: "The provided credentials being incorrect",
-            },
+        return res.redirect("/user/profile");
+      }
+
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "The provided credentials being incorrect",
           },
-        });
+        },
+      });
+    }
+
+    return res
+      .render("users/login", {
+        errors: {
+          email: {
+            msg: "The provided credentials being incorrect",
+          },
+        },
       })
       .catch((err) => {
         res.send(err);
@@ -104,14 +104,13 @@ const userController = {
 
   profile: async (req, res) => {
     try {
-        let orders = await db.Order.findAll({
-      where: { id: req.session.userLogged.id },
-    });
-    res.render("users/profile", { orders });
+      let orders = await db.Order.findAll({
+        where: { id: req.session.userLogged.id },
+      });
+      res.render("users/profile", { orders });
     } catch (error) {
       res.send(error);
     }
-  
   },
 
   edit: (req, res) => {
@@ -161,7 +160,7 @@ const userController = {
 
   delete: function (req, res) {
     db.User.destroy({
-      where: { id: parseInt(req.params.id, 10) }
+      where: { id: parseInt(req.params.id, 10) },
     }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
         res.clearCookie("userEmail");

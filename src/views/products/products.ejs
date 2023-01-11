@@ -31,14 +31,14 @@
   <div class="row row-cols-1 row-cols-md-4 g-4 fondo-form">
     <% for (i=0 ; i < allShoes.length ; i++) { %>
     <div>
-      <a class="clean-anchor" href="<%=`/products/detail/${allShoes[i].id}`%>">
+      <a class="clean-anchor" href="<%=`/products/detail/${allShoes[i].id}`%>" >
         <div class="col">
           <div class="card">
             <h5 class="card-title ttl-catalog">
               <%= allShoes[i].productName %>
             </h5>
             <div class="contenedor-imagen empuje-empuje">
-              <img src="<%=`/images/shoes-img/${allShoes[i].productName}/${allShoes[i].img}`%>" class="card-img-top" alt="<%=`imagen de ${allShoes[i].productName}`%>">
+              <img src="<%=`/images/shoes-img/${allShoes[i].productName}/${allShoes[i].img}`%>" class="card-img-top" alt="<%=`imagen de ${allShoes[i].productName}`%>" >
             </div>
       </a>
       <div class="card-body d-flex justify-content-between">
@@ -54,7 +54,7 @@
         <div>
           <a class="btn-catalog agregar_carrito clean-anchor" data-id="<%= allShoes[i].id %>">Comprar</a>
           <% if (locals.userAdmin) { %>
-          <a class="clean-anchor btn-catalog" href="<%=`/products/edit/${allShoes[i].id}`%>">
+          <a class="clean-anchor btn-catalog" href="<%=`/products/edit/${allShoes[i].id}`%>" >
             Edit
           </a>
           <% } %>
@@ -62,7 +62,7 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
   <% } %>
   </div>
 

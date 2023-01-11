@@ -1,6 +1,16 @@
+const db = require("../database/models");
+
+
 const mainController = {
-  index: (req, res) => {
-    res.render("index", { title: "SPORT SHOES" });
+  index: async (req, res) => {
+    const products = await db.Product.findAll({
+      limit: 6,
+      order: db.sequelize.random(),
+    });
+    products.forEach(element => {
+      console.log(element.id);
+    });
+    res.render("index", { title: "SPORT SHOES",  products});
   },
 
   terms: (req, res) => {
